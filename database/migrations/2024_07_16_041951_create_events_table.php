@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title', 100); // Panjang dioptimalkan menjadi 100 karakter
+            $table->string('slug')->unique();
             $table->string('sub_desc', 150); // Panjang dioptimalkan menjadi 150 karakter
             $table->text('description'); // Menggunakan tipe text untuk deskripsi panjang
             $table->integer('event_category_id')->unsigned(); // Panjang dioptimalkan menjadi 100 karakter

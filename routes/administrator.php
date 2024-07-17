@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\CareerController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\Auth\LoginController;
@@ -38,6 +39,14 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::put('career/{slug}', [CareerController::class, 'update'])->name('career.update');
     Route::delete('career/{slug}', [CareerController::class, 'destroy'])->name('career.destroy');
     Route::post('career/change-status', [CareerController::class, 'changeStatus'])->name('career.changeStatus');
+
+
+    Route::get('event', [EventController::class, 'index'])->name('event.index');
+    Route::get('event/create', [EventController::class, 'create'])->name('event.create');
+    Route::post('event', [EventController::class, 'store'])->name('event.store');
+    Route::get('event/{slug}/edit', [EventController::class, 'edit'])->name('event.edit');
+    Route::put('event/{slug}', [EventController::class, 'update'])->name('event.update');
+    Route::delete('event/{slug}', [EventController::class, 'destroy'])->name('event.destroy');
 
     Route::get('running-text', [RunningTextController::class, 'index'])->name('running-text.index');
     Route::put('running-text/{id}/update', [RunningTextController::class, 'update'])->name('running-text.update');

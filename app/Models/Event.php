@@ -31,6 +31,7 @@ class Event extends Model
      */
     protected $fillable = [
         'title',
+        'slug',
         'sub_desc',
         'description',
         'event_category_id',
@@ -60,7 +61,7 @@ class Event extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function event_category(): BelongsTo
+    public function event_category()
     {
         return $this->belongsTo(EventCategory::class, 'event_category_id', 'id');
     }
