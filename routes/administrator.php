@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\CareerController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\ArticleController;
+use App\Http\Controllers\Admin\CimanewsController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\RunningTextController;
 use App\Http\Controllers\Admin\CategoryEventController;
@@ -55,6 +56,13 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::get('article/{slug}/edit', [ArticleController::class, 'edit'])->name('article.edit');
     Route::put('article/{slug}', [ArticleController::class, 'update'])->name('article.update');
     Route::delete('article/{slug}', [ArticleController::class, 'destroy'])->name('article.destroy');
+
+    Route::get('cimanews', [CimanewsController::class, 'index'])->name('cimanews.index');
+    Route::get('cimanews/create', [CimanewsController::class, 'create'])->name('cimanews.create');
+    Route::post('cimanews', [CimanewsController::class, 'store'])->name('cimanews.store');
+    Route::get('cimanews/{slug}/edit', [CimanewsController::class, 'edit'])->name('cimanews.edit');
+    Route::put('cimanews/{slug}', [CimanewsController::class, 'update'])->name('cimanews.update');
+    Route::delete('cimanews/{slug}', [CimanewsController::class, 'destroy'])->name('cimanews.destroy');
 
     Route::get('running-text', [RunningTextController::class, 'index'])->name('running-text.index');
     Route::put('running-text/{id}/update', [RunningTextController::class, 'update'])->name('running-text.update');
