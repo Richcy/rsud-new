@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\Auth\LoginController;
+use App\Http\Controllers\Admin\RunningTextController;
 
 
 /*
@@ -28,4 +29,6 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::put('slider/{slug}', [SliderController::class, 'update'])->name('slider.update');
     Route::delete('slider/{slug}', [SliderController::class, 'destroy'])->name('slider.destroy');
 
+    Route::get('running-text', [RunningTextController::class, 'index'])->name('running-text.index');
+    Route::put('running-text/{id}/update', [RunningTextController::class, 'update'])->name('running-text.update');
 });

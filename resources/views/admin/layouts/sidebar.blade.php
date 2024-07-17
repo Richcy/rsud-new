@@ -19,8 +19,8 @@
                     <span class="menu-title text-truncate" data-i18n="Slider">Slider</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="d-flex align-items-center" href="#">
+            <li class="nav-item {{ request()->routeIs('admin.running-text.index') ? 'active' : '' }}">
+                <a class="d-flex align-items-center" href="{{ route('admin.running-text.index') }}">
                     <i data-feather='list'></i>
                     <span class="menu-title text-truncate" data-i18n="Running Text">Running Text</span>
                 </a>
