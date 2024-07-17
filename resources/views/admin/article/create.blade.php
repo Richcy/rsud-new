@@ -24,7 +24,7 @@
                                 <a href="#">Beranda</a>
                             </li>
                             <li class="breadcrumb-item active">
-                                <a href="{{ route('admin.category-article.index') }}">Daftar Artikel</a>
+                                <a href="{{ route('admin.article.index') }}">Daftar Artikel</a>
                             </li>
                             <li class="breadcrumb-item active">
                                 <a href="#">Tambah Artikel</a>
@@ -147,7 +147,7 @@
                             </div>
                             {{-- button submit --}}
                             <div class="d-flex justify-content-end mt-2">
-                                <a href="{{ route('admin.category-article.index') }}"
+                                <a href="{{ route('admin.article.index') }}"
                                     class="btn btn-secondary me-1">Kembali</a>
                                 <button type="submit" class="btn btn-primary">Simpan</button>
                             </div>
