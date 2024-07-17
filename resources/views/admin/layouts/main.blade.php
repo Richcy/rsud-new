@@ -39,6 +39,9 @@
         .menu-content li a {
             font-size: 90%
         }
+        table.dataTable.no-footer {
+            border-bottom: none !important;
+        }
     </style>
     @stack('custom_css')
     <!-- END: Custom CSS-->
@@ -108,6 +111,7 @@
             }
         })
     </script>
+    @include('components.session-alert')
 </body>
 <!-- END: Body-->
 

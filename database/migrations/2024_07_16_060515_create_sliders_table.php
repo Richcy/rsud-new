@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('sliders', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title', 150);
-            $table->string('slug');
+            $table->string('slug')->unique();
             $table->string('img');
             $table->text('description');
             $table->integer('sort')->unsigned();
