@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use App\Models\EventCategory;
+use App\Models\ArticleCategory;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 
-class CategoryEventController extends Controller
+class CategoryArticleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,17 +17,17 @@ class CategoryEventController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $data = EventCategory::select(['id', 'name', 'created_at', 'updated_at']); // Sesuaikan dengan field yang dibutuhkan
+            $data = ArticleCategory::orderBy('created_at', 'asc')->get();
             return DataTables::of($data)
-                ->addIndexColumn()
-                ->editColumn('created_at', function($row) {
-                    return $row->created_at->format('d F Y'); // Format tanggal sesuai kebutuhan
-                })
-                ->addColumn('action', 'admin.category-event.datatables.action')
-                ->rawColumns(['action'])
-                ->make(true);
+            ->addIndexColumn()
+            ->editColumn('created_at', function($row) {
+                return $row->created_at->format('d F Y'); // Format tanggal sesuai kebutuhan
+            })
+            ->addColumn('action', 'admin.category-article.datatables.action')
+            ->rawColumns(['action'])
+            ->make(true);
         }
-        return view('admin.category-event.index');
+        return view('admin.category-article.index');
     }
 
     /**
@@ -35,7 +35,7 @@ class CategoryEventController extends Controller
      */
     public function create()
     {
-        return view('admin.category-event.create');
+        return view('admin.category-article.create');
     }
 
     /**
@@ -60,14 +60,14 @@ class CategoryEventController extends Controller
 
         try {
             // Simpan data ke database
-            $CategoryEvent = new EventCategory();
+            $CategoryEvent = new ArticleCategory();
             $CategoryEvent->name = $request->name;
             $CategoryEvent->save();
 
             DB::commit();
 
             // Redirect dengan pesan sukses
-            return redirect()->route('admin.category-event.index')->with('success', 'Kategori Acara berhasil ditambahkan.');
+            return redirect()->route('admin.category-article.index')->with('success', 'Kategori Artikel berhasil ditambahkan.');
         } catch (\Exception $e) {
             DB::rollBack();
 
@@ -87,23 +87,21 @@ class CategoryEventController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit($id)
+    public function edit(string $id)
     {
-        $categoryEvent = EventCategory::findOrFail($id);
-        return view('admin.category-event.edit', compact('categoryEvent'));
+        $categoryArticle = ArticleCategory::findOrFail($id);
+        return view('admin.category-article.edit', compact('categoryArticle'));
     }
-
 
     /**
      * Update the specified resource in storage.
      */
-
-     public function update(Request $request, $id)
+    public function update(Request $request, $id)
     {
         DB::beginTransaction();
 
         try {
-            $categoryEvent = EventCategory::findOrFail($id);
+            $categoryArticle = ArticleCategory::findOrFail($id);
 
             $validator = Validator::make($request->all(), [
                 'name' => 'required|string|max:255',
@@ -113,28 +111,27 @@ class CategoryEventController extends Controller
                 return back()->withErrors($validator)->withInput()->with('error', $validator->errors()->first());
             }
 
-            $categoryEvent->name = $request->name;
-            $categoryEvent->save();
+            $categoryArticle->name = $request->name;
+            $categoryArticle->save();
 
             DB::commit();
 
-            return redirect()->route('admin.category-event.index')->with('success', 'Kategori Acara berhasil diupdate.');
+            return redirect()->route('admin.category-article.index')->with('success', 'Kategori Artikel berhasil diupdate.');
         } catch (\Exception $e) {
             DB::rollBack();
 
-            return redirect()->back()->with('error', 'Terjadi kesalahan saat mengupdate kategori acara: ' . $e->getMessage());
+            return redirect()->back()->with('error', 'Terjadi kesalahan saat mengupdate kategori artikel: ' . $e->getMessage());
         }
     }
-
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
-        $categoryEvent = EventCategory::where('id', $id)->first();
+        $categoryArticle = ArticleCategory::where('id', $id)->first();
         try {
-            $categoryEvent->delete();
+            $categoryArticle->delete();
 
             return response()->json(['success' => true, 'message' => 'Kategori Acara berhasil dihapus']);
         } catch (\Exception $e) {

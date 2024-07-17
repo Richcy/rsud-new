@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\RunningTextController;
 use App\Http\Controllers\Admin\CategoryEventController;
+use App\Http\Controllers\Admin\CategoryArticleController;
 
 
 /*
@@ -52,4 +53,5 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::put('running-text/{id}/update', [RunningTextController::class, 'update'])->name('running-text.update');
 
     Route::resource('category-event', CategoryEventController::class);
+    Route::resource('category-article', CategoryArticleController::class);
 });
