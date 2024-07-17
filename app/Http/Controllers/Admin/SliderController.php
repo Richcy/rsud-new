@@ -25,7 +25,7 @@ class SliderController extends Controller
             return DataTables::of($data)
                 ->addIndexColumn()
                 ->addColumn('img', function($row) {
-                    return '<img src="' . asset('storage/' . $row->img) . '" height="50px" width="auto">';
+                    return '<img src="' . asset('storage/' . $row->img) . '" height="70px" width="auto">';
                 })
                 ->addColumn('action', 'admin.sliders.datatables.action')
                 ->rawColumns(['img', 'action'])
