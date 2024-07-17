@@ -109,8 +109,8 @@
                     </li>
                 </ul>
             </li>
-            <li class="nav-item">
-                <a class="d-flex align-items-center" href="#">
+            <li class="nav-item {{ request()->routeIs('admin.career.*') ? 'active' : '' }}">
+                <a class="d-flex align-items-center" href="{{ route('admin.career.index') }}">
                     <i class="bi bi-binoculars" style="padding-top: 0; margin-top: -15px;"></i>
                     <span class="menu-title text-truncate" data-i18n="Karir">Karir</span>
                 </a>
