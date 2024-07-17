@@ -21,8 +21,11 @@
                             height="40" width="40"><span class="avatar-status-online"></span></span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-user">
-                    <div class="dropdown-divider"></div><a class="dropdown-item" href="#">
-                        <i class="me-50" data-feather="power"></i> Logout</a>
+                    {{-- <a class="dropdown-item" href="#"><i class="me-50" data-feather="user"></i> Profile</a> --}}
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();document.querySelector('#logoutForm').submit();"><i
+                            class="me-50" data-feather="log-out"></i> Logout</a>
+                    {{-- <div class="dropdown-divider"></div> --}}
                 </div>
             </li>
         </ul>
