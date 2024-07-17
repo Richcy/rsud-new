@@ -131,7 +131,7 @@ class EventController extends Controller
             DB::commit();
 
             // Redirect dengan pesan sukses
-            return redirect()->route('admin.events.index')->with('success', 'Event berhasil ditambahkan.');
+            return redirect()->route('admin.event.index')->with('success', 'Event berhasil ditambahkan.');
         } catch (\Exception $e) {
             DB::rollBack();
 
@@ -164,9 +164,11 @@ class EventController extends Controller
      */
     public function update(Request $request, $slug)
     {
+        $event = Event::where('slug', $slug)->first();
         // Validasi input
         $validator = Validator::make($request->all(), [
             'title' => 'required|string|max:255',
+            'slug' => 'required|string|unique:events,slug,' . $event->slug . ',slug',
             'event_category_id' => 'required|exists:event_categories,id',
             'url' => 'nullable|url',
             'start_date' => 'required|date',
@@ -234,7 +236,7 @@ class EventController extends Controller
             $event->location = $request->location;
             $event->sub_desc = $request->sub_desc;
             $event->description = $request->description;
-            $event->save();
+            $event->update();
 
             DB::commit();
 
