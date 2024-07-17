@@ -79,7 +79,7 @@
                 <ul class="menu-content">
                     <li class="ps-1 navigation-header"><span data-i18n="Forms &amp; Tables" style="font-size: 80% !important;">MODUL DOKTER</span><i data-feather="more-horizontal"></i>
                     </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Bidang Dokter</span></a>
+                    <li class="{{ request()->routeIs('admin.field-doctor.*') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.field-doctor.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Bidang Dokter</span></a>
                     </li>
                     <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Dokter</span></a>
                     </li>

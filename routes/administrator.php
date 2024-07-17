@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\EventController;
+use App\Http\Controllers\FieldDoctorController;
 use App\Http\Controllers\Admin\CareerController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\ArticleController;
@@ -69,4 +70,5 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
 
     Route::resource('category-event', CategoryEventController::class);
     Route::resource('category-article', CategoryArticleController::class);
+    Route::resource('field-doctor', FieldDoctorController::class);
 });
