@@ -105,7 +105,7 @@
                     </li>
                     <li class="{{ request()->routeIs('admin.category-article.*') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.category-article.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Kategori Artikel</span></a>
                     </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Artikel</span></a>
+                    <li class="{{ request()->routeIs('admin.article.*') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.article.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Artikel</span></a>
                     </li>
                     <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Cimanews</span></a>
                     </li>

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\CareerController;
 use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\RunningTextController;
 use App\Http\Controllers\Admin\CategoryEventController;
@@ -41,13 +42,19 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::delete('career/{slug}', [CareerController::class, 'destroy'])->name('career.destroy');
     Route::post('career/change-status', [CareerController::class, 'changeStatus'])->name('career.changeStatus');
 
-
     Route::get('event', [EventController::class, 'index'])->name('event.index');
     Route::get('event/create', [EventController::class, 'create'])->name('event.create');
     Route::post('event', [EventController::class, 'store'])->name('event.store');
     Route::get('event/{slug}/edit', [EventController::class, 'edit'])->name('event.edit');
     Route::put('event/{slug}', [EventController::class, 'update'])->name('event.update');
     Route::delete('event/{slug}', [EventController::class, 'destroy'])->name('event.destroy');
+
+    Route::get('article', [ArticleController::class, 'index'])->name('article.index');
+    Route::get('article/create', [ArticleController::class, 'create'])->name('article.create');
+    Route::post('article', [ArticleController::class, 'store'])->name('article.store');
+    Route::get('article/{slug}/edit', [ArticleController::class, 'edit'])->name('article.edit');
+    Route::put('article/{slug}', [ArticleController::class, 'update'])->name('article.update');
+    Route::delete('article/{slug}', [ArticleController::class, 'destroy'])->name('article.destroy');
 
     Route::get('running-text', [RunningTextController::class, 'index'])->name('running-text.index');
     Route::put('running-text/{id}/update', [RunningTextController::class, 'update'])->name('running-text.update');
