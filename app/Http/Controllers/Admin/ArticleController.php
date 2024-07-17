@@ -21,7 +21,14 @@ class ArticleController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $data = Article::orderBy('created_at', 'asc')->get();
+            $data = Article::join('article_categories as ac', 'articles.article_category_id', 'ac.id')
+            ->select([
+                'articles.*',
+                'ac.name',
+            ])
+            ->whereNot('ac.name', 'cimanews')
+            ->orderBy('articles.created_at', 'asc')
+            ->get();
             return DataTables::of($data)
             ->addIndexColumn()
             ->editColumn('created_at', function($row) {
@@ -60,7 +67,8 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        $categoryArticle = ArticleCategory::orderBy('name', 'asc')->get();
+        $categoryArticle = ArticleCategory::orderBy('name', 'asc')
+        ->whereNot('name', 'cimanews')->get();
         return view('admin.article.create', compact('categoryArticle'));
     }
 
@@ -112,7 +120,7 @@ class ArticleController extends Controller
             $article->slug = $request->slug;
             $article->article_category_id = $request->article_category_id;
             $article->author = $request->author;
-            $article->status = 0;
+            $article->status = 1;
             $article->sub_desc = $request->sub_desc;
             $article->description = $request->description;
             $article->img = $path; // Simpan path gambar ke dalam field img
@@ -145,7 +153,8 @@ class ArticleController extends Controller
     public function edit(string $slug)
     {
         $article = Article::where('slug', $slug)->first();
-        $categoryArticle = ArticleCategory::orderBy('name', 'asc')->get();
+        $categoryArticle = ArticleCategory::orderBy('name', 'asc')
+        ->whereNot('name', 'cimanews')->get();
         return view('admin.article.edit', compact('article', 'categoryArticle'));
     }
 
@@ -206,7 +215,7 @@ class ArticleController extends Controller
             $article->slug = $request->slug;
             $article->article_category_id = $request->article_category_id;
             $article->author = $request->author;
-            $article->status = 0;
+            $article->status = 1;
             $article->sub_desc = $request->sub_desc;
             $article->description = $request->description;
             $article->img = $path; // Simpan path gambar ke dalam field img
