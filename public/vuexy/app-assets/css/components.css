@@ -775,7 +775,7 @@ footer.footer-border {
 
 .main-menu.menu-light .navigation > li.active > a {
   background: #089544;
-  box-shadow: 0 0 10px 1px rgba(239, 182, 37, 0.7);
+  box-shadow: 0 0 10px 1px rgba(8, 149, 68, 0.7);
   color: #fff;
   font-weight: 400;
   border-radius: 4px; }
@@ -831,7 +831,7 @@ footer.footer-border {
 
 .main-menu.menu-light .navigation > li ul .active {
   background: #089544;
-  box-shadow: 0 0 10px 1px rgba(239, 182, 37, 0.7);
+  box-shadow: 0 0 10px 1px rgba(8, 149, 68, 0.7);
   border-radius: 4px;
   z-index: 1; }
 
@@ -918,7 +918,7 @@ footer.footer-border {
 
 .main-menu.menu-dark .navigation > li.active > a {
   background: #089544;
-  box-shadow: 0 0 10px 1px rgba(239, 182, 37, 0.7);
+  box-shadow: 0 0 10px 1px rgba(8, 149, 68, 0.7);
   color: #fff;
   font-weight: 400;
   border-radius: 4px; }
@@ -974,7 +974,7 @@ footer.footer-border {
 
 .main-menu.menu-dark .navigation > li ul .active {
   background: #089544;
-  box-shadow: 0 0 10px 1px rgba(239, 182, 37, 0.7);
+  box-shadow: 0 0 10px 1px rgba(8, 149, 68, 0.7);
   border-radius: 4px;
   z-index: 1; }
 
@@ -2806,7 +2806,7 @@ footer.footer-border {
 
 .timeline .timeline-item .timeline-point.timeline-point-indicator:before {
   content: '';
-  background: rgba(239, 182, 37, 0.12);
+  background: rgba(8, 149, 68, 0.12);
   height: 20px;
   width: 20px;
   display: block;
@@ -2859,7 +2859,7 @@ footer.footer-border {
 
 .custom-option-item-check:checked + .custom-option-item {
   color: #089544;
-  background-color: rgba(239, 182, 37, 0.12);
+  background-color: rgba(8, 149, 68, 0.12);
   border-color: #089544; }
 
 .custom-option-item-check:checked + .custom-option-item .custom-option-item-title {
@@ -3079,7 +3079,7 @@ body:after {
 
 .select2-container--classic .select2-results__option--highlighted,
 .select2-container--default .select2-results__option--highlighted {
-  background-color: rgba(239, 182, 37, 0.12) !important;
+  background-color: rgba(8, 149, 68, 0.12) !important;
   color: #089544 !important; }
 
 .select2-container--classic .select2-result-repository__avatar img,
@@ -3182,7 +3182,7 @@ body:after {
   border-color: #3b4253; }
 
 .dark-layout .select2-container .select2-selection--multiple .select2-selection__choice {
-  background: rgba(239, 182, 37, 0.12) !important;
+  background: rgba(8, 149, 68, 0.12) !important;
   color: #089544 !important;
   border: none; }
 

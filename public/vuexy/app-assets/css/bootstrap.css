@@ -35,7 +35,7 @@
   --bs-danger: #ea5455;
   --bs-light: #f6f6f6;
   --bs-dark: #4b4b4b;
-  --bs-primary-rgb: 239, 182, 37;
+  --bs-primary-rgb: 8, 149, 68;
   --bs-secondary-rgb: 130, 134, 139;
   --bs-success-rgb: 40, 199, 111;
   --bs-info-rgb: 0, 207, 232;
@@ -1918,7 +1918,7 @@ textarea.form-control-lg {
 .form-check-input:focus {
   border-color: #089544;
   outline: 0;
-  box-shadow: 0 2px 4px 0 rgba(239, 182, 37, 0.4); }
+  box-shadow: 0 2px 4px 0 rgba(8, 149, 68, 0.4); }
 
 .form-check-input:checked {
   background-color: #089544;
@@ -2371,7 +2371,7 @@ textarea.form-control-lg {
 
 .btn-check:focus + .btn, .btn:focus {
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(239, 182, 37, 0.25); }
+  box-shadow: 0 0 0 0.25rem rgba(8, 149, 68, 0.25); }
 
 .btn:disabled, .btn.disabled,
 fieldset:disabled .btn {
@@ -2652,7 +2652,7 @@ fieldset:disabled .btn {
   border-color: #089544; }
 
 .btn-check:focus + .btn-outline-primary, .btn-outline-primary:focus {
-  box-shadow: 0 0 0 0.25rem rgba(239, 182, 37, 0.5); }
+  box-shadow: 0 0 0 0.25rem rgba(8, 149, 68, 0.5); }
 
 .btn-check:checked + .btn-outline-primary,
 .btn-check:active + .btn-outline-primary, .btn-outline-primary:active, .btn-outline-primary.active, .btn-outline-primary.dropdown-toggle.show {
@@ -2662,7 +2662,7 @@ fieldset:disabled .btn {
 
 .btn-check:checked + .btn-outline-primary:focus,
 .btn-check:active + .btn-outline-primary:focus, .btn-outline-primary:active:focus, .btn-outline-primary.active:focus, .btn-outline-primary.dropdown-toggle.show:focus {
-  box-shadow: 0 0 0 0.25rem rgba(239, 182, 37, 0.5); }
+  box-shadow: 0 0 0 0.25rem rgba(8, 149, 68, 0.5); }
 
 .btn-outline-primary:disabled, .btn-outline-primary.disabled {
   color: #089544;
@@ -3116,7 +3116,7 @@ fieldset:disabled .btn {
 
 .dropdown-item:hover, .dropdown-item:focus {
   color: #089544;
-  background-color: rgba(239, 182, 37, 0.12); }
+  background-color: rgba(8, 149, 68, 0.12); }
 
 .dropdown-item.active, .dropdown-item:active {
   color: #fff;
@@ -4051,7 +4051,7 @@ fieldset:disabled .btn {
   color: inherit;
   background-color: #f3f2f7;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(239, 182, 37, 0.25); }
+  box-shadow: 0 0 0 0.25rem rgba(8, 149, 68, 0.25); }
 
 .page-item:not(:first-child) .page-link {
   margin-left: 0; }
@@ -4222,7 +4222,7 @@ fieldset:disabled .btn {
   height: 0.857rem;
   overflow: hidden;
   font-size: 0.857rem;
-  background-color: rgba(239, 182, 37, 0.12);
+  background-color: rgba(8, 149, 68, 0.12);
   border-radius: 5rem; }
 
 .progress-bar {
