@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\CareerController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\RunningTextController;
+use App\Http\Controllers\Admin\CategoryEventController;
 
 
 /*
@@ -40,4 +41,6 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
 
     Route::get('running-text', [RunningTextController::class, 'index'])->name('running-text.index');
     Route::put('running-text/{id}/update', [RunningTextController::class, 'update'])->name('running-text.update');
+
+    Route::resource('category-event', CategoryEventController::class);
 });
