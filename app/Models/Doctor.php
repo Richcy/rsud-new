@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\FieldDoctor;
+use App\Models\ScheduleDoctor;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -65,5 +66,15 @@ class Doctor extends Model
     public function field_doctor()
     {
         return $this->belongsTo(FieldDoctor::class, 'field_id', 'id');
+    }
+
+    /**
+     * Get all of the schedule doctor for the Doctor
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function schedule_doctor()
+    {
+        return $this->hasMany(ScheduleDoctor::class, 'doctor_id', 'id');
     }
 }

@@ -85,7 +85,7 @@
                     </li>
                     <li class="{{ request()->routeIs('admin.featured-doctor.*') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.featured-doctor.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Dokter Unggulan</span></a>
                     </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Jadwal Dokter</span></a>
+                    <li class="{{ request()->routeIs('admin.schedule-doctor.*') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.schedule-doctor.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Jadwal Dokter</span></a>
                     </li>
                 </ul>
             </li>
