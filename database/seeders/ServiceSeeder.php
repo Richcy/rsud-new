@@ -14,10 +14,18 @@ class ServiceSeeder extends Seeder
     public function run(): void
     {
         $data = [
+            // [
+            //     'banner' => 'test.png',
+            //     'description' => 'test',
+            //     'type' => 'about_home',
+            //     'lang' => 'id',
+            //     'created_at' => now(),
+            //     'updated_at' => now(),
+            // ],
             [
                 'banner' => 'test.png',
                 'description' => 'test',
-                'type' => 'about_home',
+                'type' => 'about_company',
                 'lang' => 'id',
                 'created_at' => now(),
                 'updated_at' => now(),

@@ -75,6 +75,9 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::get('running-text', [RunningTextController::class, 'index'])->name('running-text.index');
     Route::put('running-text/{id}/update', [RunningTextController::class, 'update'])->name('running-text.update');
 
+    Route::get('profile', [CompanyProfileController::class, 'profile'])->name('profile.index');
+    Route::put('profile/{id}/update', [CompanyProfileController::class, 'profileUpdate'])->name('profile.update');
+
     Route::get('structure', [CompanyProfileController::class, 'structure'])->name('structure.index');
     Route::put('structure/{id}/update', [CompanyProfileController::class, 'structureUpdate'])->name('structure.update');
 
