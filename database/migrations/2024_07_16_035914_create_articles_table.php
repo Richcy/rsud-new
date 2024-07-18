@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('sub_desc');
             $table->integer('article_category_id')->unsigned();
-            $table->text('description');
+            $table->longText('description');
             $table->string('author', 100);
             $table->string('status', 25);
             $table->string('img');

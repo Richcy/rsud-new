@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title', 100); // Panjang dioptimalkan menjadi 100 karakter
             $table->string('slug')->unique();
             $table->string('sub_desc', 150); // Panjang dioptimalkan menjadi 150 karakter
-            $table->text('description'); // Menggunakan tipe text untuk deskripsi panjang
+            $table->longText('description'); // Menggunakan tipe text untuk deskripsi panjang
             $table->integer('event_category_id')->unsigned(); // Panjang dioptimalkan menjadi 100 karakter
             $table->string('url', 255); // Panjang dioptimalkan menjadi 255 karakter
             $table->string('img', 255); // Panjang dioptimalkan menjadi 255 karakter
