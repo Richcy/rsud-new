@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\CimanewsController;
 use App\Http\Controllers\Admin\Auth\LoginController;
+use App\Http\Controllers\Admin\ImageUploadController;
 use App\Http\Controllers\Admin\RunningTextController;
 use App\Http\Controllers\Admin\CategoryEventController;
 use App\Http\Controllers\Admin\CompanyProfileController;
@@ -33,6 +34,7 @@ use App\Http\Controllers\Admin\CategoryArticleController;
 Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::get('login', [LoginController::class, 'index'])->name('login');
     Route::post('login', [LoginController::class, 'login'])->name('login.system');
+    Route::post('upload', [ImageUploadController::class, 'upload'])->name('upload');
 
     Route::get('slider', [SliderController::class, 'index'])->name('slider.index');
     Route::get('slider/create', [SliderController::class, 'create'])->name('slider.create');

@@ -9,6 +9,7 @@
     <meta name="description" content="RSUD CIMACAN">
     <meta name="keywords" content="RSUD CIMACAN">
     <meta name="author" content="RSUD CIMACAN">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Admin RSUD Cimacan</title>
     <link rel="apple-touch-icon" href="{{ asset('vuexy') }}/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('vuexy') }}/app-assets/images/ico/favicon.ico">
