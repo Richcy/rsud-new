@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\FieldDoctor;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Doctor extends Model
 {
@@ -61,7 +62,7 @@ class Doctor extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function field_doctor(): BelongsTo
+    public function field_doctor()
     {
         return $this->belongsTo(FieldDoctor::class, 'field_id', 'id');
     }

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\FieldDoctorController;
 use App\Http\Controllers\Admin\CareerController;
+use App\Http\Controllers\Admin\DoctorController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\CimanewsController;
@@ -71,4 +72,5 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::resource('category-event', CategoryEventController::class);
     Route::resource('category-article', CategoryArticleController::class);
     Route::resource('field-doctor', FieldDoctorController::class);
+    Route::resource('doctor', DoctorController::class);
 });

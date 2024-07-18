@@ -17,15 +17,15 @@ return new class extends Migration
             $table->integer('field_id')->unsigned(); // Panjang dioptimalkan menjadi 100 karakter
             $table->string('office', 150); // Panjang dioptimalkan menjadi 150 karakter
             $table->string('experience', 100); // Panjang dioptimalkan menjadi 100 karakter
-            $table->integer('year'); // Menggunakan tipe data INT untuk tahun
-            $table->integer('month'); // Menggunakan tipe data INT untuk bulan
-            $table->string('alumni', 100); // Panjang dioptimalkan menjadi 100 karakter
-            $table->string('nip', 50); // Panjang dioptimalkan menjadi 50 karakter
-            $table->string('str', 50); // Panjang dioptimalkan menjadi 50 karakter
+            $table->integer('year')->nullable(); // Menggunakan tipe data INT untuk tahun
+            $table->integer('month'->nullable()); // Menggunakan tipe data INT untuk bulan
+            $table->string('alumni', 100)->nullable(); // Panjang dioptimalkan menjadi 100 karakter
+            $table->string('nip', 50)->nullable(); // Panjang dioptimalkan menjadi 50 karakter
+            $table->string('str', 50)->nullable(); // Panjang dioptimalkan menjadi 50 karakter
             $table->string('sip', 50); // Panjang dioptimalkan menjadi 50 karakter
             $table->string('img', 255); // Panjang dioptimalkan menjadi 255 karakter
-            $table->string('status', 50); // Panjang dioptimalkan menjadi 50 karakter
-            $table->string('lang', 25); // Panjang dioptimalkan menjadi 50 karakter
+            $table->integer('status')->default(1); // Panjang dioptimalkan menjadi 50 karakter
+            $table->string('lang', 50); // Panjang dioptimalkan menjadi 50 karakter
             $table->timestamps();
         });
     }
