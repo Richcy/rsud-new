@@ -14,7 +14,7 @@ class ImageProfile extends Model
      *
      * @var string
      */
-    protected $table = 'image_profile';
+    protected $table = 'image_profiles';
 
     /**
      * The primary key associated with the table.

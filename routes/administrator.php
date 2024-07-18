@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\CimanewsController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\RunningTextController;
 use App\Http\Controllers\Admin\CategoryEventController;
+use App\Http\Controllers\Admin\CompanyProfileController;
 use App\Http\Controllers\Admin\FeaturedDoctorController;
 use App\Http\Controllers\Admin\ScheduleDoctorController;
 use App\Http\Controllers\Admin\CategoryArticleController;
@@ -70,6 +71,9 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
 
     Route::get('running-text', [RunningTextController::class, 'index'])->name('running-text.index');
     Route::put('running-text/{id}/update', [RunningTextController::class, 'update'])->name('running-text.update');
+
+    Route::get('structure', [CompanyProfileController::class, 'structure'])->name('structure.index');
+    Route::put('structure/{id}/update', [CompanyProfileController::class, 'structureUpdate'])->name('structure.update');
 
     Route::resource('category-event', CategoryEventController::class);
     Route::resource('category-article', CategoryArticleController::class);
