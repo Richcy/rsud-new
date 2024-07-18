@@ -39,7 +39,7 @@
                     </li>
                     <li class="{{ request()->routeIs('admin.sketch.index') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.sketch.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Denah</span></a>
                     </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Penilaian Mutu</span></a>
+                    <li class="{{ request()->routeIs('admin.quality-check.index') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.quality-check.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Penilaian Mutu</span></a>
                     </li>
                     <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Makluman Pelayanan</span></a>
                     </li>

@@ -78,6 +78,9 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::get('sketch', [CompanyProfileController::class, 'sketch'])->name('sketch.index');
     Route::put('sketch/{id}/update', [CompanyProfileController::class, 'sketchUpdate'])->name('sketch.update');
 
+    Route::get('quality-check', [CompanyProfileController::class, 'qualityCheck'])->name('quality-check.index');
+    Route::put('quality-check/{id}/update', [CompanyProfileController::class, 'qualityCheckUpdate'])->name('sketch.update');
+
     Route::resource('category-event', CategoryEventController::class);
     Route::resource('category-article', CategoryArticleController::class);
     Route::resource('field-doctor', FieldDoctorController::class);
