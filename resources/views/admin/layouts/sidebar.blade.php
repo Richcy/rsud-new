@@ -31,7 +31,11 @@
                 <ul class="menu-content">
                     <li class="ps-1 navigation-header"><span data-i18n="Forms &amp; Tables" style="font-size: 80% !important;">TENTANG MODUL RUMAH SAKIT</span><i data-feather="more-horizontal"></i>
                     </li>
-                    <li class="{{ request()->routeIs('admin.profile.index') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.profile.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Profil</span></a>
+                    <li class="{{ request()->routeIs(['admin.profile.index', 'admin.profileGallery.*']) ? 'active' : '' }}">
+                        <a class="d-flex align-items-center" href="{{ route('admin.profile.index') }}">
+                            <i data-feather="circle"></i>
+                            <span class="menu-item text-truncate" data-i18n="List">Profil</span>
+                        </a>
                     </li>
                     <li class="{{ request()->routeIs('admin.greeting-directur.index') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.greeting-directur.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Sambutan Direktur</span></a>
                     </li>

@@ -46,7 +46,7 @@
                                     <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Deskripsi</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Galeri</a>
+                                    <a class="nav-link" href="{{ route('admin.profileGallery.index') }}">Galeri</a>
                                 </li>
                             </ul>
                         </div>

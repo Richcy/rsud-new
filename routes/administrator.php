@@ -78,6 +78,11 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::get('profile', [CompanyProfileController::class, 'profile'])->name('profile.index');
     Route::put('profile/{id}/update', [CompanyProfileController::class, 'profileUpdate'])->name('profile.update');
 
+    Route::get('profile-gallery', [CompanyProfileController::class, 'profileGallery'])->name('profileGallery.index');
+    Route::get('profile-gallery/create', [CompanyProfileController::class, 'profileGalleryCreate'])->name('profileGallery.create');
+    Route::post('profile-gallery/', [CompanyProfileController::class, 'profileGalleryStore'])->name('profileGallery.store');
+    Route::delete('profile-gallery/{id}/', [CompanyProfileController::class, 'profileGalleryDestroy'])->name('profileGallery.destroy');
+
     Route::get('structure', [CompanyProfileController::class, 'structure'])->name('structure.index');
     Route::put('structure/{id}/update', [CompanyProfileController::class, 'structureUpdate'])->name('structure.update');
 
