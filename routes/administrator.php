@@ -84,6 +84,12 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::get('maklumat-pelayanan', [CompanyProfileController::class, 'pelayanan'])->name('maklumat-pelayanan.index');
     Route::put('maklumat-pelayanan/{id}/update', [CompanyProfileController::class, 'pelayananUpdate'])->name('maklumat-pelayanan.update');
 
+    Route::get('hak-kewajiban', [CompanyProfileController::class, 'hak'])->name('hak-kewajiban.index');
+    Route::put('hak-kewajiban/{id}/update', [CompanyProfileController::class, 'hakUpdate'])->name('hak-kewajiban.update');
+
+    Route::get('standar_pelayanan', [CompanyProfileController::class, 'standarPelayanan'])->name('standar_pelayanan.index');
+    Route::put('standar_pelayanan/{id}/update', [CompanyProfileController::class, 'standarPelayananUpdate'])->name('standar_pelayanan.update');
+
     Route::resource('category-event', CategoryEventController::class);
     Route::resource('category-article', CategoryArticleController::class);
     Route::resource('field-doctor', FieldDoctorController::class);

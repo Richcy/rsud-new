@@ -12,14 +12,14 @@
         <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
                 <div class="col-12">
-                    <h2 class="content-header-title float-start mb-0">Data Maklumat Pelayanan</h2>
+                    <h2 class="content-header-title float-start mb-0">Data Hak Dan Kewajiban</h2>
                     <div class="breadcrumb-wrapper">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
                                 <a href="#">Beranda</a>
                             </li>
                             <li class="breadcrumb-item active">
-                                <a href="#">Daftar Penilaian Mutu</a>
+                                <a href="#">Daftar Hak Dan Kewajiban</a>
                             </li>
                         </ol>
                     </div>
@@ -38,14 +38,14 @@
                         <div class="card-body">
                             <div class="row">
                                @if ($data != null)
-                               <form action="{{ route('admin.maklumat-pelayanan.update', $data->id) }}" method="post" enctype="multipart/form-data">
+                               <form action="{{ route('admin.hak-kewajiban.update', $data->id) }}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     @method('PUT')
                                 @endif
                                     <div class="col-12">
                                         <div class="col-md-12">
                                             <div class="mb-1">
-                                                <label for="img" class="form-label">Stuktur Maklumat Pelayanan</label>
+                                                <label for="img" class="form-label">Stuktur Organisasi</label>
                                                 <input type="file" accept="image/jpeg, image/png, image/jpg, image/gif" id="img" class="form-control @error('img') is-invalid @enderror" name="img">
                                                 <div id="avatar-content" class="mt-3">
                                                     @if($data->img)

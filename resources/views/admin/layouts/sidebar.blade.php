@@ -41,11 +41,11 @@
                     </li>
                     <li class="{{ request()->routeIs('admin.quality-check.index') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.quality-check.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Penilaian Mutu</span></a>
                     </li>
-                    <li class="{{ request()->routeIs('admin.maklumat-pelayanan.index') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.maklumat-pelayanan.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Makluman Pelayanan</span></a>
+                    <li class="{{ request()->routeIs('admin.maklumat-pelayanan.index') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.maklumat-pelayanan.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Maklumat Pelayanan</span></a>
                     </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Standar Pelayanan</span></a>
+                    <li class="{{ request()->routeIs('admin.standar_pelayanan.index') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.standar_pelayanan.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Standar Pelayanan</span></a>
                     </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Hak Dan Kewajiban</span></a>
+                    <li class="{{ request()->routeIs('admin.hak-kewajiban.index') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.hak-kewajiban.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Hak Dan Kewajiban</span></a>
                     </li>
                 </ul>
             </li>
