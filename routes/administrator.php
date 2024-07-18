@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\CimanewsController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\RunningTextController;
 use App\Http\Controllers\Admin\CategoryEventController;
+use App\Http\Controllers\Admin\FeaturedDoctorController;
 use App\Http\Controllers\Admin\CategoryArticleController;
 
 
@@ -73,4 +74,5 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::resource('category-article', CategoryArticleController::class);
     Route::resource('field-doctor', FieldDoctorController::class);
     Route::resource('doctor', DoctorController::class);
+    Route::resource('featured-doctor', FeaturedDoctorController::class);
 });

@@ -51,7 +51,7 @@ class FeaturedDoctor extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function doctor(): BelongsTo
+    public function doctor()
     {
         return $this->belongsTo(Doctor::class, 'doctor_id', 'id');
     }
