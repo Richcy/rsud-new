@@ -33,7 +33,7 @@
                     </li>
                     <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Profil</span></a>
                     </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Sambutan Direktur</span></a>
+                    <li class="{{ request()->routeIs('admin.greeting-directur.index') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.greeting-directur.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Sambutan Direktur</span></a>
                     </li>
                     <li class="{{ request()->routeIs('admin.structure.index') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.structure.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Struktur Organisasi</span></a>
                     </li>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Service;
 use App\Models\ImageProfile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -10,6 +11,53 @@ use Illuminate\Support\Facades\Validator;
 
 class CompanyProfileController extends Controller
 {
+    public function greeting()
+    {
+        $data = Service::where('type', 'about_home')->first();
+        return view('admin.company-profile.greeting', compact('data'));
+    }
+    public function greetingUpdate(Request $request, $id)
+    {
+        $validator = Validator::make($request->all(), [
+            'img' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'description' => 'required'
+        ], [
+            'img.image' => 'File harus berupa gambar.',
+            'img.mimes' => 'Format gambar harus jpeg, png, jpg, atau gif.',
+            'img.max' => 'Ukuran gambar tidak boleh lebih dari 2MB.',
+            'description.required' => 'Deskripsi harus diisi.',
+        ]);
+
+        if ($validator->fails()) {
+            return back()->withErrors($validator)->withInput()->with('error', $validator->errors()->first());
+        }
+
+        DB::beginTransaction();
+
+        try {
+            $greeting = Service::findOrFail($id);
+
+            if ($request->hasFile('img')) {
+                $image = $request->file('img');
+                $imageName = 'greeting_' . now()->format('Ymd_His') . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
+                $path = $image->storeAs('about_company', $imageName, 'public');
+            } else {
+                $path = $greeting->banner;
+            }
+            // Simpan path gambar ke dalam database
+            $greeting->update([
+                'banner' => $path,
+                'description' => $request->description,
+            ]);
+
+            DB::commit();
+
+            return redirect()->back()->with('success', 'Gambar berhasil diperbarui.');
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return redirect()->back()->with('error', 'Terjadi kesalahan: ' . $e->getMessage());
+        }
+    }
     public function structure()
     {
         $data = ImageProfile::where('type', 'structure')->first();

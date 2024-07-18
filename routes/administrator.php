@@ -91,6 +91,9 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::get('standar_pelayanan', [CompanyProfileController::class, 'standarPelayanan'])->name('standar_pelayanan.index');
     Route::put('standar_pelayanan/{id}/update', [CompanyProfileController::class, 'standarPelayananUpdate'])->name('standar_pelayanan.update');
 
+    Route::get('greeting-directur', [CompanyProfileController::class, 'greeting'])->name('greeting-directur.index');
+    Route::put('greeting-directur/{id}/update', [CompanyProfileController::class, 'greetingUpdate'])->name('greeting-directur.update');
+
     Route::resource('category-event', CategoryEventController::class);
     Route::resource('category-article', CategoryArticleController::class);
     Route::resource('field-doctor', FieldDoctorController::class);

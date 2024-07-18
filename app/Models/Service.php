@@ -33,6 +33,7 @@ class Service extends Model
         'banner',
         'type',
         'lang',
+        'description',
         'created_at',
         'updated_at',
     ];
