@@ -8,6 +8,7 @@ use Database\Seeders\RoleSeeder;
 use Database\Seeders\AdminSeeder;
 use Database\Seeders\StructureSeeder;
 use Database\Seeders\RunningTextSeeder;
+use Database\Seeders\AboutCompanySeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -21,7 +22,7 @@ class DatabaseSeeder extends Seeder
           RoleSeeder::class,
           AdminSeeder::class,
           RunningTextSeeder::class,
-          StructureSeeder::class,
+          AboutCompanySeeder::class,
         ]);
         // \App\Models\User::factory(10)->create();
 
