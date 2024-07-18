@@ -117,8 +117,8 @@
                     <span class="menu-title text-truncate" data-i18n="Karir">Karir</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="d-flex align-items-center" href="#">
+            <li class="nav-item {{ request()->routeIs('admin.admin.*') ? 'active' : '' }}">
+                <a class="d-flex align-items-center" href="{{ route('admin.admin.index') }}">
                     <i class="bi bi-person-gear" style="padding-top: 0; margin-top: -15px; transform: scale(1.2)"></i>
                     <span class="menu-title text-truncate" data-i18n="Karir">Kelola Admin</span>
                 </a>

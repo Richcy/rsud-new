@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\FieldDoctorController;
 use App\Http\Controllers\Admin\CareerController;
@@ -96,4 +97,5 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::resource('doctor', DoctorController::class);
     Route::resource('featured-doctor', FeaturedDoctorController::class);
     Route::resource('schedule-doctor', ScheduleDoctorController::class);
+    Route::resource('admin', AdminController::class);
 });
