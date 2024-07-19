@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\FarmasiController;
 use App\Http\Controllers\Admin\CimanewsController;
+use App\Http\Controllers\Admin\AmbulanceController;
 use App\Http\Controllers\Admin\RadiologyController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\HemodialisController;
@@ -266,6 +267,23 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::get('rehab-medik/gallery/{id}/edit', [RehabMedikController::class, 'galleryEdit'])->name('rehab-medik.gallery.edit');
     Route::put('rehab-medik/gallery/{id}', [RehabMedikController::class, 'galleryUpdate'])->name('rehab-medik.gallery.update');
     Route::delete('rehab-medik/gallery/{id}', [RehabMedikController::class, 'galleryDestroy'])->name('rehab-medik.gallery.destroy');
+
+    Route::get('ambulance', [AmbulanceController::class, 'index'])->name('ambulance.index');
+    Route::put('ambulance/{id}/update', [AmbulanceController::class, 'update'])->name('ambulance.update');
+
+    Route::get('ambulance/sub-service/{service_id}', [AmbulanceController::class, 'indexSubService'])->name('ambulance.sub-service.index');
+    Route::get('ambulance/sub-service/create/{service_id}', [AmbulanceController::class, 'createSubService'])->name('ambulance.sub-service.create');
+    Route::post('ambulance/sub-service/{service_id}', [AmbulanceController::class, 'storeSubService'])->name('ambulance.sub-service.store');
+    Route::get('ambulance/sub-service/{slug}/edit', [AmbulanceController::class, 'editSubService'])->name('ambulance.sub-service.edit');
+    Route::put('ambulance/sub-service/{slug}', [AmbulanceController::class, 'updateSubService'])->name('ambulance.sub-service.update');
+    Route::delete('ambulance/sub-service/{slug}', [AmbulanceController::class, 'destroySubService'])->name('ambulance.sub-service.destroy');
+
+    Route::get('ambulance/gallery', [AmbulanceController::class, 'galleryIndex'])->name('ambulance.gallery.index');
+    Route::get('ambulance/gallery/create', [AmbulanceController::class, 'galleryCreate'])->name('ambulance.gallery.create');
+    Route::post('ambulance/gallery', [AmbulanceController::class, 'galleryStore'])->name('ambulance.gallery.store');
+    Route::get('ambulance/gallery/{id}/edit', [AmbulanceController::class, 'galleryEdit'])->name('ambulance.gallery.edit');
+    Route::put('ambulance/gallery/{id}', [AmbulanceController::class, 'galleryUpdate'])->name('ambulance.gallery.update');
+    Route::delete('ambulance/gallery/{id}', [AmbulanceController::class, 'galleryDestroy'])->name('ambulance.gallery.destroy');
 
     Route::resource('category-event', CategoryEventController::class);
     Route::resource('category-article', CategoryArticleController::class);
