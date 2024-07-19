@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\DoctorController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\CimanewsController;
+use App\Http\Controllers\Admin\RadiologyController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\LabotariumController;
 use App\Http\Controllers\Admin\ImageUploadController;
@@ -194,6 +195,23 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::get('labotarium/gallery/{id}/edit', [LabotariumController::class, 'galleryEdit'])->name('labotarium.gallery.edit');
     Route::put('labotarium/gallery/{id}', [LabotariumController::class, 'galleryUpdate'])->name('labotarium.gallery.update');
     Route::delete('labotarium/gallery/{id}', [LabotariumController::class, 'galleryDestroy'])->name('labotarium.gallery.destroy');
+
+    Route::get('radiology', [RadiologyController::class, 'index'])->name('radiology.index');
+    Route::put('radiology/{id}/update', [RadiologyController::class, 'update'])->name('radiology.update');
+
+    Route::get('radiology/sub-service/{service_id}', [RadiologyController::class, 'indexSubService'])->name('radiology.sub-service.index');
+    Route::get('radiology/sub-service/create/{service_id}', [RadiologyController::class, 'createSubService'])->name('radiology.sub-service.create');
+    Route::post('radiology/sub-service/{service_id}', [RadiologyController::class, 'storeSubService'])->name('radiology.sub-service.store');
+    Route::get('radiology/sub-service/{slug}/edit', [RadiologyController::class, 'editSubService'])->name('radiology.sub-service.edit');
+    Route::put('radiology/sub-service/{slug}', [RadiologyController::class, 'updateSubService'])->name('radiology.sub-service.update');
+    Route::delete('radiology/sub-service/{slug}', [RadiologyController::class, 'destroySubService'])->name('radiology.sub-service.destroy');
+
+    Route::get('radiology/gallery', [RadiologyController::class, 'galleryIndex'])->name('radiology.gallery.index');
+    Route::get('radiology/gallery/create', [RadiologyController::class, 'galleryCreate'])->name('radiology.gallery.create');
+    Route::post('radiology/gallery', [RadiologyController::class, 'galleryStore'])->name('radiology.gallery.store');
+    Route::get('radiology/gallery/{id}/edit', [RadiologyController::class, 'galleryEdit'])->name('radiology.gallery.edit');
+    Route::put('radiology/gallery/{id}', [RadiologyController::class, 'galleryUpdate'])->name('radiology.gallery.update');
+    Route::delete('radiology/gallery/{id}', [RadiologyController::class, 'galleryDestroy'])->name('radiology.gallery.destroy');
 
     Route::resource('category-event', CategoryEventController::class);
     Route::resource('category-article', CategoryArticleController::class);
