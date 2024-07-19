@@ -24,8 +24,9 @@ class LoginController extends Controller
         $credenstial = $request->only('username', 'password');
         if (Auth::guard('admin')->attempt($credenstial)) {
             // Jika password cocok, login admin
+            // return 'yes';
             // Redirect ke dashboard atau halaman yang diinginkan
-            return redirect()->route('admin.slider.index');
+            return redirect()->route('admin.slider.index')->with('selamat datang');
         } else {
             // Jika gagal login, redirect kembali dengan error
             return redirect()->back()->with('error', 'Email Atau Password Anda Salah');

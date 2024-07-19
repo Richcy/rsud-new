@@ -17,7 +17,7 @@ use App\Http\Controllers\Admin\Auth\LoginController;
 require __DIR__ . '/administrator.php';
 
 Route::get('/', function () {
-    return view('admin.layouts.main');
+    return view('welcome');
 });
 
 Route::post('/logout', [LoginController::class, 'logout'])

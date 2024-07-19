@@ -37,6 +37,7 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::post('login', [LoginController::class, 'login'])->name('login.system');
     Route::post('upload', [ImageUploadController::class, 'upload'])->name('upload');
 
+   Route::middleware(['auth:admin'])->group(function () {
     Route::get('slider', [SliderController::class, 'index'])->name('slider.index');
     Route::get('slider/create', [SliderController::class, 'create'])->name('slider.create');
     Route::post('slider', [SliderController::class, 'store'])->name('slider.store');
@@ -128,5 +129,6 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::resource('doctor', DoctorController::class);
     Route::resource('featured-doctor', FeaturedDoctorController::class);
     Route::resource('schedule-doctor', ScheduleDoctorController::class);
-    Route::resource('admin', AdminController::class);
+});
+Route::resource('admin', AdminController::class);
 });
