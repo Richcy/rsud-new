@@ -1,0 +1,156 @@
+@extends('admin.layouts.main')
+
+@push('vendor_css')
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
+@endpush
+
+@push('custom_css')
+    <style>
+        table.dataTable.no-footer {
+            border-bottom: none !important;
+        }
+    </style>
+@endpush
+
+@section('content')
+    <div class="content-header row">
+        <div class="content-header-left col-md-9 col-12 mb-2">
+            <div class="row breadcrumbs-top">
+                <div class="col-12">
+                    <h2 class="content-header-title float-start mb-0">Data Beranda</h2>
+                    <div class="breadcrumb-wrapper">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="#">Beranda</a>
+                            </li>
+                            <li class="breadcrumb-item active">
+                                <a href="{{ route('admin.slider.index') }}">Daftar Slider</a>
+                            </li>
+                            <li class="breadcrumb-item active">
+                                <a href="#">Tambah Slider</a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-header-right text-md-end col-md-3 col-12 d-md-block d-none">
+            {{--  --}}
+        </div>
+    </div>
+    <div class="content-body">
+    <section id="basic-example">
+        <div class="row match-height">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Form Tambah Slider</h2>
+                    </div>
+                    <div class="card-body" style="padding-top: 6px !important;">
+                        <form action="{{ route('admin.slider.store') }}" method="post" enctype="multipart/form-data">
+                            @csrf
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-1">
+                                        <label for="title" class="form-label">Judul</label>
+                                        <input type="text" id="title" class="form-control @error('title') is-invalid @enderror" name="title" onkeyup="createSlug()" placeholder="Masukan Judul Slider" value="{{ old('title') }}">
+
+                                        @error('title')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-1">
+                                        <label for="slug" class="form-label">Slug</label>
+                                        <input type="text" id="slug" class="form-control @error('slug') is-invalid @enderror" name="slug"  placeholder="Slug akan otomatis di isi sesuai dengan judul" value="{{ old('slug') }}" readonly>
+
+                                        @error('slug')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-1">
+                                        <label for="img" class="form-label">Foto</label>
+                                        <input type="file" accept="image/jpeg, image/png, image/jpg, image/gif" id="img"
+                                            class="form-control @error('img') is-invalid @enderror"
+                                            name="img" value="{{ old('img') }}">
+
+                                        @error('img')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-1">
+                                        <label>Foto Baru</label>
+                                        <br>
+                                        <div id="avatar-content">
+                                            -
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="mb-1">
+                                        <label for="description" class="form-label">Deskripsi</label>
+                                        <textarea name="description" id="description" cols="5" rows="5" class="form-control"></textarea>
+                                        @error('description')
+                                            <div class="invalid-feedback d-block">{{ $message ?? 'Something error' }}
+                                            </div>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- button submit --}}
+                            <div class="d-flex justify-content-end">
+                                <a href="{{ route('admin.slider.index') }}"
+                                    class="btn btn-secondary me-1">Kembali</a>
+                                <button type="submit" class="btn btn-primary">Simpan</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+@endsection
+
+@push('vendor_js')
+@endpush
+
+@push('custom_js')
+    <script>
+         function createSlug() {
+            var title = $('#title').val();
+            var slug = title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
+            $('#slug').val(slug);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Image preview
+            $(document).on('change', '#img', function() {
+                var file = $(this)[0].files[0];
+
+                // Check if a file is selected
+                if(file) {
+                    // Create a FileReader object
+                    var reader = new FileReader();
+
+                    // Set up onload function
+                    reader.onload = function(e){
+                        // Set the background image of the avatar content
+                        let src = e.target.result;
+                        $('#avatar-content').html('<img src="'+src+'" id="avatar-image" style="width: 200px;">');
+                    };
+
+                    // Read the file as data URL
+                    reader.readAsDataURL(file);
+                }
+            });
+        });
+    </script>
+@endpush
