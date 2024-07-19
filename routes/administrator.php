@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\CimanewsController;
 use App\Http\Controllers\Admin\RadiologyController;
 use App\Http\Controllers\Admin\Auth\LoginController;
+use App\Http\Controllers\Admin\HemodialisController;
 use App\Http\Controllers\Admin\LabotariumController;
 use App\Http\Controllers\Admin\ImageUploadController;
 use App\Http\Controllers\Admin\RunningTextController;
@@ -212,6 +213,23 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::get('radiology/gallery/{id}/edit', [RadiologyController::class, 'galleryEdit'])->name('radiology.gallery.edit');
     Route::put('radiology/gallery/{id}', [RadiologyController::class, 'galleryUpdate'])->name('radiology.gallery.update');
     Route::delete('radiology/gallery/{id}', [RadiologyController::class, 'galleryDestroy'])->name('radiology.gallery.destroy');
+
+    Route::get('hemodialis', [HemodialisController::class, 'index'])->name('hemodialis.index');
+    Route::put('hemodialis/{id}/update', [HemodialisController::class, 'update'])->name('hemodialis.update');
+
+    Route::get('hemodialis/sub-service/{service_id}', [HemodialisController::class, 'indexSubService'])->name('hemodialis.sub-service.index');
+    Route::get('hemodialis/sub-service/create/{service_id}', [HemodialisController::class, 'createSubService'])->name('hemodialis.sub-service.create');
+    Route::post('hemodialis/sub-service/{service_id}', [HemodialisController::class, 'storeSubService'])->name('hemodialis.sub-service.store');
+    Route::get('hemodialis/sub-service/{slug}/edit', [HemodialisController::class, 'editSubService'])->name('hemodialis.sub-service.edit');
+    Route::put('hemodialis/sub-service/{slug}', [HemodialisController::class, 'updateSubService'])->name('hemodialis.sub-service.update');
+    Route::delete('hemodialis/sub-service/{slug}', [HemodialisController::class, 'destroySubService'])->name('hemodialis.sub-service.destroy');
+
+    Route::get('hemodialis/gallery', [HemodialisController::class, 'galleryIndex'])->name('hemodialis.gallery.index');
+    Route::get('hemodialis/gallery/create', [HemodialisController::class, 'galleryCreate'])->name('hemodialis.gallery.create');
+    Route::post('hemodialis/gallery', [HemodialisController::class, 'galleryStore'])->name('hemodialis.gallery.store');
+    Route::get('hemodialis/gallery/{id}/edit', [HemodialisController::class, 'galleryEdit'])->name('hemodialis.gallery.edit');
+    Route::put('hemodialis/gallery/{id}', [HemodialisController::class, 'galleryUpdate'])->name('hemodialis.gallery.update');
+    Route::delete('hemodialis/gallery/{id}', [HemodialisController::class, 'galleryDestroy'])->name('hemodialis.gallery.destroy');
 
     Route::resource('category-event', CategoryEventController::class);
     Route::resource('category-article', CategoryArticleController::class);
