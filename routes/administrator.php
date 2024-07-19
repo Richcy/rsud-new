@@ -129,6 +129,6 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::resource('doctor', DoctorController::class);
     Route::resource('featured-doctor', FeaturedDoctorController::class);
     Route::resource('schedule-doctor', ScheduleDoctorController::class);
+    Route::resource('admin', AdminController::class);
 });
-Route::resource('admin', AdminController::class);
 });
