@@ -73,7 +73,7 @@
                     </li>
                     <li class="{{ request()->routeIs(['admin.farmasi.*']) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.farmasi.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Farmasi</span></a>
                     </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Rehab Medik</span></a>
+                    <li class="{{ request()->routeIs(['admin.rehab-medik.*']) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.rehab-medik.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Rehab Medik</span></a>
                     </li>
                     <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Ambulans</span></a>
                     </li>

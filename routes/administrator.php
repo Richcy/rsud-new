@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\RadiologyController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\HemodialisController;
 use App\Http\Controllers\Admin\LabotariumController;
+use App\Http\Controllers\Admin\RehabMedikController;
 use App\Http\Controllers\Admin\ImageUploadController;
 use App\Http\Controllers\Admin\RunningTextController;
 use App\Http\Controllers\Admin\CategoryEventController;
@@ -248,6 +249,23 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::get('farmasi/gallery/{id}/edit', [FarmasiController::class, 'galleryEdit'])->name('farmasi.gallery.edit');
     Route::put('farmasi/gallery/{id}', [FarmasiController::class, 'galleryUpdate'])->name('farmasi.gallery.update');
     Route::delete('farmasi/gallery/{id}', [FarmasiController::class, 'galleryDestroy'])->name('farmasi.gallery.destroy');
+
+    Route::get('rehab-medik', [RehabMedikController::class, 'index'])->name('rehab-medik.index');
+    Route::put('rehab-medik/{id}/update', [RehabMedikController::class, 'update'])->name('rehab-medik.update');
+
+    Route::get('rehab-medik/sub-service/{service_id}', [RehabMedikController::class, 'indexSubService'])->name('rehab-medik.sub-service.index');
+    Route::get('rehab-medik/sub-service/create/{service_id}', [RehabMedikController::class, 'createSubService'])->name('rehab-medik.sub-service.create');
+    Route::post('rehab-medik/sub-service/{service_id}', [RehabMedikController::class, 'storeSubService'])->name('rehab-medik.sub-service.store');
+    Route::get('rehab-medik/sub-service/{slug}/edit', [RehabMedikController::class, 'editSubService'])->name('rehab-medik.sub-service.edit');
+    Route::put('rehab-medik/sub-service/{slug}', [RehabMedikController::class, 'updateSubService'])->name('rehab-medik.sub-service.update');
+    Route::delete('rehab-medik/sub-service/{slug}', [RehabMedikController::class, 'destroySubService'])->name('rehab-medik.sub-service.destroy');
+
+    Route::get('rehab-medik/gallery', [RehabMedikController::class, 'galleryIndex'])->name('rehab-medik.gallery.index');
+    Route::get('rehab-medik/gallery/create', [RehabMedikController::class, 'galleryCreate'])->name('rehab-medik.gallery.create');
+    Route::post('rehab-medik/gallery', [RehabMedikController::class, 'galleryStore'])->name('rehab-medik.gallery.store');
+    Route::get('rehab-medik/gallery/{id}/edit', [RehabMedikController::class, 'galleryEdit'])->name('rehab-medik.gallery.edit');
+    Route::put('rehab-medik/gallery/{id}', [RehabMedikController::class, 'galleryUpdate'])->name('rehab-medik.gallery.update');
+    Route::delete('rehab-medik/gallery/{id}', [RehabMedikController::class, 'galleryDestroy'])->name('rehab-medik.gallery.destroy');
 
     Route::resource('category-event', CategoryEventController::class);
     Route::resource('category-article', CategoryArticleController::class);

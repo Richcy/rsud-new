@@ -97,7 +97,7 @@ class ServiceSeeder extends Seeder
             [
                 'banner' => 'test.png',
                 'description' => 'test',
-                'type' => 'rehab_medic',
+                'type' => 'rehab_medik',
                 'lang' => 'id',
                 'created_at' => now(),
                 'updated_at' => now(),
