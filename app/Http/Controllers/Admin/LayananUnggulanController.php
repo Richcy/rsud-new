@@ -74,7 +74,7 @@ class LayananUnggulanController extends Controller
 
             DB::commit();
 
-            return redirect()->route('admin.services.index')->with('success', 'Service berhasil diperbarui.');
+            return redirect()->route('admin.layanan-unggulan.index')->with('success', 'Instalasi Rawat Jalan berhasil diperbarui.');
         } catch (\Exception $e) {
             DB::rollBack();
             return redirect()->back()->with('error', 'Terjadi kesalahan: ' . $e->getMessage());

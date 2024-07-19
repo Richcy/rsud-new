@@ -47,7 +47,7 @@
                         <h4>Form Tambah Sub Service</h4>
                     </div>
                     <div class="card-body" style="padding-top: 6px !important;">
-                        <form action="{{ route('admin.layanan-unggulan-sub-event.store', $id) }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('admin.layanan-unggulan-sub-service.store', $id) }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-md-6">
