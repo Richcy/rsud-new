@@ -21,6 +21,7 @@ use App\Http\Controllers\Admin\CategoryArticleController;
 use App\Http\Controllers\Admin\LayananUnggulanController;
 use App\Http\Controllers\Admin\InstalasiRawatInapController;
 use App\Http\Controllers\Admin\InstalasiRawatJalanController;
+use App\Http\Controllers\Admin\InstalasiGawatDaruratController;
 
 
 /*
@@ -158,6 +159,23 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::get('rawat-inap/gallery/{id}/edit', [InstalasiRawatInapController::class, 'galleryEdit'])->name('rawat-inap.gallery.edit');
     Route::put('rawat-inap/gallery/{id}', [InstalasiRawatInapController::class, 'galleryUpdate'])->name('rawat-inap.gallery.update');
     Route::delete('rawat-inap/gallery/{id}', [InstalasiRawatInapController::class, 'galleryDestroy'])->name('rawat-inap.gallery.destroy');
+
+    Route::get('gawat-darurat', [InstalasiGawatDaruratController::class, 'index'])->name('gawat-darurat.index');
+    Route::put('gawat-darurat/{id}/update', [InstalasiGawatDaruratController::class, 'update'])->name('gawat-darurat.update');
+
+    Route::get('gawat-darurat/sub-service/{service_id}', [InstalasiGawatDaruratController::class, 'indexSubService'])->name('gawat-darurat.sub-service.index');
+    Route::get('gawat-darurat/sub-service/create/{service_id}', [InstalasiGawatDaruratController::class, 'createSubService'])->name('gawat-darurat.sub-service.create');
+    Route::post('gawat-darurat/sub-service/{service_id}', [InstalasiGawatDaruratController::class, 'storeSubService'])->name('gawat-darurat.sub-service.store');
+    Route::get('gawat-darurat/sub-service/{slug}/edit', [InstalasiGawatDaruratController::class, 'editSubService'])->name('gawat-darurat.sub-service.edit');
+    Route::put('gawat-darurat/sub-service/{slug}', [InstalasiGawatDaruratController::class, 'updateSubService'])->name('gawat-darurat.sub-service.update');
+    Route::delete('gawat-darurat/sub-service/{slug}', [InstalasiGawatDaruratController::class, 'destroySubService'])->name('gawat-darurat.sub-service.destroy');
+
+    Route::get('gawat-darurat/gallery', [InstalasiGawatDaruratController::class, 'galleryIndex'])->name('gawat-darurat.gallery.index');
+    Route::get('gawat-darurat/gallery/create', [InstalasiGawatDaruratController::class, 'galleryCreate'])->name('gawat-darurat.gallery.create');
+    Route::post('gawat-darurat/gallery', [InstalasiGawatDaruratController::class, 'galleryStore'])->name('gawat-darurat.gallery.store');
+    Route::get('gawat-darurat/gallery/{id}/edit', [InstalasiGawatDaruratController::class, 'galleryEdit'])->name('gawat-darurat.gallery.edit');
+    Route::put('gawat-darurat/gallery/{id}', [InstalasiGawatDaruratController::class, 'galleryUpdate'])->name('gawat-darurat.gallery.update');
+    Route::delete('gawat-darurat/gallery/{id}', [InstalasiGawatDaruratController::class, 'galleryDestroy'])->name('gawat-darurat.gallery.destroy');
 
     Route::resource('category-event', CategoryEventController::class);
     Route::resource('category-article', CategoryArticleController::class);
