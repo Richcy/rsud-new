@@ -90,7 +90,7 @@
             processing: true,
             serverSide: true,
             ajax: {
-                url: "/adminstrator/career",
+                url: "/administrator/career",
                 type: 'GET',
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'
@@ -168,7 +168,7 @@
                 if (result.isConfirmed) {
                     // Kirim permintaan Ajax untuk mengubah status
                     $.ajax({
-                        url: '/adminstrator/career/change-status', // Sesuaikan dengan nama route yang Anda tentukan
+                        url: '/administrator/career/change-status', // Sesuaikan dengan nama route yang Anda tentukan
                         method: 'POST',
                         data: {
                             _token: '{{ csrf_token() }}',

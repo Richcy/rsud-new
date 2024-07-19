@@ -106,7 +106,7 @@
             serverSide: true,
             responsive: true,
             ajax: {
-                url: '/adminstrator/labotarium/sub-service/{{ $id }}',
+                url: '/administrator/labotarium/sub-service/{{ $id }}',
                 type: 'GET',
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'

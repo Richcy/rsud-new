@@ -106,7 +106,7 @@
             serverSide: true,
             responsive: true,
             ajax: {
-                url: '/adminstrator/radiology/sub-service/{{ $id }}',
+                url: '/administrator/radiology/sub-service/{{ $id }}',
                 type: 'GET',
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'

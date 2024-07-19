@@ -114,7 +114,7 @@
                 processing: true,
                 serverSide: true,
                 ajax: {
-                    url: "/adminstrator/featured-doctor",
+                    url: "/administrator/featured-doctor",
                     type: 'GET',
                 },
                 columns: [

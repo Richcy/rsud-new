@@ -41,7 +41,7 @@ use App\Http\Controllers\Admin\InstalasiGawatDaruratController;
 |
 */
 
-Route::prefix('adminstrator')->name('admin.')->group(function () {
+Route::prefix('administrator')->name('admin.')->group(function () {
     Route::get('login', [LoginController::class, 'index'])->name('login');
     Route::post('login', [LoginController::class, 'login'])->name('login.system');
     Route::post('upload', [ImageUploadController::class, 'upload'])->name('upload');

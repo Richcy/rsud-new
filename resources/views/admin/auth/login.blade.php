@@ -175,7 +175,7 @@
                                 </a>
 
                                 <div class="text-center">
-                                    <h3 class="poppins-regular text-uppercase">Adminstrator</h3>
+                                    <h3 class="poppins-regular text-uppercase">administrator</h3>
                                 </div>
 
                                 <form class="auth-login-form mt-2" action="{{ route('admin.login.system') }}" method="POST">
