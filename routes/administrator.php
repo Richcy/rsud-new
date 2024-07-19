@@ -18,6 +18,7 @@ use App\Http\Controllers\Admin\CompanyProfileController;
 use App\Http\Controllers\Admin\FeaturedDoctorController;
 use App\Http\Controllers\Admin\ScheduleDoctorController;
 use App\Http\Controllers\Admin\CategoryArticleController;
+use App\Http\Controllers\Admin\LayananUnggulanController;
 
 
 /*
@@ -103,6 +104,23 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
 
     Route::get('greeting-directur', [CompanyProfileController::class, 'greeting'])->name('greeting-directur.index');
     Route::put('greeting-directur/{id}/update', [CompanyProfileController::class, 'greetingUpdate'])->name('greeting-directur.update');
+
+    Route::get('layanan-unggulan', [LayananUnggulanController::class, 'index'])->name('layanan-unggulan.index');
+    Route::put('layanan-unggulan/{id}/update', [LayananUnggulanController::class, 'update'])->name('layanan-unggulan.update');
+
+    Route::get('layanan-unggulan/sub-service/{service_id}', [LayananUnggulanController::class, 'indexSubService'])->name('layanan-unggulan-sub-service.index');
+    Route::get('layanan-unggulan/sub-service/create/{service_id}', [LayananUnggulanController::class, 'createSubService'])->name('layanan-unggulan-sub-service.create');
+    Route::post('layanan-unggulan/sub-service/{service_id}', [LayananUnggulanController::class, 'storeSubService'])->name('layanan-unggulan-sub-service.store');
+    Route::get('layanan-unggulan/sub-service/{slug}/edit', [LayananUnggulanController::class, 'editSubService'])->name('layanan-unggulan-sub-service.edit');
+    Route::put('layanan-unggulan/sub-service/{slug}', [LayananUnggulanController::class, 'updateSubService'])->name('layanan-unggulan-sub-service.update');
+    Route::delete('layanan-unggulan/sub-service/{slug}', [LayananUnggulanController::class, 'destroySubService'])->name('layanan-unggulan-sub-service.destroy');
+
+    Route::get('layanan-unggulan/gallery', [LayananUnggulanController::class, 'galleryIndex'])->name('layanan-unggulan-gallery.index');
+    Route::get('layanan-unggulan/gallery/create', [LayananUnggulanController::class, 'galleryCreate'])->name('layanan-unggulan-gallery.create');
+    Route::post('layanan-unggulan/gallery', [LayananUnggulanController::class, 'galleryStore'])->name('layanan-unggulan-gallery.store');
+    Route::get('layanan-unggulan/gallery/{id}/edit', [LayananUnggulanController::class, 'galleryEdit'])->name('layanan-unggulan-gallery.edit');
+    Route::put('layanan-unggulan/gallery/{id}', [LayananUnggulanController::class, 'galleryUpdate'])->name('layanan-unggulan-gallery.update');
+    Route::delete('layanan-unggulan/gallery/{id}', [LayananUnggulanController::class, 'galleryDestroy'])->name('layanan-unggulan-gallery.destroy');
 
     Route::resource('category-event', CategoryEventController::class);
     Route::resource('category-article', CategoryArticleController::class);

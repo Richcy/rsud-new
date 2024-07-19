@@ -57,7 +57,7 @@
                 <ul class="menu-content">
                     <li class="ps-1 navigation-header"><span data-i18n="Forms &amp; Tables" style="font-size: 80% !important;">MODUL PELAYANAN  </span><i data-feather="more-horizontal"></i>
                     </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Layanan Unggulan</span></a>
+                    <li class="{{ request()->routeIs(['admin.layanan-unggulan.index', 'admin.layanan-unggulan-gallery.*', 'admin.layanan-unggulan-sub-service.*']) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.layanan-unggulan.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Layanan Unggulan</span></a>
                     </li>
                     <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Instalasi Rawat Jalan</span></a>
                     </li>
