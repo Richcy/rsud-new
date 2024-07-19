@@ -65,7 +65,7 @@
                     </li>
                     <li class="{{ request()->routeIs(['admin.gawat-darurat.*']) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.gawat-darurat.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Instalasi Gawat Darurat</span></a>
                     </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Labotarium</span></a>
+                    <li class="{{ request()->routeIs(['admin.labotarium.*']) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.labotarium.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Labotarium</span></a>
                     </li>
                     <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Radiology</span></a>
                     </li>

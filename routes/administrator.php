@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\CimanewsController;
 use App\Http\Controllers\Admin\Auth\LoginController;
+use App\Http\Controllers\Admin\LabotariumController;
 use App\Http\Controllers\Admin\ImageUploadController;
 use App\Http\Controllers\Admin\RunningTextController;
 use App\Http\Controllers\Admin\CategoryEventController;
@@ -176,6 +177,23 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::get('gawat-darurat/gallery/{id}/edit', [InstalasiGawatDaruratController::class, 'galleryEdit'])->name('gawat-darurat.gallery.edit');
     Route::put('gawat-darurat/gallery/{id}', [InstalasiGawatDaruratController::class, 'galleryUpdate'])->name('gawat-darurat.gallery.update');
     Route::delete('gawat-darurat/gallery/{id}', [InstalasiGawatDaruratController::class, 'galleryDestroy'])->name('gawat-darurat.gallery.destroy');
+
+    Route::get('labotarium', [LabotariumController::class, 'index'])->name('labotarium.index');
+    Route::put('labotarium/{id}/update', [LabotariumController::class, 'update'])->name('labotarium.update');
+
+    Route::get('labotarium/sub-service/{service_id}', [LabotariumController::class, 'indexSubService'])->name('labotarium.sub-service.index');
+    Route::get('labotarium/sub-service/create/{service_id}', [LabotariumController::class, 'createSubService'])->name('labotarium.sub-service.create');
+    Route::post('labotarium/sub-service/{service_id}', [LabotariumController::class, 'storeSubService'])->name('labotarium.sub-service.store');
+    Route::get('labotarium/sub-service/{slug}/edit', [LabotariumController::class, 'editSubService'])->name('labotarium.sub-service.edit');
+    Route::put('labotarium/sub-service/{slug}', [LabotariumController::class, 'updateSubService'])->name('labotarium.sub-service.update');
+    Route::delete('labotarium/sub-service/{slug}', [LabotariumController::class, 'destroySubService'])->name('labotarium.sub-service.destroy');
+
+    Route::get('labotarium/gallery', [LabotariumController::class, 'galleryIndex'])->name('labotarium.gallery.index');
+    Route::get('labotarium/gallery/create', [LabotariumController::class, 'galleryCreate'])->name('labotarium.gallery.create');
+    Route::post('labotarium/gallery', [LabotariumController::class, 'galleryStore'])->name('labotarium.gallery.store');
+    Route::get('labotarium/gallery/{id}/edit', [LabotariumController::class, 'galleryEdit'])->name('labotarium.gallery.edit');
+    Route::put('labotarium/gallery/{id}', [LabotariumController::class, 'galleryUpdate'])->name('labotarium.gallery.update');
+    Route::delete('labotarium/gallery/{id}', [LabotariumController::class, 'galleryDestroy'])->name('labotarium.gallery.destroy');
 
     Route::resource('category-event', CategoryEventController::class);
     Route::resource('category-article', CategoryArticleController::class);
