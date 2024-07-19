@@ -59,7 +59,7 @@
                     </li>
                     <li class="{{ request()->routeIs(['admin.layanan-unggulan.index', 'admin.layanan-unggulan-gallery.*', 'admin.layanan-unggulan-sub-service.*']) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.layanan-unggulan.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Layanan Unggulan</span></a>
                     </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Instalasi Rawat Jalan</span></a>
+                    <li class="{{ request()->routeIs(['admin.rawat-jalan.*']) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.rawat-jalan.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Instalasi Rawat Jalan</span></a>
                     </li>
                     <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Instalasi Rawat Inap</span></a>
                     </li>

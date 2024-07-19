@@ -38,6 +38,14 @@ class ServiceSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'banner' => 'test.png',
+                'description' => 'test',
+                'type' => 'irj',
+                'lang' => 'id',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ];
 
         DB::table('services')->insert($data);

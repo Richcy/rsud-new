@@ -19,6 +19,7 @@ use App\Http\Controllers\Admin\FeaturedDoctorController;
 use App\Http\Controllers\Admin\ScheduleDoctorController;
 use App\Http\Controllers\Admin\CategoryArticleController;
 use App\Http\Controllers\Admin\LayananUnggulanController;
+use App\Http\Controllers\Admin\InstalasiRawatJalanController;
 
 
 /*
@@ -122,6 +123,23 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::get('layanan-unggulan/gallery/{id}/edit', [LayananUnggulanController::class, 'galleryEdit'])->name('layanan-unggulan-gallery.edit');
     Route::put('layanan-unggulan/gallery/{id}', [LayananUnggulanController::class, 'galleryUpdate'])->name('layanan-unggulan-gallery.update');
     Route::delete('layanan-unggulan/gallery/{id}', [LayananUnggulanController::class, 'galleryDestroy'])->name('layanan-unggulan-gallery.destroy');
+
+    Route::get('rawat-jalan', [InstalasiRawatJalanController::class, 'index'])->name('rawat-jalan.index');
+    Route::put('rawat-jalan/{id}/update', [InstalasiRawatJalanController::class, 'update'])->name('rawat-jalan.update');
+
+    Route::get('rawat-jalan/sub-service/{service_id}', [InstalasiRawatJalanController::class, 'indexSubService'])->name('rawat-jalan.sub-service.index');
+    Route::get('rawat-jalan/sub-service/create/{service_id}', [InstalasiRawatJalanController::class, 'createSubService'])->name('rawat-jalan.sub-service.create');
+    Route::post('rawat-jalan/sub-service/{service_id}', [InstalasiRawatJalanController::class, 'storeSubService'])->name('rawat-jalan.sub-service.store');
+    Route::get('rawat-jalan/sub-service/{slug}/edit', [InstalasiRawatJalanController::class, 'editSubService'])->name('rawat-jalan.sub-service.edit');
+    Route::put('rawat-jalan/sub-service/{slug}', [InstalasiRawatJalanController::class, 'updateSubService'])->name('rawat-jalan.sub-service.update');
+    Route::delete('rawat-jalan/sub-service/{slug}', [InstalasiRawatJalanController::class, 'destroySubService'])->name('rawat-jalan.sub-service.destroy');
+
+    Route::get('rawat-jalan/gallery', [InstalasiRawatJalanController::class, 'galleryIndex'])->name('rawat-jalan.gallery.index');
+    Route::get('rawat-jalan/gallery/create', [InstalasiRawatJalanController::class, 'galleryCreate'])->name('rawat-jalan.gallery.create');
+    Route::post('rawat-jalan/gallery', [InstalasiRawatJalanController::class, 'galleryStore'])->name('rawat-jalan.gallery.store');
+    Route::get('rawat-jalan/gallery/{id}/edit', [InstalasiRawatJalanController::class, 'galleryEdit'])->name('rawat-jalan.gallery.edit');
+    Route::put('rawat-jalan/gallery/{id}', [InstalasiRawatJalanController::class, 'galleryUpdate'])->name('rawat-jalan.gallery.update');
+    Route::delete('rawat-jalan/gallery/{id}', [InstalasiRawatJalanController::class, 'galleryDestroy'])->name('rawat-jalan.gallery.destroy');
 
     Route::resource('category-event', CategoryEventController::class);
     Route::resource('category-article', CategoryArticleController::class);
