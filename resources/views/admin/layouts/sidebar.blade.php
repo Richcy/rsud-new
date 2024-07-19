@@ -61,7 +61,7 @@
                     </li>
                     <li class="{{ request()->routeIs(['admin.rawat-jalan.*']) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.rawat-jalan.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Instalasi Rawat Jalan</span></a>
                     </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Instalasi Rawat Inap</span></a>
+                    <li class="{{ request()->routeIs(['admin.rawat-inap.*']) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.rawat-inap.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Instalasi Rawat Inap</span></a>
                     </li>
                     <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Instalasi Gawat Darurat</span></a>
                     </li>

@@ -41,20 +41,20 @@
                         <div class="card-header py-2">
                             <ul class="nav nav-pills card-header-pills ms-0" id="pills-tab" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link"  href="{{ route('admin.rawat-jalan.index') }}">Deskripsi</a>
+                                    <a class="nav-link"  href="{{ route('admin.rawat-inap.index') }}">Deskripsi</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link active" href="#">Sub Service</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('admin.rawat-jalan.gallery.index') }}">Galeri</a>
+                                    <a class="nav-link" href="{{ route('admin.rawat-inap.gallery.index') }}">Galeri</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="card-header">
                             <h4>Sub Service</h4>
                             {{-- button tambah --}}
-                            <a href="{{ route('admin.rawat-jalan.sub-service.create', $id) }}" class="btn btn-primary">Tambah Sub Service</a>
+                            <a href="{{ route('admin.rawat-inap.sub-service.create', $id) }}" class="btn btn-primary">Tambah Sub Service</a>
                         </div>
                         <div class="card-body">
                             <div class="tab-content" id="pills-tabContent">
@@ -106,7 +106,7 @@
             serverSide: true,
             responsive: true,
             ajax: {
-                url: '/adminstrator/rawat-jalan/sub-service/{{ $id }}',
+                url: '/adminstrator/rawat-inap/sub-service/{{ $id }}',
                 type: 'GET',
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'

@@ -23,7 +23,7 @@
                                 <a href="#">Beranda</a>
                             </li>
                             <li class="breadcrumb-item active">
-                                <a href="{{ route('admin.rawat-jalan.index') }}">Daftar Sub Service</a>
+                                <a href="{{ route('admin.rawat-inap.index') }}">Daftar Sub Service</a>
                             </li>
                             <li class="breadcrumb-item active">
                                 <a href="#">Update Sub Service</a>
@@ -46,7 +46,7 @@
                             <h4>Form Update Sub Service</h4>
                         </div>
                         <div class="card-body" style="padding-top: 6px !important;">
-                            <form action="{{ route('admin.rawat-jalan.sub-service.update    ', $subService->slug) }}" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('admin.rawat-inap.sub-service.update', $subService->slug) }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')
                                 <div class="row">

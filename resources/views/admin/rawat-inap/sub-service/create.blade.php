@@ -24,7 +24,7 @@
                                 <a href="#">Beranda</a>
                             </li>
                             <li class="breadcrumb-item active">
-                                <a href="{{ route('admin.rawat-jalan.index') }}">Daftar Sub Service</a>
+                                <a href="{{ route('admin.rawat-inap.index') }}">Daftar Sub Service</a>
                             </li>
                             <li class="breadcrumb-item active">
                                 <a href="#">Tambah Sub Service</a>
@@ -47,7 +47,7 @@
                         <h4>Form Tambah Sub Service</h4>
                     </div>
                     <div class="card-body" style="padding-top: 6px !important;">
-                        <form action="{{ route('admin.rawat-jalan.sub-service.store', $id) }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('admin.rawat-inap.sub-service.store', $id) }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-md-6">

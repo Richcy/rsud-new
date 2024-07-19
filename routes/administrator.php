@@ -19,6 +19,7 @@ use App\Http\Controllers\Admin\FeaturedDoctorController;
 use App\Http\Controllers\Admin\ScheduleDoctorController;
 use App\Http\Controllers\Admin\CategoryArticleController;
 use App\Http\Controllers\Admin\LayananUnggulanController;
+use App\Http\Controllers\Admin\InstalasiRawatInapController;
 use App\Http\Controllers\Admin\InstalasiRawatJalanController;
 
 
@@ -140,6 +141,23 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::get('rawat-jalan/gallery/{id}/edit', [InstalasiRawatJalanController::class, 'galleryEdit'])->name('rawat-jalan.gallery.edit');
     Route::put('rawat-jalan/gallery/{id}', [InstalasiRawatJalanController::class, 'galleryUpdate'])->name('rawat-jalan.gallery.update');
     Route::delete('rawat-jalan/gallery/{id}', [InstalasiRawatJalanController::class, 'galleryDestroy'])->name('rawat-jalan.gallery.destroy');
+
+    Route::get('rawat-inap', [InstalasiRawatInapController::class, 'index'])->name('rawat-inap.index');
+    Route::put('rawat-inap/{id}/update', [InstalasiRawatInapController::class, 'update'])->name('rawat-inap.update');
+
+    Route::get('rawat-inap/sub-service/{service_id}', [InstalasiRawatInapController::class, 'indexSubService'])->name('rawat-inap.sub-service.index');
+    Route::get('rawat-inap/sub-service/create/{service_id}', [InstalasiRawatInapController::class, 'createSubService'])->name('rawat-inap.sub-service.create');
+    Route::post('rawat-inap/sub-service/{service_id}', [InstalasiRawatInapController::class, 'storeSubService'])->name('rawat-inap.sub-service.store');
+    Route::get('rawat-inap/sub-service/{slug}/edit', [InstalasiRawatInapController::class, 'editSubService'])->name('rawat-inap.sub-service.edit');
+    Route::put('rawat-inap/sub-service/{slug}', [InstalasiRawatInapController::class, 'updateSubService'])->name('rawat-inap.sub-service.update');
+    Route::delete('rawat-inap/sub-service/{slug}', [InstalasiRawatInapController::class, 'destroySubService'])->name('rawat-inap.sub-service.destroy');
+
+    Route::get('rawat-inap/gallery', [InstalasiRawatInapController::class, 'galleryIndex'])->name('rawat-inap.gallery.index');
+    Route::get('rawat-inap/gallery/create', [InstalasiRawatInapController::class, 'galleryCreate'])->name('rawat-inap.gallery.create');
+    Route::post('rawat-inap/gallery', [InstalasiRawatInapController::class, 'galleryStore'])->name('rawat-inap.gallery.store');
+    Route::get('rawat-inap/gallery/{id}/edit', [InstalasiRawatInapController::class, 'galleryEdit'])->name('rawat-inap.gallery.edit');
+    Route::put('rawat-inap/gallery/{id}', [InstalasiRawatInapController::class, 'galleryUpdate'])->name('rawat-inap.gallery.update');
+    Route::delete('rawat-inap/gallery/{id}', [InstalasiRawatInapController::class, 'galleryDestroy'])->name('rawat-inap.gallery.destroy');
 
     Route::resource('category-event', CategoryEventController::class);
     Route::resource('category-article', CategoryArticleController::class);
