@@ -1,13 +1,6 @@
 @extends('admin.layouts.main')
 
 @push('vendor_css')
-<link rel="stylesheet" type="text/css" href="{{ asset('vuexy/app-assets/vendors/css/editors/quill/katex.min.css') }}">
-<link rel="stylesheet" type="text/css"
-    href="{{ asset('vuexy/app-assets/vendors/css/editors/quill/monokai-sublime.min.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('vuexy/app-assets/vendors/css/editors/quill/quill.snow.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('vuexy/app-assets/vendors/css/editors/quill/quill.bubble.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('vuexy/app-assets/css/plugins/forms/form-quill-editor.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('vuexy/app-assets/css/plugins/forms/form-quill-editor.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('vuexy') }}/app-assets/vendors/css/pickers/pickadate/pickadate.css">
 <link rel="stylesheet" href="{{ asset('assets/js/clock-picker/clockpicker.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/js/clock-picker/standalone.css') }}">
@@ -199,19 +192,12 @@
                                 <div class="col-md-12">
                                     <div class="mb-1">
                                         <label for="description" class="form-label">Deskripsi</label>
-                                        <div id="full-wrapper">
-                                            <div id="full-container">
-                                                <div class="editor">
-                                                    {!! old('description') ?? '' !!}
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <textarea name="description" id="description" cols="30" rows="50" class="form-control tinymce">{{ old('description') }}</textarea>
                                         @error('description')
-                                            <div class="invalid-feedback d-block">{{ $message ?? 'Something error' }}
-                                            </div>
+                                        <div class="invalid-feedback d-block">{{ $message ?? 'Something error' }}</div>
                                         @enderror
-                                        <textarea name="description" id="description" cols="30" rows="50" class="form-control d-none"></textarea>
                                     </div>
+                                </div>
                                 </div>
                             </div>
 
@@ -231,9 +217,6 @@
 @endsection
 
 @push('vendor_js')
-    <script src="{{ asset('vuexy/app-assets/vendors/js/editors/quill/highlight.min.js') }}"></script>
-    <script src="{{ asset('vuexy/app-assets/vendors/js/editors/quill/katex.min.js') }}"></script>
-    <script src="{{ asset('vuexy/app-assets/vendors/js/editors/quill/quill.min.js') }}"></script>
     <script src="{{ asset('vuexy') }}/app-assets/vendors/js/ui/jquery.sticky.js"></script>
     <script src="{{ asset('vuexy') }}/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
     <script src="{{ asset('vuexy') }}/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
@@ -246,6 +229,76 @@
 @push('custom_js')
     <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/42.0.1/ckeditor5.css">
     <script src="{{ asset('vuexy/app-assets/js/scripts/forms/pickers/form-pickers.js') }}"></script>
+    <script src="{{ asset('assets/vendor/tinymce/tinymce.min.js') }}"></script>
+    <script>
+        tinymce.init({
+        selector: ".tinymce",
+        plugins: [
+            "advlist autolink lists link image charmap print preview anchor",
+            "searchreplace visualblocks code fullscreen",
+            "insertdatetime media table contextmenu paste",
+            "textcolor image"
+        ],
+        toolbar: "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | forecolor backcolor | image",
+        relative_urls: false,
+        forced_root_block: false,
+        height: 500,
+        automatic_uploads: true,
+        images_upload_url: '{{ route("admin.upload") }}',
+        paste_data_images: true,
+        file_picker_callback: function(cb, value, meta) {
+            var input = document.createElement('input');
+            input.setAttribute('type', 'file');
+            input.setAttribute('accept', 'image/*');
+            input.onchange = function() {
+                var file = this.files[0];
+                var reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = function () {
+                    var id = 'post-image-' + (new Date()).getTime();
+                    var blobCache = tinymce.activeEditor.editorUpload.blobCache;
+                    var blobInfo = blobCache.create(id, file, reader.result);
+                    blobCache.add(blobInfo);
+                    cb(blobInfo.blobUri(), { title: file.name });
+                };
+            };
+            input.click();
+        },
+        images_upload_handler: function (blobInfo, success, failure) {
+            var xhr, formData;
+
+            xhr = new XMLHttpRequest();
+            xhr.withCredentials = false;
+            xhr.open('POST', '{{ route("admin.upload") }}');
+
+            xhr.setRequestHeader("X-CSRF-Token", document.querySelector('meta[name="csrf-token"]').getAttribute('content'));
+
+            xhr.onload = function() {
+                var json;
+
+                if (xhr.status != 200) {
+                    failure('HTTP Error: ' + xhr.status);
+                    return;
+                }
+
+                json = JSON.parse(xhr.responseText);
+
+                if (!json || typeof json.location != 'string') {
+                    failure('Invalid JSON: ' + xhr.responseText);
+                    return;
+                }
+
+                success(json.location);
+            };
+
+            formData = new FormData();
+            formData.append('file', blobInfo.blob(), blobInfo.filename());
+
+            xhr.send(formData);
+        },
+        image_dimensions: true  // Enable image dimensions editing
+    });
+    </script>
     <script>
          function createSlug() {
             var title = $('#title').val();
@@ -266,84 +319,6 @@
             });
 
         });
-
-        var quill = new Quill('#full-container .editor', {
-        bounds: '#full-container .editor',
-        modules: {
-            formula: true,
-            syntax: true,
-            toolbar: [
-                [{
-                        font: []
-                    },
-                    {
-                        size: []
-                    }
-                ],
-                ['bold', 'italic', 'underline', 'strike'],
-                [{
-                        color: []
-                    },
-                    {
-                        background: []
-                    }
-                ],
-                [{
-                        script: 'super'
-                    },
-                    {
-                        script: 'sub'
-                    }
-                ],
-                [{
-                        header: '1'
-                    },
-                    {
-                        header: '2'
-                    },
-                    'blockquote',
-                    'code-block'
-                ],
-                [{
-                        list: 'ordered'
-                    },
-                    {
-                        list: 'bullet'
-                    },
-                    {
-                        indent: '-1'
-                    },
-                    {
-                        indent: '+1'
-                    }
-                ],
-                [
-                    'direction',
-                    {
-                        align: []
-                    }
-                ],
-                ['link', 'image', 'video', 'formula'],
-                ['clean']
-            ]
-        },
-        theme: 'snow',
-        placeholder: 'Tulis kontent disini ...',
-        readOnly: false,
-        scrollingContainer: '#full-wrapper',
-    });
-
-    quill.root.style.height = '300px'; //
-
-    var form = document.querySelector('form');
-    form.onsubmit = function() {
-        // Populate hidden form on submit
-        var about = document.querySelector('#description');
-        about.value = quill.root.innerHTML;
-        // console.log(about.value);
-        // return false;
-    };
-
 
         document.addEventListener('DOMContentLoaded', function() {
             // Image preview

@@ -28,7 +28,7 @@ class SliderController extends Controller
                     return '<img src="' . asset('storage/' . $row->img) . '" height="70px" width="auto">';
                 })
                 ->addColumn('action', 'admin.sliders.datatables.action')
-                ->rawColumns(['img', 'action'])
+                ->rawColumns(['img', 'action', 'description'])
                 ->make(true);
         }
         return view('admin.sliders.index');

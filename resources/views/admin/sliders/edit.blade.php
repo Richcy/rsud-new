@@ -100,11 +100,12 @@
                                     <div class="col-md-12">
                                         <div class="mb-1">
                                             <label for="description" class="form-label">Deskripsi</label>
-                                            <textarea name="description" id="description" cols="5" rows="5" class="form-control">{{ old('description', $slider->description) }}</textarea>
+                                            <textarea name="description" id="description" cols="30" rows="50" class="form-control tinymce">{{ old('description', $slider->description) }}</textarea>
                                             @error('description')
-                                                <div class="invalid-feedback d-block">{{ $message ?? 'Something error' }}</div>
+                                            <div class="invalid-feedback d-block">{{ $message ?? 'Something error' }}</div>
                                             @enderror
                                         </div>
+                                    </div>
                                     </div>
                                 </div>
 
@@ -127,6 +128,76 @@
 @endpush
 
 @push('custom_js')
+<script src="{{ asset('assets/vendor/tinymce/tinymce.min.js') }}"></script>
+    <script>
+        tinymce.init({
+        selector: ".tinymce",
+        plugins: [
+            "advlist autolink lists link image charmap print preview anchor",
+            "searchreplace visualblocks code fullscreen",
+            "insertdatetime media table contextmenu paste",
+            "textcolor image"
+        ],
+        toolbar: "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | forecolor backcolor | image",
+        relative_urls: false,
+        forced_root_block: false,
+        height: 500,
+        automatic_uploads: true,
+        images_upload_url: '{{ route("admin.upload") }}',
+        paste_data_images: true,
+        file_picker_callback: function(cb, value, meta) {
+            var input = document.createElement('input');
+            input.setAttribute('type', 'file');
+            input.setAttribute('accept', 'image/*');
+            input.onchange = function() {
+                var file = this.files[0];
+                var reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = function () {
+                    var id = 'post-image-' + (new Date()).getTime();
+                    var blobCache = tinymce.activeEditor.editorUpload.blobCache;
+                    var blobInfo = blobCache.create(id, file, reader.result);
+                    blobCache.add(blobInfo);
+                    cb(blobInfo.blobUri(), { title: file.name });
+                };
+            };
+            input.click();
+        },
+        images_upload_handler: function (blobInfo, success, failure) {
+            var xhr, formData;
+
+            xhr = new XMLHttpRequest();
+            xhr.withCredentials = false;
+            xhr.open('POST', '{{ route("admin.upload") }}');
+
+            xhr.setRequestHeader("X-CSRF-Token", document.querySelector('meta[name="csrf-token"]').getAttribute('content'));
+
+            xhr.onload = function() {
+                var json;
+
+                if (xhr.status != 200) {
+                    failure('HTTP Error: ' + xhr.status);
+                    return;
+                }
+
+                json = JSON.parse(xhr.responseText);
+
+                if (!json || typeof json.location != 'string') {
+                    failure('Invalid JSON: ' + xhr.responseText);
+                    return;
+                }
+
+                success(json.location);
+            };
+
+            formData = new FormData();
+            formData.append('file', blobInfo.blob(), blobInfo.filename());
+
+            xhr.send(formData);
+        },
+        image_dimensions: true  // Enable image dimensions editing
+    });
+    </script>
     <script>
          function createSlug() {
             var title = $('#title').val();
