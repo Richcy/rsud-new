@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\CareerController;
 use App\Http\Controllers\Admin\DoctorController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\ArticleController;
+use App\Http\Controllers\Admin\FarmasiController;
 use App\Http\Controllers\Admin\CimanewsController;
 use App\Http\Controllers\Admin\RadiologyController;
 use App\Http\Controllers\Admin\Auth\LoginController;
@@ -230,6 +231,23 @@ Route::prefix('adminstrator')->name('admin.')->group(function () {
     Route::get('hemodialis/gallery/{id}/edit', [HemodialisController::class, 'galleryEdit'])->name('hemodialis.gallery.edit');
     Route::put('hemodialis/gallery/{id}', [HemodialisController::class, 'galleryUpdate'])->name('hemodialis.gallery.update');
     Route::delete('hemodialis/gallery/{id}', [HemodialisController::class, 'galleryDestroy'])->name('hemodialis.gallery.destroy');
+
+    Route::get('farmasi', [FarmasiController::class, 'index'])->name('farmasi.index');
+    Route::put('farmasi/{id}/update', [FarmasiController::class, 'update'])->name('farmasi.update');
+
+    Route::get('farmasi/sub-service/{service_id}', [FarmasiController::class, 'indexSubService'])->name('farmasi.sub-service.index');
+    Route::get('farmasi/sub-service/create/{service_id}', [FarmasiController::class, 'createSubService'])->name('farmasi.sub-service.create');
+    Route::post('farmasi/sub-service/{service_id}', [FarmasiController::class, 'storeSubService'])->name('farmasi.sub-service.store');
+    Route::get('farmasi/sub-service/{slug}/edit', [FarmasiController::class, 'editSubService'])->name('farmasi.sub-service.edit');
+    Route::put('farmasi/sub-service/{slug}', [FarmasiController::class, 'updateSubService'])->name('farmasi.sub-service.update');
+    Route::delete('farmasi/sub-service/{slug}', [FarmasiController::class, 'destroySubService'])->name('farmasi.sub-service.destroy');
+
+    Route::get('farmasi/gallery', [FarmasiController::class, 'galleryIndex'])->name('farmasi.gallery.index');
+    Route::get('farmasi/gallery/create', [FarmasiController::class, 'galleryCreate'])->name('farmasi.gallery.create');
+    Route::post('farmasi/gallery', [FarmasiController::class, 'galleryStore'])->name('farmasi.gallery.store');
+    Route::get('farmasi/gallery/{id}/edit', [FarmasiController::class, 'galleryEdit'])->name('farmasi.gallery.edit');
+    Route::put('farmasi/gallery/{id}', [FarmasiController::class, 'galleryUpdate'])->name('farmasi.gallery.update');
+    Route::delete('farmasi/gallery/{id}', [FarmasiController::class, 'galleryDestroy'])->name('farmasi.gallery.destroy');
 
     Route::resource('category-event', CategoryEventController::class);
     Route::resource('category-article', CategoryArticleController::class);
