@@ -11,14 +11,14 @@
         <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
                 <div class="col-12">
-                    <h4 class="content-header-title float-start mb-0">Data rehab-medik</h4>
+                    <h4 class="content-header-title float-start mb-0">Data Rehab Medik</h4>
                     <div class="breadcrumb-wrapper">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
                                 <a href="#">Beranda</a>
                             </li>
                             <li class="breadcrumb-item active">
-                                <a href="#">Daftar Farmasi</a>
+                                <a href="#">Daftar Rehab Medik</a>
                             </li>
                         </ol>
                     </div>
