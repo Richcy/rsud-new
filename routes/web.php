@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 
 /*
@@ -16,9 +17,7 @@ use App\Http\Controllers\Admin\Auth\LoginController;
 
 require __DIR__ . '/administrator.php';
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index'])->name('user.home');
 
 Route::post('/logout', [LoginController::class, 'logout'])
                 ->middleware('auth')
