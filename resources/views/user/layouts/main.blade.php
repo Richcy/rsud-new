@@ -194,18 +194,18 @@
                   <div class="rr-header-main-menu rr-header-menu">
                      <nav class="rr-main-menu-content text-end">
                         <ul>
-                            <li><a href="about.html">Beranda</a></li>
+                            <li><a href="{{ route('user.home') }}">Beranda</a></li>
                            <li class="has-dropdown">
-                              <a href="service.html">Tentang</a>
+                              <a>Tentang</a>
                               <ul class="submenu rr-submenu">
                                  <li><a href="{{ route('user.profile.index') }}">Profil Rumah Sakit</a></li>
-                                 <li><a href="service.html">Sambutan Direktur</a></li>
-                                 <li><a href="service.html">Struktur Organisasi</a></li>
-                                 <li><a href="service.html">Denah Rumah Sakit</a></li>
-                                 <li><a href="service.html">Penilaian Mutu</a></li>
-                                 <li><a href="service.html">Hak dan Kewajiban Pasien</a></li>
-                                 <li><a href="service.html">Maklumat Pelayanan</a></li>
-                                 <li><a href="service.html">Standar Pelayanan</a></li>
+                                 <li><a href="{{ route("user.greeting.index") }}">Sambutan Direktur</a></li>
+                                 <li><a href="{{ route('user.structure.index') }}">Struktur Organisasi</a></li>
+                                 <li><a href="{{ route('user.sketch.index') }}">Denah Rumah Sakit</a></li>
+                                 <li><a href="{{ route('user.quality.index') }}">Penilaian Mutu</a></li>
+                                 <li><a href="{{ route('user.hak_kewajiban.index') }}">Hak dan Kewajiban Pasien</a></li>
+                                 <li><a href="{{ route('user.maklumat_pelayanan.index') }}">Maklumat Pelayanan</a></li>
+                                 <li><a href="{{ route('user.standard_pelayanan.index') }}">Standar Pelayanan</a></li>
                               </ul>
                            </li>
                            <li class="has-dropdown">
@@ -215,7 +215,7 @@
                                  <li><a href="team.html">Instalasi Rawat Jalan</a></li>
                                  <li><a href="team.html">Instalasi Rawat Inap</a></li>
                                  <li><a href="team.html">Instalasi Gawat Darurat</a></li>
-                                 <li><a href="team.html">Labotarium</a></li>
+                                 <li><a href="team.html">Laboratorium</a></li>
                                  <li><a href="team.html">Hemodialisis</a></li>
                                  <li><a href="team.html">Rehabilitasi Medik</a></li>
                                  <li><a href="team.html">Radiologi</a></li>
@@ -309,8 +309,8 @@
                         <div class="rr-footer-list ">
                            <ul>
                               <li><a href="{{ route('user.profile.index') }}l">Profil Rumah Sakit</a></li>
-                              <li><a href="service.html">Sambutan Direktur</a></li>
-                              <li><a href="service.html">Struktur Organisasi</a></li>
+                              <li><a href="{{ route('user.greeting.index') }}">Sambutan Direktur</a></li>
+                              <li><a href="{{ route('user.structure.index') }}">Struktur Organisasi</a></li>
                               <li><a href="service.html">Standar Pelayanan</a></li>
                               <li><a href="service.html">Dokter</a></li>
                            </ul>
@@ -327,7 +327,7 @@
                               <li><a href="service.html">Instalasi Rawat Jalan</a></li>
                               <li><a href="service.html">Instalasi Rawat Inap</a></li>
                               <li><a href="service.html">Instalasi Gawat Darurat</a></li>
-                              <li><a href="service.html">Labotarium</a></li>
+                              <li><a href="service.html">Laboratorium</a></li>
                               <li><a href="service.html">Radiologi</a></li>
                               <li><a href="service.html">Hermodialisis</a></li>
                            </ul>

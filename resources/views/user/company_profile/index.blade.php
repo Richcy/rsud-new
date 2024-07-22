@@ -8,14 +8,21 @@
 @section('seo_url', )
 @extends('user.layouts.main')
 @push('custom_css')
-
+    <style>
+       @media(min-widht: 768px)
+       {
+        #description{
+            margin-left: 20px;
+        }
+       }
+    </style>
 @endpush
 
 @section('content')
     <div class="container my-5">
         <div class="row">
             <div class="col-12">
-                <span><small><a href="">Beranda</a> / <a href="">Tentang</a> / Profil Rumah Sakit</small></span>
+                <span><small><a href="">Beranda</a> / <a href="">Tentang</a> / <strong>Profil Rumah Sakit</strong></small></span>
                 <div class="text-center">
                     <img style="height: 250px; width: 100%; object-fit:cover;" src="{{ asset('storage/'. $profile->banner) }}" alt="">
                 </div>
@@ -26,7 +33,7 @@
                     <h3>PROFIL RSUD CIMACAN</h3>
                 </div>
 
-                <div class="container mx-3 pt-5">
+                <div class="container pt-5" id="description">
                     {!! $profile->description !!}
                 </div>
             </div>

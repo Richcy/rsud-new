@@ -339,7 +339,7 @@
                         <i class="fa-solid fa-microscope"></i>
                     </div>
                     <div class="rr-features-content text-center">
-                        <h3 class="rr-features-title"><a href="service-details.html">Labotarium</a></h3>
+                        <h3 class="rr-features-title"><a href="service-details.html">Laboratorium</a></h3>
                         <a class="rr-features-btn" href="service-details.html"><span>Lihat Selengkapnya <i class="fa-solid fa-angle-right"></i></span></a>
                      </div>
                  </div>
