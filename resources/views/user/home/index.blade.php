@@ -1,3 +1,11 @@
+
+@section('seo_keyword', 'Beranda, Halaman Utama, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan')
+@section('seo_title', 'RSUD Cimacan | Beranda')
+@section('seo_desc',
+    'Rumah Sakit Umum Daerah Cimacan pada awalnya adalah Puskesmas Pacet (Cimacan) yang sudah berdiri
+    sejak tahun 1953, kemudian pada tahun 1981 statusnya meningkat menjadi Puskesmas DTP dan berubah status menjadi Rumah
+    Sakit dengan ditetapkannya Surat Keputusan Bupati Cianjur atas nama Pemerintah Daerah Kabupaten Cianjur Nomor 19 Tahu…')
+@section('seo_url', '/');
 @extends('user.layouts.main')
 @push('custom_css')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
@@ -187,8 +195,8 @@
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-12 mb-3">
-                                        <div class="p-relative p-3 h-100">
-                                            <img class="img-fluid w-100 h-100" src="{{ asset('storage/' . $sambutan->banner) }}" alt="img">
+                                        <div class="p-relative p-3">
+                                            <img class="img-fluid"  src="{{ asset('storage/' . $sambutan->banner) }}" alt="img">
                                         </div>
                                     </div>
                                 </div>
@@ -204,7 +212,7 @@
                                 <div class="row">
                                    <div class="col-xl-12 col-lg-12 col-md-12">
                                       <div class="rr-tab-2__thumb rr-cursor-point-area text-end p-relative">
-                                         <img style="transform: scale(0.8);" class="w-100 h-100" src="{{ asset('storage/' . $maklumat->img) }}" alt="img">
+                                         <img style="transform: scale(0.8);" class="w-100 img-fluid" src="{{ asset('storage/' . $maklumat->img) }}" alt="img">
                                       </div>
                                    </div>
                                 </div>
@@ -220,7 +228,7 @@
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12  col-md-12">
                                         <div class="rr-tab-2__thumb rr-cursor-point-area text-end p-relative">
-                                           <img style="transform: scale(0.5); margin-top: -400px" class="w-100 h-100" src="{{ asset('storage/' . $rating->img) }}" alt="img">
+                                           <img style="transform: scale(0.5); margin-top: -400px" class="w-100 " src="{{ asset('storage/' . $rating->img) }}" alt="img">
                                         </div>
                                      </div>
                                 </div>
@@ -236,7 +244,7 @@
                                <div class="row">
                                 <div class="col-xl-12 col-lg-12  col-md-12">
                                     <div class="rr-tab-2__thumb rr-cursor-point-area text-end p-relative">
-                                       <img class="w-100 h-100" src="{{ asset('storage/' . $structure->img) }}" alt="img">
+                                       <img class="w-100 img-fluid" style="transform: scale(0.8);" src="{{ asset('storage/' . $structure->img) }}" alt="img">
                                     </div>
                                  </div>
                                </div>

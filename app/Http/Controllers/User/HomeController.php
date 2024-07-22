@@ -17,7 +17,7 @@ class HomeController extends Controller
     public function index()
     {
         $sliders = Slider::orderBy('sort','asc')->get();
-        $sambutan = Service::where('type', 'about_company')->first();
+        $sambutan = Service::where('type', 'about_home')->first();
 
     // if ($sambutan) {
     //     $sambutan->description = Str::limit($sambutan->description, 400);

@@ -3,12 +3,24 @@
 
 <head>
    <meta charset="utf-8">
-   <title>Mekina - Medical & Health HTML5 Template</title>
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>@yield('seo_title', 'Beranda')</title>
 
+   <meta name="keywords" content="@yield('seo_keyword')">
+   <meta name="description" content="@yield('seo_desc') ">
+   <link rel="canonical" href="@yield('seo_url')">
+   <meta property="og:type" content="article" />
+   <meta property="og:title" content="@yield('seo_keyword')" />
+   <meta property="og:image" content="" />
+   <meta property="og:description" content="@yield('seo_desc')" />
+   <meta property="og:url" content="@yield('seo_url')" />
+   <meta name="twitter:card" content="summary_large_image" />
+   <meta name="twitter:title" content="@yield('seo_keyword')" />
+   <meta name="twitter:image:src" content="" />
+   <meta name="twitter:description" content="@yield('seo_desc')" />
    <!-- Place favicon.ico in the root directory -->
-   <link rel="shortcut icon" type="image/x-icon" href="{{ asset('mekina') }}/assets/img/logo/favicon.png">
+   <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/logo_rsud_hijau.png') }}">
 
    <!-- CSS here -->
    <link rel="stylesheet" href="{{ asset('mekina') }}/assets/css/bootstrap.css">
