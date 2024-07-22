@@ -52,7 +52,7 @@ class SliderController extends Controller
             'title' => 'required|string|max:255',
             'slug' => 'required|string|max:255|unique:sliders,slug',
             'description' => 'nullable|string',
-            'img' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'img' => 'required|image|mimes:jpeg,png,jpg,gif',
         ], [
             'title.required' => 'Judul harus diisi.',
             'slug.required' => 'Slug harus diisi.',
