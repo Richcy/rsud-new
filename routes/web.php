@@ -8,6 +8,7 @@ use App\Http\Controllers\User\GreetingController;
 use App\Http\Controllers\User\MaklumatController;
 use App\Http\Controllers\User\StructureController;
 use App\Http\Controllers\Admin\Auth\LoginController;
+use App\Http\Controllers\User\LaboratoriumController;
 use App\Http\Controllers\User\CompanyProfileController;
 use App\Http\Controllers\User\HakDanKewajibanController;
 use App\Http\Controllers\User\LayananUnggulanController;
@@ -44,6 +45,7 @@ Route::name('user.')->group(function () {
     Route::get('/rawat_inap', [InstalasiRawatInapController::class, 'index'])->name('rawat_inap.index');
     Route::get('/rawat_jalan', [InstalasiRawatJalanController::class, 'index'])->name('rawat_jalan.index');
     Route::get('/gawat_darurat', [InstalasiGawatDaruratController::class, 'index'])->name('gawat_darurat.index');
+    Route::get('/laboratorium', [LaboratoriumController::class, 'index'])->name('laboratorium.index');
 });
 
 Route::post('/logout', [LoginController::class, 'logout'])

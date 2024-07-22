@@ -1,10 +1,11 @@
+
 @section('seo_keyword', 'Layanan Unggulan RSUD Cimacan, Rumah Sakit Di Cianjur, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan')
 @section('seo_title', 'RSUD Cimacan | Beranda')
 @section('seo_desc',
     'Rumah Sakit Umum Daerah Cimacan pada awalnya adalah Puskesmas Pacet (Cimacan) yang sudah berdiri
     sejak tahun 1953, kemudian pada tahun 1981 statusnya meningkat menjadi Puskesmas DTP dan berubah status menjadi Rumah
     Sakit dengan ditetapkannya Surat Keputusan Bupati Cianjur atas nama Pemerintah Daerah Kabupaten Cianjur Nomor 19 Tahu…')
-@section('seo_url', route('user.gawat_darurat.index'))
+@section('seo_url', route('user.laboratorium.index'))
 @extends('user.layouts.main')
 @push('custom_css')
    <!-- Splide CSS -->
@@ -34,20 +35,20 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-12">
-                <span><small><a href="">Beranda</a> / <a href="">Services</a> / <strong>Instalasi Gawat Darurat</strong></small></span>
+                <span><small><a href="">Beranda</a> / <a href="">Services</a> / <strong>Laboratorium</strong></small></span>
                 <div class="text-center">
-                    <img style="height: 250px; width: 100%; object-fit:cover;" src="{{ asset('storage/'. $gawatDarurat->banner) }}" alt="">
+                    <img style="height: 250px; width: 100%; object-fit:cover;" src="{{ asset('storage/'. $lab->banner) }}" alt="">
                 </div>
             </div>
 
             <div class="col-12 my-4">
                 <div class="text-left">
-                    <h3>INSTALASI RAWAT JALAN</h3>
+                    <h3>LABORATORIUM</h3>
                 </div>
                 <div class="row">
                     <div class="{{ $image->isNotEmpty() ? 'col-12 col-md-6 col-lg-8' : 'col-12' }}">
                         <div class="container pt-5" id="description">
-                            {!! $gawatDarurat->description !!}
+                            {!! $lab->description !!}
                         </div>
                         <div class="accordion" id="accordionExample">
                             @forelse ($subService as $item)
