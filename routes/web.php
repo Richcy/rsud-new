@@ -7,6 +7,7 @@ use App\Http\Controllers\User\FarmasiController;
 use App\Http\Controllers\User\QualityController;
 use App\Http\Controllers\User\GreetingController;
 use App\Http\Controllers\User\MaklumatController;
+use App\Http\Controllers\User\AmbulanceController;
 use App\Http\Controllers\User\RadiologyController;
 use App\Http\Controllers\User\StructureController;
 use App\Http\Controllers\User\RehabMedikController;
@@ -54,6 +55,7 @@ Route::name('user.')->group(function () {
     Route::get('/rehab_medik', [RehabMedikController::class, 'index'])->name('rehab_medik.index');
     Route::get('/radiology', [RadiologyController::class, 'index'])->name('radiology.index');
     Route::get('/farmasi', [FarmasiController::class, 'index'])->name('farmasi.index');
+    Route::get('/ambulance', [AmbulanceController::class, 'index'])->name('ambulance.index');
 });
 
 Route::post('/logout', [LoginController::class, 'logout'])

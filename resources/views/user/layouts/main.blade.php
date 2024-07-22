@@ -220,7 +220,7 @@
                                  <li><a href="{{ route('user.rehab_medik.index') }}">Rehabilitasi Medik</a></li>
                                  <li><a href="{{ route('user.radiology.index') }}">Radiologi</a></li>
                                  <li><a href="{{ route('user.farmasi.index') }}">Farmasi</a></li>
-                                 <li><a href="">Ambulans</a></li>
+                                 <li><a href="{{ route('user.ambulance.index') }}">Ambulans</a></li>
                                  <li><a href="">Pengaduan</a></li>
                               </ul>
                            </li>
