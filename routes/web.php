@@ -10,6 +10,7 @@ use App\Http\Controllers\User\StructureController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\User\CompanyProfileController;
 use App\Http\Controllers\User\HakDanKewajibanController;
+use App\Http\Controllers\User\StandardPelayananController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,7 @@ Route::name('user.')->group(function () {
     Route::get('/quality', [QualityController::class, 'index'])->name('quality.index');
     Route::get('/hak_kewajiban', [HakDanKewajibanController::class, 'index'])->name('hak_kewajiban.index');
     Route::get('/maklumat_pelayanan', [MaklumatController::class, 'index'])->name('maklumat_pelayanan.index');
+    Route::get('/standard_pelayanan', [StandardPelayananController::class, 'index'])->name('standard_pelayanan.index');
 });
 
 Route::post('/logout', [LoginController::class, 'logout'])
