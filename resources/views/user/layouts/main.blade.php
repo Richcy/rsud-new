@@ -331,7 +331,7 @@
                                  Download Tartimah
                              </h5>
                              <a href="">
-                                <img class="img-fluid me-4 mt-5" style="margin: 0 20px 0 -15px; padding: 0; height: 55  %; width: 55  %" src="{{ asset('assets/images/playstore-download-btn.webp') }}" alt="">
+                                <img class="img-fluid me-4 mt-5" style="margin: 0 20px 0 -15px; padding: 0; height: 55%; width: 55%" src="{{ asset('assets/images/playstore-download-btn.webp') }}" alt="">
                              </a>
                             </div>
                          </div>

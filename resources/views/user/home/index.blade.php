@@ -469,7 +469,7 @@
                 <div class="rr-contact-form-box text-center mt-90">
                     <h4 class="rr-section-title">Alamat Kami</h4>
                     <div class="pt-20">
-                        <i style="font-size: 50px" class="fa-solid fa-location-dot mb-20"></i>
+                        <i style="font-size: 50px; color:#A82024" class="fa-solid fa-location-dot mb-20"></i>
                        <h5 style="font-weight: 400">
                         Jl. Raya Cimacan No.17A, Palasari, <br>
                         Kec. Cipanas, Kabupaten Cianjur, <br>
