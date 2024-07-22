@@ -200,7 +200,7 @@
                               <ul class="submenu rr-submenu">
                                  <li><a href="{{ route('user.profile.index') }}">Profil Rumah Sakit</a></li>
                                  <li><a href="{{ route("user.greeting.index") }}">Sambutan Direktur</a></li>
-                                 <li><a href="">Struktur Organisasi</a></li>
+                                 <li><a href="{{ route('user.structure.index') }}">Struktur Organisasi</a></li>
                                  <li><a href="">Denah Rumah Sakit</a></li>
                                  <li><a href="">Penilaian Mutu</a></li>
                                  <li><a href="">Hak dan Kewajiban Pasien</a></li>
@@ -310,7 +310,7 @@
                            <ul>
                               <li><a href="{{ route('user.profile.index') }}l">Profil Rumah Sakit</a></li>
                               <li><a href="{{ route('user.greeting.index') }}">Sambutan Direktur</a></li>
-                              <li><a href="service.html">Struktur Organisasi</a></li>
+                              <li><a href="{{ route('user.structure.index') }}">Struktur Organisasi</a></li>
                               <li><a href="service.html">Standar Pelayanan</a></li>
                               <li><a href="service.html">Dokter</a></li>
                            </ul>
