@@ -217,7 +217,7 @@
                                  <li><a href="{{ route('user.gawat_darurat.index') }}">Instalasi Gawat Darurat</a></li>
                                  <li><a href="{{ route('user.laboratorium.index') }}">Laboratorium</a></li>
                                  <li><a href="{{ route('user.hemodialisis.index') }}">Hemodialisis</a></li>
-                                 <li><a href="">Rehabilitasi Medik</a></li>
+                                 <li><a href="{{ route('user.rehab_medik.index') }}">Rehabilitasi Medik</a></li>
                                  <li><a href="">Radiologi</a></li>
                                  <li><a href="">Farmasi</a></li>
                                  <li><a href="">Ambulans</a></li>

@@ -17,6 +17,7 @@ use App\Http\Controllers\User\StandardPelayananController;
 use App\Http\Controllers\User\InstalasiRawatInapController;
 use App\Http\Controllers\User\InstalasiRawatJalanController;
 use App\Http\Controllers\User\InstalasiGawatDaruratController;
+use App\Http\Controllers\User\RehabMedikController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +49,7 @@ Route::name('user.')->group(function () {
     Route::get('/gawat_darurat', [InstalasiGawatDaruratController::class, 'index'])->name('gawat_darurat.index');
     Route::get('/laboratorium', [LaboratoriumController::class, 'index'])->name('laboratorium.index');
     Route::get('/hemodialisis', [HemodialisisController::class, 'index'])->name('hemodialisis.index');
+    Route::get('/rehab_medik', [RehabMedikController::class, 'index'])->name('rehab_medik.index');
 });
 
 Route::post('/logout', [LoginController::class, 'logout'])
