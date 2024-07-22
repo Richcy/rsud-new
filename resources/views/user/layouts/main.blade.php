@@ -213,7 +213,7 @@
                               <ul class="submenu rr-submenu">
                                  <li><a href="{{ route('user.layanan_unggulan.index') }}">Layanan Unggulan</a></li>
                                  <li><a href="">Instalasi Rawat Jalan</a></li>
-                                 <li><a href="">Instalasi Rawat Inap</a></li>
+                                 <li><a href="{{ route('user.rawat_inap.index') }}">Instalasi Rawat Inap</a></li>
                                  <li><a href="">Instalasi Gawat Darurat</a></li>
                                  <li><a href="">Laboratorium</a></li>
                                  <li><a href="">Hemodialisis</a></li>
@@ -323,13 +323,13 @@
                         <h4 class="rr-footer-title">Layanan Kami</h4>
                         <div class="rr-footer-list">
                            <ul>
-                              <li><a href="s{{ route('user.layanan_unggulan.index') }}">Layanan Unggulan</a></li>
-                              <li><a href="service.html">Instalasi Rawat Jalan</a></li>
-                              <li><a href="service.html">Instalasi Rawat Inap</a></li>
-                              <li><a href="service.html">Instalasi Gawat Darurat</a></li>
-                              <li><a href="service.html">Laboratorium</a></li>
-                              <li><a href="service.html">Radiologi</a></li>
-                              <li><a href="service.html">Hermodialisis</a></li>
+                              <li><a href="{{ route('user.layanan_unggulan.index') }}">Layanan Unggulan</a></li>
+                              <li><a href="">Instalasi Rawat Jalan</a></li>
+                              <li><a href="{{ route('user.rawat_inap.index') }}">Instalasi Rawat Inap</a></li>
+                              <li><a href="">Instalasi Gawat Darurat</a></li>
+                              <li><a href="">Laboratorium</a></li>
+                              <li><a href="">Radiologi</a></li>
+                              <li><a href="">Hermodialisis</a></li>
                            </ul>
                         </div>
                      </div>

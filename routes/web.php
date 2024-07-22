@@ -12,6 +12,7 @@ use App\Http\Controllers\User\CompanyProfileController;
 use App\Http\Controllers\User\HakDanKewajibanController;
 use App\Http\Controllers\User\LayananUnggulanController;
 use App\Http\Controllers\User\StandardPelayananController;
+use App\Http\Controllers\User\InstalasiRawatInapController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +39,7 @@ Route::name('user.')->group(function () {
     Route::get('/standard_pelayanan', [StandardPelayananController::class, 'index'])->name('standard_pelayanan.index');
 
     Route::get('/layanan_unggulan', [LayananUnggulanController::class, 'index'])->name('layanan_unggulan.index');
+    Route::get('/rawat_inap', [InstalasiRawatInapController::class, 'index'])->name('rawat_inap.index');
 });
 
 Route::post('/logout', [LoginController::class, 'logout'])
