@@ -15,7 +15,7 @@ use App\Http\Controllers\Admin\AmbulanceController;
 use App\Http\Controllers\Admin\RadiologyController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\HemodialisController;
-use App\Http\Controllers\Admin\LabotariumController;
+use App\Http\Controllers\Admin\LaboratoriumController;
 use App\Http\Controllers\Admin\RehabMedikController;
 use App\Http\Controllers\Admin\ImageUploadController;
 use App\Http\Controllers\Admin\RunningTextController;
@@ -183,22 +183,22 @@ Route::prefix('administrator')->name('admin.')->group(function () {
     Route::put('gawat-darurat/gallery/{id}', [InstalasiGawatDaruratController::class, 'galleryUpdate'])->name('gawat-darurat.gallery.update');
     Route::delete('gawat-darurat/gallery/{id}', [InstalasiGawatDaruratController::class, 'galleryDestroy'])->name('gawat-darurat.gallery.destroy');
 
-    Route::get('labotarium', [LabotariumController::class, 'index'])->name('labotarium.index');
-    Route::put('labotarium/{id}/update', [LabotariumController::class, 'update'])->name('labotarium.update');
+    Route::get('Laboratorium', [LaboratoriumController::class, 'index'])->name('Laboratorium.index');
+    Route::put('Laboratorium/{id}/update', [LaboratoriumController::class, 'update'])->name('Laboratorium.update');
 
-    Route::get('labotarium/sub-service/{service_id}', [LabotariumController::class, 'indexSubService'])->name('labotarium.sub-service.index');
-    Route::get('labotarium/sub-service/create/{service_id}', [LabotariumController::class, 'createSubService'])->name('labotarium.sub-service.create');
-    Route::post('labotarium/sub-service/{service_id}', [LabotariumController::class, 'storeSubService'])->name('labotarium.sub-service.store');
-    Route::get('labotarium/sub-service/{slug}/edit', [LabotariumController::class, 'editSubService'])->name('labotarium.sub-service.edit');
-    Route::put('labotarium/sub-service/{slug}', [LabotariumController::class, 'updateSubService'])->name('labotarium.sub-service.update');
-    Route::delete('labotarium/sub-service/{slug}', [LabotariumController::class, 'destroySubService'])->name('labotarium.sub-service.destroy');
+    Route::get('Laboratorium/sub-service/{service_id}', [LaboratoriumController::class, 'indexSubService'])->name('Laboratorium.sub-service.index');
+    Route::get('Laboratorium/sub-service/create/{service_id}', [LaboratoriumController::class, 'createSubService'])->name('Laboratorium.sub-service.create');
+    Route::post('Laboratorium/sub-service/{service_id}', [LaboratoriumController::class, 'storeSubService'])->name('Laboratorium.sub-service.store');
+    Route::get('Laboratorium/sub-service/{slug}/edit', [LaboratoriumController::class, 'editSubService'])->name('Laboratorium.sub-service.edit');
+    Route::put('Laboratorium/sub-service/{slug}', [LaboratoriumController::class, 'updateSubService'])->name('Laboratorium.sub-service.update');
+    Route::delete('Laboratorium/sub-service/{slug}', [LaboratoriumController::class, 'destroySubService'])->name('Laboratorium.sub-service.destroy');
 
-    Route::get('labotarium/gallery', [LabotariumController::class, 'galleryIndex'])->name('labotarium.gallery.index');
-    Route::get('labotarium/gallery/create', [LabotariumController::class, 'galleryCreate'])->name('labotarium.gallery.create');
-    Route::post('labotarium/gallery', [LabotariumController::class, 'galleryStore'])->name('labotarium.gallery.store');
-    Route::get('labotarium/gallery/{id}/edit', [LabotariumController::class, 'galleryEdit'])->name('labotarium.gallery.edit');
-    Route::put('labotarium/gallery/{id}', [LabotariumController::class, 'galleryUpdate'])->name('labotarium.gallery.update');
-    Route::delete('labotarium/gallery/{id}', [LabotariumController::class, 'galleryDestroy'])->name('labotarium.gallery.destroy');
+    Route::get('Laboratorium/gallery', [LaboratoriumController::class, 'galleryIndex'])->name('Laboratorium.gallery.index');
+    Route::get('Laboratorium/gallery/create', [LaboratoriumController::class, 'galleryCreate'])->name('Laboratorium.gallery.create');
+    Route::post('Laboratorium/gallery', [LaboratoriumController::class, 'galleryStore'])->name('Laboratorium.gallery.store');
+    Route::get('Laboratorium/gallery/{id}/edit', [LaboratoriumController::class, 'galleryEdit'])->name('Laboratorium.gallery.edit');
+    Route::put('Laboratorium/gallery/{id}', [LaboratoriumController::class, 'galleryUpdate'])->name('Laboratorium.gallery.update');
+    Route::delete('Laboratorium/gallery/{id}', [LaboratoriumController::class, 'galleryDestroy'])->name('Laboratorium.gallery.destroy');
 
     Route::get('radiology', [RadiologyController::class, 'index'])->name('radiology.index');
     Route::put('radiology/{id}/update', [RadiologyController::class, 'update'])->name('radiology.update');

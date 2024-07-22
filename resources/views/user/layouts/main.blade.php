@@ -215,7 +215,7 @@
                                  <li><a href="team.html">Instalasi Rawat Jalan</a></li>
                                  <li><a href="team.html">Instalasi Rawat Inap</a></li>
                                  <li><a href="team.html">Instalasi Gawat Darurat</a></li>
-                                 <li><a href="team.html">Labotarium</a></li>
+                                 <li><a href="team.html">Laboratorium</a></li>
                                  <li><a href="team.html">Hemodialisis</a></li>
                                  <li><a href="team.html">Rehabilitasi Medik</a></li>
                                  <li><a href="team.html">Radiologi</a></li>
@@ -327,7 +327,7 @@
                               <li><a href="service.html">Instalasi Rawat Jalan</a></li>
                               <li><a href="service.html">Instalasi Rawat Inap</a></li>
                               <li><a href="service.html">Instalasi Gawat Darurat</a></li>
-                              <li><a href="service.html">Labotarium</a></li>
+                              <li><a href="service.html">Laboratorium</a></li>
                               <li><a href="service.html">Radiologi</a></li>
                               <li><a href="service.html">Hermodialisis</a></li>
                            </ul>

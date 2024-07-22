@@ -24,7 +24,7 @@
                                 <a href="#">Beranda</a>
                             </li>
                             <li class="breadcrumb-item active">
-                                <a href="{{ route('admin.labotarium.gallery.index') }}">Daftar Gambar Layanan Unggulan</a>
+                                <a href="{{ route('admin.Laboratorium.gallery.index') }}">Daftar Gambar Layanan Unggulan</a>
                             </li>
                             <li class="breadcrumb-item active">
                                 <a href="#">Tambah Gambar Layanan Unggulan</a>
@@ -47,7 +47,7 @@
                         <h4>Form Tambah Gambar Layanan Unggulan</h4>
                     </div>
                     <div class="card-body" style="padding-top: 6px !important;">
-                        <form action="{{ route('admin.labotarium.gallery.store') }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('admin.Laboratorium.gallery.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-md-6">
@@ -73,7 +73,7 @@
                                 </div>
                             {{-- button submit --}}
                             <div class="d-flex justify-content-end mt-2">
-                                <a href="{{ route('admin.labotarium.gallery.index') }}"
+                                <a href="{{ route('admin.Laboratorium.gallery.index') }}"
                                     class="btn btn-secondary me-1">Kembali</a>
                                 <button type="submit" class="btn btn-primary">Simpan</button>
                             </div>
