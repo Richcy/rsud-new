@@ -35,7 +35,7 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-12">
-                <span><small><a href="">Beranda</a> / <a href="">Services</a> / <strong>Instalasi Rawat Jalan</strong></small></span>
+                <span><small><a href="">Beranda</a> / <a href="">Services</a> / <strong>Instalasi Gawat Darurat</strong></small></span>
                 <div class="text-center">
                     <img style="height: 250px; width: 100%; object-fit:cover;" src="{{ asset('storage/'. $gawatDarurat->banner) }}" alt="">
                 </div>
