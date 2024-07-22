@@ -5,7 +5,7 @@
     'Rumah Sakit Umum Daerah Cimacan pada awalnya adalah Puskesmas Pacet (Cimacan) yang sudah berdiri
     sejak tahun 1953, kemudian pada tahun 1981 statusnya meningkat menjadi Puskesmas DTP dan berubah status menjadi Rumah
     Sakit dengan ditetapkannya Surat Keputusan Bupati Cianjur atas nama Pemerintah Daerah Kabupaten Cianjur Nomor 19 Tahu…')
-@section('seo_url', )
+@section('seo_url', route('user.profile.index'))
 @extends('user.layouts.main')
 @push('custom_css')
     <style>
