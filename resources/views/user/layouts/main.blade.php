@@ -212,7 +212,7 @@
                               <a href="#">Layanan</a>
                               <ul class="submenu rr-submenu">
                                  <li><a href="{{ route('user.layanan_unggulan.index') }}">Layanan Unggulan</a></li>
-                                 <li><a href="">Instalasi Rawat Jalan</a></li>
+                                 <li><a href="{{ route('user.rawat_jalan.index') }}">Instalasi Rawat Jalan</a></li>
                                  <li><a href="{{ route('user.rawat_inap.index') }}">Instalasi Rawat Inap</a></li>
                                  <li><a href="">Instalasi Gawat Darurat</a></li>
                                  <li><a href="">Laboratorium</a></li>
@@ -324,7 +324,7 @@
                         <div class="rr-footer-list">
                            <ul>
                               <li><a href="{{ route('user.layanan_unggulan.index') }}">Layanan Unggulan</a></li>
-                              <li><a href="">Instalasi Rawat Jalan</a></li>
+                              <li><a href="{{ route('user.rawat_jalan.index') }}">Instalasi Rawat Jalan</a></li>
                               <li><a href="{{ route('user.rawat_inap.index') }}">Instalasi Rawat Inap</a></li>
                               <li><a href="">Instalasi Gawat Darurat</a></li>
                               <li><a href="">Laboratorium</a></li>
