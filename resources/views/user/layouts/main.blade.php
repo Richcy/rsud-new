@@ -153,53 +153,17 @@
    <!-- rr-offcanvus-area-end -->
    <header class="rr-header-height" style="background: #A82024 !important;">
       <!-- header top area start -->
-      <div class="rr-header-2-top d-none d-xxl-block grey-bg p-relative">
+      <div class="rr-header-2-top d-none d-xl-block grey-bg p-relative">
          <div class="container custom-container-1 z-index-3">
             <div class="rr-header-2-before">
                <div class="row align-items-center">
-                  <div class="col-xxl-6 col-xl-4">
-                     <div class="rr-header-2-top-info text-end">
-                        <ul class="d-flex align-items-center">
-                           <li>
-                              <a href="mailto:support@gmail.com "><span><i class="fa-solid fa-envelope"></i></span>
-                                 support@gmail.com </a>
-                           </li>
-                           <li class="ml-50">
-                            <span><i class="fa-solid fa-clock"></i>Sun - Fri:6.00am -
-                              02.00pm</span>
-                           </li>
-                        </ul>
+                  <div class="col-12 ">
+                     <div class="rr-header-2-top-info">
+                        <marquee behavior="20" direction="left" class="pt-1">
+                            <span>{{ $running_text->content }}</span>
+                        </marquee>
                      </div>
                   </div>
-                  <div class="col-xxl-6 col-xl-8">
-                     <div class="rr-header-2-top-info d-flex align-items-center justify-content-end text-end">
-                        <div class="rr-header-2-menu">
-                           <ul>
-                              <li>
-                                 <a href="#">Login/</a>
-                                 <a href="#">Registar/</a>
-                                 <a href="#">Support</a>
-                              </li>
-                           </ul>
-                        </div>
-                        <div class="rr-header-2-lang d-none d-md-block ml-60">
-                           <select style="display: none;">
-                              <option>English</option>
-                              <option>Bangla</option>
-                              <option>French</option>
-                           </select>
-                           <div class="nice-select" tabindex="0"><span class="current"><img
-                                    src="{{ asset('mekina') }}/assets/img/header/avata.png" alt="img"> English</span>
-                              <ul class="list z-index-2">
-                                 <li data-value="English" class="option selected focus">English</li>
-                                 <li data-value="Bangla" class="option">Bangla</li>
-                                 <li data-value="French" class="option">French</li>
-                              </ul>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-
                </div>
             </div>
          </div>
@@ -209,7 +173,7 @@
     <div id="header-sticky" class="rr-header-area rr-header-3-menu">
          <div class="container custom-container-1">
             <div class="row align-items-center">
-               <div class="col-xl-1 col-lg-2 col-md-2 col-5 d-xl-none d-xxl-none">
+               <div class="col-xl-2 col-lg-2 col-md-2 col-5 ps-3">
                   <div class="rr-header-logo">
                      <a href="index.html"><img class="img-fluid" style="width: 45%; height: 45%;" src="{{ asset('assets/images/rsc_white.png') }}" alt="img"></a>
                   </div>
@@ -263,24 +227,13 @@
                      </nav>
                   </div>
                </div>
-               <div class="col-xl-4 col-lg-10 col-md-10 col-7">
+               <div class="col-xl-2 col-lg-10 col-md-10 col-7">
                   <div class="rr-header-right d-flex align-items-center justify-content-end">
                      <div class="rr-header-2-icon d-none rr-header-2-search d-xl-block">
                         <button class="search-open-btn"><i style="color: #FFFFFF !important;" class="fa-solid fa-magnifying-glass"></i></button>
                      </div>
                      <div class="rr-header-bar">
                         <button class="rr-menu-bar mr-30"><i style="color: #121212 !important;" class="fa-solid fa-bars-staggered"></i></button>
-                     </div>
-                     <div class="d-none d-xxl-block">
-                        <div class="rr-header-2-contat d-flex align-items-center">
-                           <div class="rr-header-2-contat-icon p-relative">
-                              <span><i class="fa-solid fa-phone"></i></span>
-                           </div>
-                           <div class="rr-header-2-contat-text ml-20">
-                              <h4>Emergency Call</h4>
-                              <b><a href="tel:+99584554">24/7 – +99584554</a></b>
-                           </div>
-                        </div>
                      </div>
                   </div>
                </div>
@@ -298,7 +251,7 @@
    </main>
 
    <footer>
-      <div class="rr-footer-main p-relative fix" data-background="{{ asset('mekina') }}/assets/img/footer/footer-bg.jpg">
+      <div class="rr-footer-main p-relative fix">
 
        <!-- footer area start -->
        <div class="rr-footer-area pt-80 p-relative fix">

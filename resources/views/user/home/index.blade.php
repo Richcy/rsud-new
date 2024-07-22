@@ -1,17 +1,72 @@
 @extends('user.layouts.main')
 @push('custom_css')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <style>
           .sambutan-description > h1{
             font-weight: 400 !important;
             font-size: 18px;
             text-align: left !important;
         }
+        .splide__slide img {
+            width: 100%;
+            height: 600px; /* Default height */
+            object-fit: cover;
+        }
+
+        @media (max-width: 1200px) {
+            .splide__slide img {
+                height: 500px; /* Height for large devices */
+            }
+        }
+
+        @media (max-width: 992px) {
+            .splide__slide img {
+                height: 400px; /* Height for medium devices */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .splide__slide img {
+                height: 300px; /* Height for small devices */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .splide__slide img {
+                height: 200px; /* Height for extra small devices */
+            }
+        }
+
+        .splide__arrow{
+            background: #A82024;
+            width: 40px;
+            height: 40px;
+        }
+        .splide__arrow > svg{
+            stroke: #FFFFFF !important;
+            color: #FFFFFF;
+            /* background: #FFFFFF; */
+            fill: #FFFFFF;
+        }
+        .sambutan-description {
+            max-height: 180px; /* Adjust height as needed */
+            overflow: hidden;
+        }
+        .sambutan-description > div, a, p, span, h1, h2, h3, h4, h5, h6{
+            font-size: 90%;
+            line-height: 20px;
+            line-break: 20px;
+        }
+        .sambutan-description::after {
+            content: '...';
+            display: block;
+        }
     </style>
 @endpush
 
 @section('content')
       <!-- slider area start -->
-      <div class="rr-slider-3-area black-bg-2">
+      {{-- <div class="rr-slider-3-area black-bg-2">
         <div class="rr-slider-3-wrapper p-relative">
            <div class="rr-slider-3-arrow-box">
               <button class="slider-next">
@@ -23,16 +78,28 @@
            </div>
            <div class="swiper-container rr-slider-3-active">
               <div class="swiper-wrapper">
-                 <div class="swiper-slide fix "  >
-                    @foreach ($sliders as $slider)
-                    <div class="rr-slider-3-height p-relative rr-slider-3-thumb" data-background="{{ asset('storage/' . $slider->img) }}">
+                 <div class="swiper-slide fix">
+                     <div class="rr-slider-3-height p-relative rr-slider-3-thumb">
+                        @foreach ($sliders as $slider)
+                            <img src="{{ asset('storage/' . $slider->img) }}" alt="">
+                        @endforeach
                     </div>
-                    @endforeach
                  </div>
               </div>
            </div>
         </div>
-     </div>
+     </div> --}}
+     <section class="splide" aria-label="Splide Basic HTML Example">
+        <div class="splide__track">
+              <ul class="splide__list">
+                 @foreach ($sliders as $slider)
+                    <li class="splide__slide">
+                        <img style="img-fluid" src="{{ asset('storage/'. $slider->img) }}" alt="">
+                    </li>
+                 @endforeach
+              </ul>
+        </div>
+      </section>
      <!-- slider area end -->
      <!-- tab area start -->
      <section class="tab-area rr-tab-2__ptb theme-background pt-100 pb-50 p-relative fix">
@@ -108,22 +175,22 @@
                           <div class="rr-tab-2__section-box">
                              <div class="container p-0">
                                 <div class="row">
-                                    <div class="col-xl-6 col-lg-6 col-md-6">
-                                        <div class="d-flex flex-column h-100 rr-tab-2__item">
-                                          <h2 class="rr-tab-2-title-3">Sambutan Direktur:</h2>
-                                          <div class="sambutan-description">
-                                            {!! \Illuminate\Support\Str::limit($sambutan->description, 60) !!}
-                                          </div>
-                                          <a class="mt-auto rr-btn-black" href="service.html">
-                                            <span>Lihat Selengkapnya <i class="fa-sharp fa-solid fa-plus"></i></span>
-                                          </a>
-                                        </div>
-                                      </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6">
-                                            <div class="rr-tab-2__thumb rr-cursor-point-area text-end p-relative">
-                                                <img class="w-100 h-75" src="{{ asset('storage/' .$sambutan->banner) }}" alt="img">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 mb-3">
+                                        <div class="p-3 h-100 d-flex flex-column">
+                                            <h2 class="rr-tab-2-title-3">Sambutan Direktur:</h2>
+                                            <div class="sambutan-description mb-10">
+                                                {!! $sambutan->description !!}
                                             </div>
+                                            <a class="mt-auto rr-btn-black btn btn-dark " href="service.html">
+                                                <span>Lihat Selengkapnya <i class="fa-sharp fa-solid fa-plus"></i></span>
+                                            </a>
                                         </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 mb-3">
+                                        <div class="p-relative p-3 h-100">
+                                            <img class="img-fluid w-100 h-100" src="{{ asset('storage/' . $sambutan->banner) }}" alt="img">
+                                        </div>
+                                    </div>
                                 </div>
                              </div>
                           </div>
@@ -135,9 +202,9 @@
                           <div class="rr-tab-2__section-box">
                              <div class="container p-0">
                                 <div class="row">
-                                   <div class="col-xl-12 col-lg-12  col-md-12">
+                                   <div class="col-xl-12 col-lg-12 col-md-12">
                                       <div class="rr-tab-2__thumb rr-cursor-point-area text-end p-relative">
-                                         <img class="w-100 h-100" src="{{ asset('storage/' . $maklumat->img) }}" alt="img">
+                                         <img style="transform: scale(0.8);" class="w-100 h-100" src="{{ asset('storage/' . $maklumat->img) }}" alt="img">
                                       </div>
                                    </div>
                                 </div>
@@ -153,7 +220,7 @@
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12  col-md-12">
                                         <div class="rr-tab-2__thumb rr-cursor-point-area text-end p-relative">
-                                           <img class="w-100 h-100" src="{{ asset('storage/' . $rating->img) }}" alt="img">
+                                           <img style="transform: scale(0.5); margin-top: -400px" class="w-100 h-100" src="{{ asset('storage/' . $rating->img) }}" alt="img">
                                         </div>
                                      </div>
                                 </div>
@@ -201,7 +268,7 @@
                        <span>01</span>
                     </div>
                     <div class="rr-features-icon">
-                       <img src="{{ asset('mekina') }}/assets//img/feature/icon-1.png" alt="img">
+                        <i class="fa-solid fa-hand-holding-medical"></i>
                     </div>
                     <div class="rr-features-content text-center">
                        <h3 class="rr-features-title"><a href="service-details.html">Layanan Unggulan</a></h3>
@@ -216,7 +283,7 @@
                        <span>02</span>
                     </div>
                     <div class="rr-features-icon">
-                       <img src="{{ asset('mekina') }}/assets//img/feature/icon-2.png" alt="img">
+                        <i class="fa-solid fa-bed-pulse"></i>
                     </div>
                     <div class="rr-features-content text-center">
                         <h3 class="rr-features-title"><a href="service-details.html">Instalasi Rawat Inap</a></h3>
@@ -231,7 +298,7 @@
                        <span>03</span>
                     </div>
                     <div class="rr-features-icon">
-                       <img src="{{ asset('mekina') }}/assets//img/feature/icon-3.png" alt="img">
+                        <i class="fa-solid fa-hospital"></i>
                     </div>
                     <div class="rr-features-content text-center">
                         <h3 class="rr-features-title"><a href="service-details.html">Instalas Rawat Jalan</a></h3>
@@ -246,7 +313,7 @@
                        <span>04</span>
                     </div>
                     <div class="rr-features-icon">
-                       <img src="{{ asset('mekina') }}/assets//img/feature/icon-4.png" alt="img">
+                        <i class="fa-solid fa-truck-medical"></i>
                     </div>
                     <div class="rr-features-content text-center">
                         <h3 class="rr-features-title"><a href="service-details.html">Instalasi Gawat Darurat</a></h3>
@@ -261,7 +328,7 @@
                        <span>05</span>
                     </div>
                     <div class="rr-features-icon">
-                       <img src="{{ asset('mekina') }}/assets//img/feature/icon-4.png" alt="img">
+                        <i class="fa-solid fa-microscope"></i>
                     </div>
                     <div class="rr-features-content text-center">
                         <h3 class="rr-features-title"><a href="service-details.html">Labotarium</a></h3>
@@ -276,7 +343,7 @@
                        <span>06</span>
                     </div>
                     <div class="rr-features-icon">
-                       <img src="{{ asset('mekina') }}/assets//img/feature/icon-4.png" alt="img">
+                        <i class="fa-solid fa-suitcase-medical"></i>
                     </div>
                     <div class="rr-features-content text-center">
                         <h3 class="rr-features-title"><a href="service-details.html">Radiology</a></h3>
@@ -289,40 +356,43 @@
      </section>
      <!-- features area end -->
 
-      <!-- doctor area start -->
-      <div class="rr-doctors-area  pb-30 pt-100">
-        <div class="container">
-           <div class="row">
-              <div class="col-xl-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
-                 <div class="rr-doctors-title-box text-center mb-45">
-                    <div class="rr-doctors-title-box z-index-2">
-                       <h4 class="rr-section-title">Dokter</h4>
-                    </div>
-                 </div>
-              </div>
-           </div>
-           <div class="row mb-50">
-              @foreach ($doctors as $doctor)
-              <div class="col-xl-6 col-lg-6 col-md-4 col-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
-                <div class="rr-doctors-item mb-25 d-flex align-items-center justify-content-center">
-                   <div class="rr-doctors-img">
-                      <img src="{{ asset('storage/'. $doctor->doctor->img) }}" alt="">
-                   </div>
-                   <div class="rr-doctors-content">
-                      <h4 class="rr-doctors-name"><a href="doctor-details.html">{{ $doctor->doctor->name }}</a></h4>
-                      <p>{{ $doctor->doctor->field_doctor->name }}</p>
-                      <a class="rr-doctors-button" href="doctor-details.html">Lihat Selengkapnya </a>
-                   </div>
-                </div>
+   <!-- team area start -->
+   <section class="rr-team-4-area pt-100 pb-80 fix">
+    <div class="container">
+       <div class="row mb-40">
+          <div class="col-xl-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+             <div class="rr-price-2-title-box text-center mb-45">
+                <h4 class="rr-section-title rr-section-title-space">Dokter</h4>
              </div>
-              @endforeach
-              <div class="text-center">
-                 <a class="rr-btn" href="doctor.html">Lihat Semua Dokter <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-           </div>
-        </div>
-     </div>
-     <!-- doctor area end -->
+          </div>
+          @foreach ($doctors as $item)
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+            <div class="rr-team-4-item p-relative mb-60">
+               <div class="rr-team-4-thumb p-relative ">
+                  <div class="rr-team-4-img">
+                     <img class="w-100" src="{{ asset('storage/'. $item->doctor->img) }}" alt="img">
+                  </div>
+               </div>
+
+               <div class="rr-team-4-content text-center p-relative">
+                  <h6 class="rr-team-4-title"><a href="team.html">{{ $item->doctor->name }}</a></h6>
+                    <p>{{ $item->doctor->field_doctor->name }}</p>
+               </div>
+               <div class="rr-team-4-arrow"> <a href="team.html"><i class="fa-solid fa-arrow-up"></i></a>
+               </div>
+            </div>
+         </div>
+          @endforeach
+       </div>
+       <div class="row">
+          <div class="team-btn text-center wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".9s">
+             <a class="rr-btn-black" href="team.html"><span>Lihat Semua Dokter <i
+                      class="fa-sharp fa-solid fa-plus"></i></span></a>
+          </div>
+       </div>
+    </div>
+ </section>
+ <!-- team area end -->
 
      <!-- blog area start -->
      <div class="rr-blog-area pt-90 pb-90 fix">
@@ -380,7 +450,12 @@
       <!-- contact area start -->
       <section class="rr-contact-area fix">
         <div class="container">
-           <div class="row">
+           <div class="row g-0">
+            <div class="col-xl-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+                <div class="rr-blog-title-box text-center mb-45">
+                   <h4 class="rr-section-title">LAYANAN PENGADUAN</h4>
+                </div>
+             </div>
               <div class="col-xl-4 col-lg-4 col-md-12 col-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                  <div class="rr-contact-info">
                     <div class="rr-contact-item d-flex align-items-center p-relative">
@@ -451,7 +526,7 @@
               <div class="col-xl-8 col-lg-8 col-md-12 col-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".9s">
                  <div class="rr-contact-form">
                     <div class="rr-contact-form-box text-center">
-                       <h4 class="rr-section-title">LAYANAN PENGADUAN</h4>
+                       <img style="max-height: 665px; object-fit: cover;" src="{{ asset('assets/images/petugas_khusus.jpg') }}" alt="" class="img-fluid w-100">
                     </div>
                  </div>
               </div>
@@ -484,5 +559,13 @@
 @endsection
 
 @push('custom_js')
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+     <script>
+        var splide = new Splide( '.splide', {
+            type  : 'fade',
+            rewind: true,
+        });
 
+        splide.mount();
+     </script>
 @endpush
