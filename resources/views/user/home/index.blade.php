@@ -450,15 +450,15 @@
       <!-- contact area start -->
       <section class="rr-contact-area fix">
         <div class="container">
-           <div class="row g-0">
+           <div class="row gx-0">
             <div class="col-xl-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                 <div class="rr-blog-title-box text-center mb-45">
                    <h4 class="rr-section-title">LAYANAN PENGADUAN</h4>
                 </div>
              </div>
               <div class="col-xl-4 col-lg-4 col-md-12 col-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
-                 <div class="rr-contact-info">
-                    <div class="rr-contact-item d-flex align-items-center p-relative">
+                 <div class="rr-contact-info" >
+                    <div class="rr-contact-item d-flex align-items-center p-relative" style="padding-top: 30px !important;">
                         <div class="rr-contact-icon mr-20">
                            <span><i class="fa-solid fa-user"></i></span>
                         </div>
@@ -512,7 +512,7 @@
                           <span><a href="tel:+09627387877">Email</a></span>
                        </div>
                     </div>
-                    <div class="rr-contact-item d-flex align-items-center p-relative">
+                    <div class="rr-contact-item d-flex align-items-center p-relative" style="padding-bottom: 30px !important;">
                        <div class="rr-contact-icon mr-20">
                           <span><i class="fa-brands fa-facebook"></i></span>
                        </div>
@@ -526,7 +526,7 @@
               <div class="col-xl-8 col-lg-8 col-md-12 col-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".9s">
                  <div class="rr-contact-form">
                     <div class="rr-contact-form-box text-center">
-                       <img style="max-height: 665px; object-fit: cover;" src="{{ asset('assets/images/petugas_khusus.jpg') }}" alt="" class="img-fluid w-100">
+                       <img style="max-height: 695px; object-fit: cover;" src="{{ asset('assets/images/petugas_khusus.jpg') }}" alt="" class="img-fluid w-100">
                     </div>
                  </div>
               </div>
@@ -536,7 +536,7 @@
      <!-- contact area end -->
      <!-- map area start -->
      <div class="rr-map fix container pt-90 pb-90">
-        <div class="row">
+        <div class="row ">
             <div class="col-md-7 col-12">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.4038199017186!2d107.02980937515613!3d-6.7204789657083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69b3c04cf9e9eb%3A0x2032315f50965be4!2sRSUD%20Cimacan!5e0!3m2!1sid!2sid!4v1721577992569!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
