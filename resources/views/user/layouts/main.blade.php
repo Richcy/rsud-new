@@ -196,16 +196,16 @@
                         <ul>
                             <li><a href="{{ route('user.home') }}">Beranda</a></li>
                            <li class="has-dropdown">
-                              <a href="service.html">Tentang</a>
+                              <a>Tentang</a>
                               <ul class="submenu rr-submenu">
                                  <li><a href="{{ route('user.profile.index') }}">Profil Rumah Sakit</a></li>
-                                 <li><a href="service.html">Sambutan Direktur</a></li>
-                                 <li><a href="service.html">Struktur Organisasi</a></li>
-                                 <li><a href="service.html">Denah Rumah Sakit</a></li>
-                                 <li><a href="service.html">Penilaian Mutu</a></li>
-                                 <li><a href="service.html">Hak dan Kewajiban Pasien</a></li>
-                                 <li><a href="service.html">Maklumat Pelayanan</a></li>
-                                 <li><a href="service.html">Standar Pelayanan</a></li>
+                                 <li><a href="{{ route("user.greeting.index") }}">Sambutan Direktur</a></li>
+                                 <li><a href="">Struktur Organisasi</a></li>
+                                 <li><a href="">Denah Rumah Sakit</a></li>
+                                 <li><a href="">Penilaian Mutu</a></li>
+                                 <li><a href="">Hak dan Kewajiban Pasien</a></li>
+                                 <li><a href="">Maklumat Pelayanan</a></li>
+                                 <li><a href="">Standar Pelayanan</a></li>
                               </ul>
                            </li>
                            <li class="has-dropdown">
@@ -309,7 +309,7 @@
                         <div class="rr-footer-list ">
                            <ul>
                               <li><a href="{{ route('user.profile.index') }}l">Profil Rumah Sakit</a></li>
-                              <li><a href="service.html">Sambutan Direktur</a></li>
+                              <li><a href="{{ route('user.greeting.index') }}">Sambutan Direktur</a></li>
                               <li><a href="service.html">Struktur Organisasi</a></li>
                               <li><a href="service.html">Standar Pelayanan</a></li>
                               <li><a href="service.html">Dokter</a></li>
