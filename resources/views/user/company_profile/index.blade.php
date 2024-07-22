@@ -8,7 +8,14 @@
 @section('seo_url', )
 @extends('user.layouts.main')
 @push('custom_css')
-
+    <style>
+       @media(min-widht: 768px)
+       {
+        #description{
+            margin-left: 20px;
+        }
+       }
+    </style>
 @endpush
 
 @section('content')
@@ -26,7 +33,7 @@
                     <h3>PROFIL RSUD CIMACAN</h3>
                 </div>
 
-                <div class="container mx-3 pt-5">
+                <div class="container pt-5" id="description">
                     {!! $profile->description !!}
                 </div>
             </div>

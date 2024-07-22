@@ -194,7 +194,7 @@
                   <div class="rr-header-main-menu rr-header-menu">
                      <nav class="rr-main-menu-content text-end">
                         <ul>
-                            <li><a href="about.html">Beranda</a></li>
+                            <li><a href="{{ route('user.home') }}">Beranda</a></li>
                            <li class="has-dropdown">
                               <a href="service.html">Tentang</a>
                               <ul class="submenu rr-submenu">
