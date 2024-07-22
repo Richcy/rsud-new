@@ -212,7 +212,7 @@
                                 <div class="row">
                                    <div class="col-xl-12 col-lg-12 col-md-12">
                                       <div class="rr-tab-2__thumb rr-cursor-point-area text-end p-relative">
-                                         <img style="transform: scale(0.8);" class="w-100 h-100 img-fluid" src="{{ asset('storage/' . $maklumat->img) }}" alt="img">
+                                         <img style="transform: scale(0.8);" class="w-100 img-fluid" src="{{ asset('storage/' . $maklumat->img) }}" alt="img">
                                       </div>
                                    </div>
                                 </div>
@@ -228,7 +228,7 @@
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12  col-md-12">
                                         <div class="rr-tab-2__thumb rr-cursor-point-area text-end p-relative">
-                                           <img style="transform: scale(0.5); margin-top: -400px" class="w-100 h-100 img-fluid" src="{{ asset('storage/' . $rating->img) }}" alt="img">
+                                           <img style="transform: scale(0.5); margin-top: -400px" class="w-100 " src="{{ asset('storage/' . $rating->img) }}" alt="img">
                                         </div>
                                      </div>
                                 </div>
@@ -244,7 +244,7 @@
                                <div class="row">
                                 <div class="col-xl-12 col-lg-12  col-md-12">
                                     <div class="rr-tab-2__thumb rr-cursor-point-area text-end p-relative">
-                                       <img class="w-100 h-100 img-fluid" src="{{ asset('storage/' . $structure->img) }}" alt="img">
+                                       <img class="w-100 img-fluid" style="transform: scale(0.8);" src="{{ asset('storage/' . $structure->img) }}" alt="img">
                                     </div>
                                  </div>
                                </div>
