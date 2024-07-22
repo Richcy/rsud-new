@@ -90,7 +90,7 @@
             processing: true,
             serverSide: true,
             ajax: {
-                url: "/adminstrator/admin",
+                url: "/administrator/admin",
                 type: 'GET',
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'

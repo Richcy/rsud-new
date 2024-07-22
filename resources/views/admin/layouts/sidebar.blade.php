@@ -61,21 +61,21 @@
                     </li>
                     <li class="{{ request()->routeIs(['admin.rawat-jalan.*']) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.rawat-jalan.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Instalasi Rawat Jalan</span></a>
                     </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Instalasi Rawat Inap</span></a>
+                    <li class="{{ request()->routeIs(['admin.rawat-inap.*']) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.rawat-inap.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Instalasi Rawat Inap</span></a>
                     </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Instalasi Gawat Darurat</span></a>
+                    <li class="{{ request()->routeIs(['admin.gawat-darurat.*']) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.gawat-darurat.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Instalasi Gawat Darurat</span></a>
                     </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Labotarium</span></a>
+                    <li class="{{ request()->routeIs(['admin.labotarium.*']) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.labotarium.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Labotarium</span></a>
                     </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Radiology</span></a>
+                    <li class="{{ request()->routeIs(['admin.radiology.*']) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.radiology.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Radiology</span></a>
                     </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Hemodialis</span></a>
+                    <li class="{{ request()->routeIs(['admin.hemodialis.*']) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.hemodialis.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Hemodialis</span></a>
                     </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Farmasi</span></a>
+                    <li class="{{ request()->routeIs(['admin.farmasi.*']) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.farmasi.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Farmasi</span></a>
                     </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Rehab Medik</span></a>
+                    <li class="{{ request()->routeIs(['admin.rehab-medik.*']) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.rehab-medik.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Rehab Medik</span></a>
                     </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Ambulans</span></a>
+                    <li class="{{ request()->routeIs(['admin.ambulance.*']) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.ambulance.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Ambulance</span></a>
                     </li>
                 </ul>
             </li>

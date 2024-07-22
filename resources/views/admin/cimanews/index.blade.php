@@ -92,7 +92,7 @@
             processing: true,
             serverSide: true,
             ajax: {
-                url: "/adminstrator/cimanews",
+                url: "/administrator/cimanews",
                 type: 'GET',
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'

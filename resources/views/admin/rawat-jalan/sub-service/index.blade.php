@@ -106,7 +106,7 @@
             serverSide: true,
             responsive: true,
             ajax: {
-                url: '/adminstrator/layanan-unggulan/sub-service/{{ $id }}',
+                url: '/administrator/rawat-jalan/sub-service/{{ $id }}',
                 type: 'GET',
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'

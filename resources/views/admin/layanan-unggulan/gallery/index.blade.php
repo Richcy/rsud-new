@@ -106,7 +106,7 @@
             serverSide: true,
             responsive: true,
             ajax: {
-                url: '/adminstrator/layanan-unggulan/gallery',
+                url: '/administrator/layanan-unggulan/gallery',
                 type: 'GET',
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'

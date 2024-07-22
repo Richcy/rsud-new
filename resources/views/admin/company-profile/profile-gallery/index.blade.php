@@ -103,7 +103,7 @@
             serverSide: true,
             responsive: true,
             ajax: {
-                url: "/adminstrator/profile-gallery",
+                url: "/administrator/profile-gallery",
                 type: 'GET',
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'

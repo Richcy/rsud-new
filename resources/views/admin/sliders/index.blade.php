@@ -88,7 +88,7 @@
             processing: true,
             serverSide: true,
             ajax: {
-                url: "/adminstrator/slider",
+                url: "/administrator/slider",
                 type: 'GET',
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'

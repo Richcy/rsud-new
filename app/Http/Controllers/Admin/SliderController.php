@@ -28,7 +28,7 @@ class SliderController extends Controller
                     return '<img src="' . asset('storage/' . $row->img) . '" height="70px" width="auto">';
                 })
                 ->addColumn('action', 'admin.sliders.datatables.action')
-                ->rawColumns(['img', 'action'])
+                ->rawColumns(['img', 'action', 'description'])
                 ->make(true);
         }
         return view('admin.sliders.index');
@@ -52,7 +52,7 @@ class SliderController extends Controller
             'title' => 'required|string|max:255',
             'slug' => 'required|string|max:255|unique:sliders,slug',
             'description' => 'nullable|string',
-            'img' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'img' => 'required|image|mimes:jpeg,png,jpg,gif',
         ], [
             'title.required' => 'Judul harus diisi.',
             'slug.required' => 'Slug harus diisi.',

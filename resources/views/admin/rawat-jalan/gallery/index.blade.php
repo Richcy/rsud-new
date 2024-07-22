@@ -106,7 +106,7 @@
             serverSide: true,
             responsive: true,
             ajax: {
-                url: '/adminstrator/rawat-jalan/gallery',
+                url: '/administrator/rawat-jalan/gallery',
                 type: 'GET',
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'

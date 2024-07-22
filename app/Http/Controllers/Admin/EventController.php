@@ -106,11 +106,7 @@ class EventController extends Controller
         DB::beginTransaction();
 
         try {
-            if ($request->hasFile('img')) {
-                $file = $request->file('img');
-                $filename = 'event_' . Carbon::now()->format('Ymd_His') . '_' . Str::random(5) . '.' . $file->getClientOriginalExtension();
-                $path = $file->storeAs('events', $filename, 'public');
-            }
+
 
             // Simpan data ke database
             $event = new Event();
@@ -125,7 +121,14 @@ class EventController extends Controller
             $event->location = $request->location;
             $event->sub_desc = $request->sub_desc;
             $event->description = $request->description;
-            $event->img = $path; // Simpan path gambar ke dalam field img
+
+
+            if ($request->hasFile('img')) {
+                $file = $request->file('img');
+                $filename = 'event_' . Carbon::now()->format('Ymd_His') . '_' . Str::random(5) . '.' . $file->getClientOriginalExtension();
+                $path = $file->storeAs('events', $filename, 'public');
+            }
+            $event->img = $path;  // Simpan path gambar ke dalam field img
             $event->save();
 
             DB::commit();

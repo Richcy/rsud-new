@@ -88,7 +88,7 @@
             processing: true,
             serverSide: true,
             ajax: {
-                url: "/adminstrator/field-doctor",
+                url: "/administrator/field-doctor",
                 type: 'GET',
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'

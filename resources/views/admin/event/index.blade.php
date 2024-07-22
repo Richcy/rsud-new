@@ -98,7 +98,7 @@
             serverSide: true,
             responsive: true,
             ajax: {
-                url: "/adminstrator/event",
+                url: "/administrator/event",
                 type: 'GET',
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'

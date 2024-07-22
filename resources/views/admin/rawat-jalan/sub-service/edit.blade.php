@@ -23,7 +23,7 @@
                                 <a href="#">Beranda</a>
                             </li>
                             <li class="breadcrumb-item active">
-                                <a href="{{ route('admin.layanan-unggulan.index') }}">Daftar Sub Service</a>
+                                <a href="{{ route('admin.rawat-jalan.index') }}">Daftar Sub Service</a>
                             </li>
                             <li class="breadcrumb-item active">
                                 <a href="#">Update Sub Service</a>
