@@ -3,10 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\User\SketchController;
+use App\Http\Controllers\User\FarmasiController;
 use App\Http\Controllers\User\QualityController;
 use App\Http\Controllers\User\GreetingController;
 use App\Http\Controllers\User\MaklumatController;
+use App\Http\Controllers\User\RadiologyController;
 use App\Http\Controllers\User\StructureController;
+use App\Http\Controllers\User\RehabMedikController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\User\HemodialisisController;
 use App\Http\Controllers\User\LaboratoriumController;
@@ -17,7 +20,6 @@ use App\Http\Controllers\User\StandardPelayananController;
 use App\Http\Controllers\User\InstalasiRawatInapController;
 use App\Http\Controllers\User\InstalasiRawatJalanController;
 use App\Http\Controllers\User\InstalasiGawatDaruratController;
-use App\Http\Controllers\User\RehabMedikController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,6 +52,8 @@ Route::name('user.')->group(function () {
     Route::get('/laboratorium', [LaboratoriumController::class, 'index'])->name('laboratorium.index');
     Route::get('/hemodialisis', [HemodialisisController::class, 'index'])->name('hemodialisis.index');
     Route::get('/rehab_medik', [RehabMedikController::class, 'index'])->name('rehab_medik.index');
+    Route::get('/radiology', [RadiologyController::class, 'index'])->name('radiology.index');
+    Route::get('/farmasi', [FarmasiController::class, 'index'])->name('farmasi.index');
 });
 
 Route::post('/logout', [LoginController::class, 'logout'])
