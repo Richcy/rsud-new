@@ -69,7 +69,7 @@ class CareerController extends Controller
         $validator = Validator::make($request->all(), [
             'title' => 'required|string|max:255',
             'slug' => 'required|string|max:255|unique:careers,slug',
-            'url' => 'required|url',
+            'url' => 'nullable|url',
             'status' => 'required|in:1,0',
             'sub_desc' => 'nullable|string',
             'img' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
@@ -153,7 +153,7 @@ class CareerController extends Controller
         $validator = Validator::make($request->all(), [
             'title' => 'required|string|max:255',
             'slug' => 'required|string|max:255|unique:careers,slug,' . $id,
-            'url' => 'required|url',
+            'url' => 'nullable|url',
             'status' => 'required|in:1,0',
             'sub_desc' => 'nullable|string',
             'img' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',

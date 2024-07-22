@@ -52,7 +52,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="mb-1">
-                                            <label for="title" class="form-label">Nama Subevent</label>
+                                            <label for="title" class="form-label">Nama SubService</label>
                                             <input type="text" id="title" class="form-control @error('title') is-invalid @enderror" name="title" onkeyup="createSlug()" placeholder="Masukan Nama Diskon" value="{{ old('title', $subService->title) }}">
                                             @error('title')
                                                 <div class="invalid-feedback">{{ $message }}</div>

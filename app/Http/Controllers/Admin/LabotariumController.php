@@ -13,7 +13,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
-class LabotariumController extends Controller
+class LaboratoriumController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,7 +21,7 @@ class LabotariumController extends Controller
     public function index()
     {
         $data = Service::where('type', 'lab')->first();
-        return view('admin.labotarium.index', compact('data'));
+        return view('admin.Laboratorium.index', compact('data'));
     }
     /**
      * Update the specified resource in storage.
@@ -74,7 +74,7 @@ class LabotariumController extends Controller
 
             DB::commit();
 
-            return redirect()->route('admin.labotarium.index')->with('success', 'Service berhasil diperbarui.');
+            return redirect()->route('admin.Laboratorium.index')->with('success', 'Service berhasil diperbarui.');
         } catch (\Exception $e) {
             DB::rollBack();
             return redirect()->back()->with('error', 'Terjadi kesalahan: ' . $e->getMessage());
@@ -89,17 +89,17 @@ class LabotariumController extends Controller
             return datatables()->of($data)
                 ->addIndexColumn()
                 ->addColumn('action', function($data) {
-                    return view('admin.labotarium.sub-service.datatables.action', compact('data'));
+                    return view('admin.Laboratorium.sub-service.datatables.action', compact('data'));
                 })
                 ->rawColumns(['action'])
                 ->make(true);
         }
-        return view('admin.labotarium.sub-service.index', compact('id'));
+        return view('admin.Laboratorium.sub-service.index', compact('id'));
     }
 
     public function createSubService($id)
     {
-        return view('admin.labotarium.sub-service.create', compact('id'));
+        return view('admin.Laboratorium.sub-service.create', compact('id'));
     }
 
     public function storeSubService(Request $request, string $id)
@@ -143,7 +143,7 @@ class LabotariumController extends Controller
         // Commit transaksi jika semua operasi berhasil
         DB::commit();
 
-        return redirect()->route('admin.labotarium.sub-service.index', $id)->with('success', 'Sub Service berhasil ditambahkan.');
+        return redirect()->route('admin.Laboratorium.sub-service.index', $id)->with('success', 'Sub Service berhasil ditambahkan.');
     } catch (\Exception $e) {
         // Rollback transaksi jika terjadi kesalahan
         DB::rollback();
@@ -155,7 +155,7 @@ class LabotariumController extends Controller
     public function editSubService($slug)
     {
         $subService = SubService::where('slug', $slug)->first();
-        return view('admin.labotarium.sub-service.edit', compact('subService'));
+        return view('admin.Laboratorium.sub-service.edit', compact('subService'));
     }
 
     public function updateSubService(Request $request, $slug)
@@ -166,9 +166,9 @@ class LabotariumController extends Controller
             'slug' => 'required|string|max:255',
             'description' => 'nullable|string',
         ], [
-            'title.required' => 'Nama Subevent wajib diisi.',
-            'title.string' => 'Nama Subevent harus berupa teks.',
-            'title.max' => 'Nama Subevent tidak boleh lebih dari :max karakter.',
+            'title.required' => 'Nama SubService wajib diisi.',
+            'title.string' => 'Nama SubService harus berupa teks.',
+            'title.max' => 'Nama SubService tidak boleh lebih dari :max karakter.',
             'slug.required' => 'Slug wajib diisi.',
             'slug.string' => 'Slug harus berupa teks.',
             'slug.max' => 'Slug tidak boleh lebih dari :max karakter.',
@@ -192,7 +192,7 @@ class LabotariumController extends Controller
             // Save data
             $rawatJalan->save();
 
-            return redirect()->route('admin.labotarium.sub-service.index', $rawatJalan->service_id)->with('success', 'Sub Service berhasil diperbarui.');
+            return redirect()->route('admin.Laboratorium.sub-service.index', $rawatJalan->service_id)->with('success', 'Sub Service berhasil diperbarui.');
 
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Gagal memperbarui Sub Service: ' . $e->getMessage());
@@ -226,7 +226,7 @@ class LabotariumController extends Controller
 
             return DataTables::of($data)
              ->addIndexColumn()
-             ->addColumn('action', 'admin.labotarium.gallery.datatables.action')
+             ->addColumn('action', 'admin.Laboratorium.gallery.datatables.action')
              ->editColumn('img', function($row) {
                  if ($row->img) {
                      return '<img src="' . asset('storage/' . $row->img) . '" height="70px" width="auto">';
@@ -240,12 +240,12 @@ class LabotariumController extends Controller
 
 
          $id = Service::where('type', 'lab')->select('id')->first();
-         return view('admin.labotarium.gallery.index', compact('id'));
+         return view('admin.Laboratorium.gallery.index', compact('id'));
     }
 
     public function galleryCreate()
     {
-        return view('admin.labotarium.gallery.create');
+        return view('admin.Laboratorium.gallery.create');
     }
 
     public function galleryStore(Request $request)
@@ -283,7 +283,7 @@ class LabotariumController extends Controller
 
                 DB::commit();
 
-                return redirect()->route('admin.labotarium.gallery.index')->with('success', 'Gambar berhasil diunggah');
+                return redirect()->route('admin.Laboratorium.gallery.index')->with('success', 'Gambar berhasil diunggah');
             }
 
             return redirect()->back()->with('error', 'Gagal mengunggah gambar');
@@ -296,7 +296,7 @@ class LabotariumController extends Controller
     public function galleryEdit($id)
     {
         $data = Gallery::find($id);
-        return view('admin.labotarium.gallery.edit', compact('data'));
+        return view('admin.Laboratorium.gallery.edit', compact('data'));
     }
 
     public function galleryUpdate(Request $request, $id)
@@ -336,7 +336,7 @@ class LabotariumController extends Controller
 
             DB::commit();
 
-            return redirect()->route('admin.labotarium.gallery.index')->with('success', 'Gambar berhasil diperbarui');
+            return redirect()->route('admin.Laboratorium.gallery.index')->with('success', 'Gambar berhasil diperbarui');
         } catch (\Exception $e) {
             DB::rollBack();
             return redirect()->back()->with('error', 'Terjadi kesalahan: ' . $e->getMessage());

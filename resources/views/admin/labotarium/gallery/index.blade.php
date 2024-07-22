@@ -41,10 +41,10 @@
                         <div class="card-header py-2">
                             <ul class="nav nav-pills card-header-pills ms-0" id="pills-tab" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link"  href="{{ route('admin.labotarium.index') }}">Deskripsi</a>
+                                    <a class="nav-link"  href="{{ route('admin.Laboratorium.index') }}">Deskripsi</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link"  href="{{ route('admin.labotarium.sub-service.index', $id) }}">Sub Service</a>
+                                    <a class="nav-link"  href="{{ route('admin.Laboratorium.sub-service.index', $id) }}">Sub Service</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link active">Galeri</a>
@@ -54,7 +54,7 @@
                         <div class="card-header">
                             <h4>Galeri</h4>
                             {{-- button tambah --}}
-                            <a href="{{ route('admin.labotarium.gallery.create') }}" class="btn btn-primary">Tambah Galeri</a>
+                            <a href="{{ route('admin.Laboratorium.gallery.create') }}" class="btn btn-primary">Tambah Galeri</a>
                         </div>
                         <div class="card-body">
                             <div class="tab-content" id="pills-tabContent">
@@ -106,7 +106,7 @@
             serverSide: true,
             responsive: true,
             ajax: {
-                url: '/administrator/labotarium/gallery',
+                url: '/administrator/Laboratorium/gallery',
                 type: 'GET',
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'

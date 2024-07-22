@@ -23,7 +23,7 @@
                                 <a href="#">Beranda</a>
                             </li>
                             <li class="breadcrumb-item active">
-                                <a href="{{ route('admin.labotarium.index') }}">Daftar Sub Service</a>
+                                <a href="{{ route('admin.Laboratorium.index') }}">Daftar Sub Service</a>
                             </li>
                             <li class="breadcrumb-item active">
                                 <a href="#">Update Sub Service</a>
@@ -46,13 +46,13 @@
                             <h4>Form Update Sub Service</h4>
                         </div>
                         <div class="card-body" style="padding-top: 6px !important;">
-                            <form action="{{ route('admin.labotarium.sub-service.update', $subService->slug) }}" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('admin.Laboratorium.sub-service.update', $subService->slug) }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="mb-1">
-                                            <label for="title" class="form-label">Nama Subevent</label>
+                                            <label for="title" class="form-label">Nama SubService</label>
                                             <input type="text" id="title" class="form-control @error('title') is-invalid @enderror" name="title" onkeyup="createSlug()" placeholder="Masukan Nama Diskon" value="{{ old('title', $subService->title) }}">
                                             @error('title')
                                                 <div class="invalid-feedback">{{ $message }}</div>

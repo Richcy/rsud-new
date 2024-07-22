@@ -166,9 +166,9 @@ class RehabMedikController extends Controller
             'slug' => 'required|string|max:255',
             'description' => 'required|string',
         ], [
-            'title.required' => 'Nama Subevent wajib diisi.',
-            'title.string' => 'Nama Subevent harus berupa teks.',
-            'title.max' => 'Nama Subevent tidak boleh lebih dari :max karakter.',
+            'title.required' => 'Nama SubService wajib diisi.',
+            'title.string' => 'Nama SubService harus berupa teks.',
+            'title.max' => 'Nama SubService tidak boleh lebih dari :max karakter.',
             'slug.required' => 'Slug wajib diisi.',
             'slug.string' => 'Slug harus berupa teks.',
             'slug.max' => 'Slug tidak boleh lebih dari :max karakter.',

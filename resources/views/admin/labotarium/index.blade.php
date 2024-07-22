@@ -11,14 +11,14 @@
         <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
                 <div class="col-12">
-                    <h4 class="content-header-title float-start mb-0">Data Instalasi Labotarium</h4>
+                    <h4 class="content-header-title float-start mb-0">Data Instalasi Laboratorium</h4>
                     <div class="breadcrumb-wrapper">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
                                 <a href="#">Beranda</a>
                             </li>
                             <li class="breadcrumb-item active">
-                                <a href="#">Daftar Instalasi Labotarium</a>
+                                <a href="#">Daftar Instalasi Laboratorium</a>
                             </li>
                         </ol>
                     </div>
@@ -40,10 +40,10 @@
                                     <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Deskripsi</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('admin.labotarium.sub-service.index', $data->id) }}">Sub Service</a>
+                                    <a class="nav-link" href="{{ route('admin.Laboratorium.sub-service.index', $data->id) }}">Sub Service</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('admin.labotarium.gallery.index') }}">Galeri</a>
+                                    <a class="nav-link" href="{{ route('admin.Laboratorium.gallery.index') }}">Galeri</a>
                                 </li>
                             </ul>
                         </div>
@@ -51,7 +51,7 @@
                             <div class="tab-content" id="pills-tabContent">
                                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                                     @if ($data != null)
-                               <form action="{{ route('admin.labotarium.update', $data->id) }}" method="post" enctype="multipart/form-data">
+                               <form action="{{ route('admin.Laboratorium.update', $data->id) }}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     @method('PUT')
                                 @endif
