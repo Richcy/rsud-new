@@ -204,7 +204,7 @@
                                  <li><a href="{{ route('user.sketch.index') }}">Denah Rumah Sakit</a></li>
                                  <li><a href="{{ route('user.quality.index') }}">Penilaian Mutu</a></li>
                                  <li><a href="{{ route('user.hak_kewajiban.index') }}">Hak dan Kewajiban Pasien</a></li>
-                                 <li><a href="">Maklumat Pelayanan</a></li>
+                                 <li><a href="{{ route('user.maklumat_pelayanan.index') }}">Maklumat Pelayanan</a></li>
                                  <li><a href="">Standar Pelayanan</a></li>
                               </ul>
                            </li>

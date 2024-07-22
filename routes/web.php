@@ -5,6 +5,7 @@ use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\User\SketchController;
 use App\Http\Controllers\User\QualityController;
 use App\Http\Controllers\User\GreetingController;
+use App\Http\Controllers\User\MaklumatController;
 use App\Http\Controllers\User\StructureController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\User\CompanyProfileController;
@@ -31,6 +32,7 @@ Route::name('user.')->group(function () {
     Route::get('/sketch', [SketchController::class, 'index'])->name('sketch.index');
     Route::get('/quality', [QualityController::class, 'index'])->name('quality.index');
     Route::get('/hak_kewajiban', [HakDanKewajibanController::class, 'index'])->name('hak_kewajiban.index');
+    Route::get('/maklumat_pelayanan', [MaklumatController::class, 'index'])->name('maklumat_pelayanan.index');
 });
 
 Route::post('/logout', [LoginController::class, 'logout'])
