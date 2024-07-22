@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('office', 150); // Panjang dioptimalkan menjadi 150 karakter
             $table->string('experience', 100); // Panjang dioptimalkan menjadi 100 karakter
             $table->integer('year')->nullable(); // Menggunakan tipe data INT untuk tahun
-            $table->integer('month'->nullable()); // Menggunakan tipe data INT untuk bulan
+            $table->integer('month')->nullable(); // Menggunakan tipe data INT untuk bulan
             $table->string('alumni', 100)->nullable(); // Panjang dioptimalkan menjadi 100 karakter
             $table->string('nip', 50)->nullable(); // Panjang dioptimalkan menjadi 50 karakter
             $table->string('str', 50)->nullable(); // Panjang dioptimalkan menjadi 50 karakter

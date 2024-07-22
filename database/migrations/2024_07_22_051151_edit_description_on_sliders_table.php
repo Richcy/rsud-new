@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('sliders', function (Blueprint $table) {
-            $table->longText('description')->nullable();
+            $table->longText('description')->nullable()->change();
         });
     }
 
