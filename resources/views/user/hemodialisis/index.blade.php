@@ -80,8 +80,8 @@
                                 <ul class="splide__list">
                                     @foreach ($image as $item)
                                         <li class="splide__slide">
-                                            <a href="{{ asset('storage/' . $item->img) }}" data-glightbox="title: {{ $item->title }}">
-                                                <img src="{{ asset('storage/' . $item->img) }}" style="transform: scale(0.7)" class="d-block w-100" alt="...">
+                                            <a href="{{ asset('storage/' . $item->img) }}" style="width: 100%; height: 200px;" data-glightbox="title: {{ $item->title }}">
+                                                <img src="{{ asset('storage/' . $item->img) }}" style="transform: scale(0.7); height: 400px; object-fit: cover;" class="d-block w-100" alt="...">
                                             </a>
                                         </li>
                                     @endforeach
