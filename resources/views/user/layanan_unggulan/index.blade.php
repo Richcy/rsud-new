@@ -46,75 +46,53 @@
                     <h3>LAYANAN UNGGULAN</h3>
                 </div>
 
-                @if ($image != null)
                 <div class="row">
-                    <div class="col-12 col-md-6 col-lg-8">
+                    <div class="{{ $image->isNotEmpty() ? 'col-12 col-md-6 col-lg-8' : 'col-12' }}">
                         <div class="container pt-5" id="description">
                             {!! $unggulan->description !!}
                         </div>
                         <div class="accordion" id="accordionExample">
                             @forelse ($subService as $item)
-                              <div class="accordion-item">
-                                  <h2 class="accordion-header" id="headingOne">
-                                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                          <i style="color: #A82024; font-size: 20px;" class="fa-solid fa-square-plus me-3"></i> {{ $item->title }}
-                                      </button>
-                                  </h2>
-                                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                      <div class="accordion-body container">
-                                          {!! $item->description !!}
-                                      </div>
-                                  </div>
-                              </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading{{ $loop->index }}">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ $loop->index }}" aria-expanded="true" aria-controls="collapse{{ $loop->index }}">
+                                            <i style="color: #A82024; font-size: 20px;" class="fa-solid fa-square-plus me-3"></i> {{ $item->title }}
+                                        </button>
+                                    </h2>
+                                    <div id="collapse{{ $loop->index }}" class="accordion-collapse collapse" aria-labelledby="heading{{ $loop->index }}" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body container">
+                                            {!! $item->description !!}
+                                        </div>
+                                    </div>
+                                </div>
                             @empty
-
+                                <p>No sub services available.</p>
                             @endforelse
-                          </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="text-center">
-                            <h3>Galeri</h3>
                         </div>
-                        <div id="imageCarousel" class="splide">
-                            <div class="splide__track">
-                                <ul class="splide__list">
-                                    @foreach ($image as $item)
-                                        <li class="splide__slide">
-                                            <a href="{{ asset('storage/' . $item->img) }}" data-glightbox="title: {{ $item->title }}">
-                                                <img src="{{ asset('storage/' . $item->img) }}" style="transform: scale(0.7)" class="d-block w-100" alt="...">
-                                            </a>
-                                        </li>
-                                    @endforeach
-                                </ul>
+                    </div>
+
+                    @if ($image->isNotEmpty())
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="text-center">
+                                <h3>Galeri</h3>
+                            </div>
+                            <div id="imageCarousel" class="splide">
+                                <div class="splide__track">
+                                    <ul class="splide__list">
+                                        @foreach ($image as $item)
+                                            <li class="splide__slide">
+                                                <a href="{{ asset('storage/' . $item->img) }}" data-glightbox="title: {{ $item->title }}">
+                                                    <img src="{{ asset('storage/' . $item->img) }}" style="transform: scale(0.7)" class="d-block w-100" alt="...">
+                                                </a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endif
                 </div>
-            @else
-            <div class="col-12">
-                <div class="container pt-5" id="description">
-                    {!! $unggulan->description !!}
-                </div>
-                <div class="accordion" id="accordionExample">
-                    @forelse ($subService as $item)
-                      <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingOne">
-                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                  <i style="color: #A82024; font-size: 20px;" class="fa-solid fa-square-plus me-3"></i> {{ $item->title }}
-                              </button>
-                          </h2>
-                          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                              <div class="accordion-body container">
-                                  {!! $item->description !!}
-                              </div>
-                          </div>
-                      </div>
-                    @empty
 
-                    @endforelse
-                  </div>
-            </div>
-            @endif
 
 
 
