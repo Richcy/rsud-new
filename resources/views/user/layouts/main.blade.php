@@ -203,7 +203,7 @@
                                  <li><a href="{{ route('user.structure.index') }}">Struktur Organisasi</a></li>
                                  <li><a href="{{ route('user.sketch.index') }}">Denah Rumah Sakit</a></li>
                                  <li><a href="{{ route('user.quality.index') }}">Penilaian Mutu</a></li>
-                                 <li><a href="">Hak dan Kewajiban Pasien</a></li>
+                                 <li><a href="{{ route('user.hak_kewajiban.index') }}">Hak dan Kewajiban Pasien</a></li>
                                  <li><a href="">Maklumat Pelayanan</a></li>
                                  <li><a href="">Standar Pelayanan</a></li>
                               </ul>
