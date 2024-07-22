@@ -351,7 +351,7 @@ class CompanyProfileController extends Controller
     public function pelayananUpdate(Request $request, $id)
     {
         $validator = Validator::make($request->all(), [
-            'img' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'img' => 'image|mimes:jpeg,png,jpg,gif',
         ], [
             'img.image' => 'File harus berupa gambar.',
             'img.mimes' => 'Format gambar harus jpeg, png, jpg, atau gif.',
