@@ -110,7 +110,7 @@
                                 </div>
 
                                 {{-- button submit --}}
-                                <div class="d-flex justify-content-end">
+                                <div class="d-flex justify-content-end pb-5 pe-5">
                                     <a href="{{ route('admin.slider.index') }}"
                                         class="btn btn-secondary me-1">Kembali</a>
                                     <button type="submit" class="btn btn-primary">Simpan</button>
