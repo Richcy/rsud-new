@@ -211,17 +211,17 @@
                            <li class="has-dropdown">
                               <a href="#">Layanan</a>
                               <ul class="submenu rr-submenu">
-                                 <li><a href="team.html">Layanan Unggulan</a></li>
-                                 <li><a href="team.html">Instalasi Rawat Jalan</a></li>
-                                 <li><a href="team.html">Instalasi Rawat Inap</a></li>
-                                 <li><a href="team.html">Instalasi Gawat Darurat</a></li>
-                                 <li><a href="team.html">Laboratorium</a></li>
-                                 <li><a href="team.html">Hemodialisis</a></li>
-                                 <li><a href="team.html">Rehabilitasi Medik</a></li>
-                                 <li><a href="team.html">Radiologi</a></li>
-                                 <li><a href="team.html">Farmasi</a></li>
-                                 <li><a href="team.html">Ambulans</a></li>
-                                 <li><a href="team.html">Pengaduan</a></li>
+                                 <li><a href="{{ route('user.layanan_unggulan.index') }}">Layanan Unggulan</a></li>
+                                 <li><a href="">Instalasi Rawat Jalan</a></li>
+                                 <li><a href="">Instalasi Rawat Inap</a></li>
+                                 <li><a href="">Instalasi Gawat Darurat</a></li>
+                                 <li><a href="">Laboratorium</a></li>
+                                 <li><a href="">Hemodialisis</a></li>
+                                 <li><a href="">Rehabilitasi Medik</a></li>
+                                 <li><a href="">Radiologi</a></li>
+                                 <li><a href="">Farmasi</a></li>
+                                 <li><a href="">Ambulans</a></li>
+                                 <li><a href="">Pengaduan</a></li>
                               </ul>
                            </li>
                            <li><a href="contact.html">Dokter</a></li>
@@ -311,7 +311,7 @@
                               <li><a href="{{ route('user.profile.index') }}l">Profil Rumah Sakit</a></li>
                               <li><a href="{{ route('user.greeting.index') }}">Sambutan Direktur</a></li>
                               <li><a href="{{ route('user.structure.index') }}">Struktur Organisasi</a></li>
-                              <li><a href="service.html">Standar Pelayanan</a></li>
+                              <li><a href="{{ route('user.standard_pelayanan.index') }}">Standar Pelayanan</a></li>
                               <li><a href="service.html">Dokter</a></li>
                            </ul>
                         </div>
@@ -323,7 +323,7 @@
                         <h4 class="rr-footer-title">Layanan Kami</h4>
                         <div class="rr-footer-list">
                            <ul>
-                              <li><a href="service.html">Layanan Unggulan</a></li>
+                              <li><a href="s{{ route('user.layanan_unggulan.index') }}">Layanan Unggulan</a></li>
                               <li><a href="service.html">Instalasi Rawat Jalan</a></li>
                               <li><a href="service.html">Instalasi Rawat Inap</a></li>
                               <li><a href="service.html">Instalasi Gawat Darurat</a></li>
