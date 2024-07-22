@@ -214,7 +214,7 @@
                                  <li><a href="{{ route('user.layanan_unggulan.index') }}">Layanan Unggulan</a></li>
                                  <li><a href="{{ route('user.rawat_jalan.index') }}">Instalasi Rawat Jalan</a></li>
                                  <li><a href="{{ route('user.rawat_inap.index') }}">Instalasi Rawat Inap</a></li>
-                                 <li><a href="">Instalasi Gawat Darurat</a></li>
+                                 <li><a href="{{ route('user.gawat_darurat.index') }}">Instalasi Gawat Darurat</a></li>
                                  <li><a href="">Laboratorium</a></li>
                                  <li><a href="">Hemodialisis</a></li>
                                  <li><a href="">Rehabilitasi Medik</a></li>
@@ -326,7 +326,7 @@
                               <li><a href="{{ route('user.layanan_unggulan.index') }}">Layanan Unggulan</a></li>
                               <li><a href="{{ route('user.rawat_jalan.index') }}">Instalasi Rawat Jalan</a></li>
                               <li><a href="{{ route('user.rawat_inap.index') }}">Instalasi Rawat Inap</a></li>
-                              <li><a href="">Instalasi Gawat Darurat</a></li>
+                              <li><a href="{{ route('user.gawat_darurat.index') }}">Instalasi Gawat Darurat</a></li>
                               <li><a href="">Laboratorium</a></li>
                               <li><a href="">Radiologi</a></li>
                               <li><a href="">Hermodialisis</a></li>

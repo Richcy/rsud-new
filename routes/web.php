@@ -14,6 +14,7 @@ use App\Http\Controllers\User\LayananUnggulanController;
 use App\Http\Controllers\User\StandardPelayananController;
 use App\Http\Controllers\User\InstalasiRawatInapController;
 use App\Http\Controllers\User\InstalasiRawatJalanController;
+use App\Http\Controllers\User\InstalasiGawatDaruratController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +43,7 @@ Route::name('user.')->group(function () {
     Route::get('/layanan_unggulan', [LayananUnggulanController::class, 'index'])->name('layanan_unggulan.index');
     Route::get('/rawat_inap', [InstalasiRawatInapController::class, 'index'])->name('rawat_inap.index');
     Route::get('/rawat_jalan', [InstalasiRawatJalanController::class, 'index'])->name('rawat_jalan.index');
+    Route::get('/gawat_darurat', [InstalasiGawatDaruratController::class, 'index'])->name('gawat_darurat.index');
 });
 
 Route::post('/logout', [LoginController::class, 'logout'])
