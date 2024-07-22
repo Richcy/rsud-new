@@ -154,8 +154,8 @@ class InstalasiRawatJalanController extends Controller
 
     public function editSubService($slug)
     {
-        $data = SubService::where('slug', $slug)->first();
-        return view('admin.rawat-jalan.sub-service.edit', compact('data'));
+        $subService = SubService::where('slug', $slug)->first();
+        return view('admin.rawat-jalan.sub-service.edit', compact('subService'));
     }
 
     public function updateSubService(Request $request, $slug)
