@@ -46,7 +46,7 @@
                             <h4>Form Update Sub Service</h4>
                         </div>
                         <div class="card-body" style="padding-top: 6px !important;">
-                            <form action="{{ route('admin.rawat-jalan.sub-service.update    ', $subService->slug) }}" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('admin.rawat-jalan.sub-service.update', $subService->slug) }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')
                                 <div class="row">

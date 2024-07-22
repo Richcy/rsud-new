@@ -198,7 +198,7 @@
                            <li class="has-dropdown">
                               <a href="service.html">Tentang</a>
                               <ul class="submenu rr-submenu">
-                                 <li><a href="service.html">Profil Rumah Sakit</a></li>
+                                 <li><a href="{{ route('user.profile.index') }}">Profil Rumah Sakit</a></li>
                                  <li><a href="service.html">Sambutan Direktur</a></li>
                                  <li><a href="service.html">Struktur Organisasi</a></li>
                                  <li><a href="service.html">Denah Rumah Sakit</a></li>
@@ -308,7 +308,7 @@
                         <h4 class="rr-footer-title">Persingkat Tautan</h4>
                         <div class="rr-footer-list ">
                            <ul>
-                              <li><a href="service.html">Profil Rumah Sakit</a></li>
+                              <li><a href="{{ route('user.profile.index') }}l">Profil Rumah Sakit</a></li>
                               <li><a href="service.html">Sambutan Direktur</a></li>
                               <li><a href="service.html">Struktur Organisasi</a></li>
                               <li><a href="service.html">Standar Pelayanan</a></li>
