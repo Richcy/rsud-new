@@ -81,7 +81,7 @@
                                 </div>
                             {{-- button submit --}}
                             <div class="d-flex justify-content-end mt-2">
-                                <a href="{{ route('admin.profileGallery.index') }}"
+                                <a href="{{ route('admin.ambulance.sub-service.index', $id) }}"
                                     class="btn btn-secondary me-1">Kembali</a>
                                 <button type="submit" class="btn btn-primary">Simpan</button>
                             </div>

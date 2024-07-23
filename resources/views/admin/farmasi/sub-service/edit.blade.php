@@ -80,7 +80,7 @@
                                 </div>
                                 {{-- button submit --}}
                                 <div class="d-flex justify-content-end mt-2">
-                                    <a href="{{ route('admin.profileGallery.index') }}"
+                                    <a href="{{ route('admin.farmasi.sub-service.index', $subService->service_id) }}"
                                         class="btn btn-secondary me-1">Kembali</a>
                                     <button type="submit" class="btn btn-primary">Simpan</button>
                                 </div>
