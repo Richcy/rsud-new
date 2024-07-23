@@ -275,8 +275,8 @@
                         <i class="fa-solid fa-hand-holding-medical"></i>
                     </div>
                     <div class="rr-features-content text-center">
-                       <h3 class="rr-features-title"><a href="service-details.html">Layanan Unggulan</a></h3>
-                       <a class="rr-features-btn" href="service-details.html"><span>Lihat Selengkapnya <i class="fa-solid fa-angle-right"></i></span></a>
+                       <h3 class="rr-features-title"><a href="{{ route('user.layanan_unggulan.index') }}">Layanan Unggulan</a></h3>
+                       <a class="rr-features-btn" href="{{ route('user.layanan_unggulan.index') }}"><span>Lihat Selengkapnya <i class="fa-solid fa-angle-right"></i></span></a>
                     </div>
                  </div>
               </div>
@@ -290,8 +290,8 @@
                         <i class="fa-solid fa-bed-pulse"></i>
                     </div>
                     <div class="rr-features-content text-center">
-                        <h3 class="rr-features-title"><a href="service-details.html">Instalasi Rawat Inap</a></h3>
-                        <a class="rr-features-btn" href="service-details.html"><span>Lihat Selengkapnya <i class="fa-solid fa-angle-right"></i></span></a>
+                        <h3 class="rr-features-title"><a href="{{ route('user.rawat_inap.index') }}">Instalasi Rawat Inap</a></h3>
+                        <a class="rr-features-btn" href="{{ route('user.rawat_inap.index') }}"><span>Lihat Selengkapnya <i class="fa-solid fa-angle-right"></i></span></a>
                      </div>
                  </div>
               </div>
@@ -305,8 +305,8 @@
                         <i class="fa-solid fa-hospital"></i>
                     </div>
                     <div class="rr-features-content text-center">
-                        <h3 class="rr-features-title"><a href="service-details.html">Instalas Rawat Jalan</a></h3>
-                        <a class="rr-features-btn" href="service-details.html"><span>Lihat Selengkapnya <i class="fa-solid fa-angle-right"></i></span></a>
+                        <h3 class="rr-features-title"><a href="{{ route('user.rawat_jalan.index') }}">Instalasi Rawat Jalan</a></h3>
+                        <a class="rr-features-btn" href="{{ route('user.rawat_jalan.index') }}"><span>Lihat Selengkapnya <i class="fa-solid fa-angle-right"></i></span></a>
                      </div>
                  </div>
               </div>
@@ -320,8 +320,8 @@
                         <i class="fa-solid fa-truck-medical"></i>
                     </div>
                     <div class="rr-features-content text-center">
-                        <h3 class="rr-features-title"><a href="service-details.html">Instalasi Gawat Darurat</a></h3>
-                        <a class="rr-features-btn" href="service-details.html"><span>Lihat Selengkapnya <i class="fa-solid fa-angle-right"></i></span></a>
+                        <h3 class="rr-features-title"><a href="{{ route('user.gawat_darurat.index') }}">Instalasi Gawat Darurat</a></h3>
+                        <a class="rr-features-btn" href="{{ route('user.gawat_darurat.index') }}"><span>Lihat Selengkapnya <i class="fa-solid fa-angle-right"></i></span></a>
                      </div>
                  </div>
               </div>
@@ -335,8 +335,8 @@
                         <i class="fa-solid fa-microscope"></i>
                     </div>
                     <div class="rr-features-content text-center">
-                        <h3 class="rr-features-title"><a href="service-details.html">Laboratorium</a></h3>
-                        <a class="rr-features-btn" href="service-details.html"><span>Lihat Selengkapnya <i class="fa-solid fa-angle-right"></i></span></a>
+                        <h3 class="rr-features-title"><a href="{{ route('user.laboratorium.index') }}">Laboratorium</a></h3>
+                        <a class="rr-features-btn" href="{{ route('user.laboratorium.index') }}"><span>Lihat Selengkapnya <i class="fa-solid fa-angle-right"></i></span></a>
                      </div>
                  </div>
               </div>
@@ -350,7 +350,7 @@
                         <i class="fa-solid fa-suitcase-medical"></i>
                     </div>
                     <div class="rr-features-content text-center">
-                        <h3 class="rr-features-title"><a href="service-details.html">Radiology</a></h3>
+                        <h3 class="rr-features-title"><a href=" ">Radiology</a></h3>
                         <a class="rr-features-btn" href="service-details.html"><span>Lihat Selengkapnya <i class="fa-solid fa-angle-right"></i></span></a>
                      </div>
                  </div>
@@ -379,10 +379,10 @@
                </div>
 
                <div class="rr-team-4-content text-center p-relative">
-                  <h6 class="rr-team-4-title"><a href="team.html">{{ $item->doctor->name }}</a></h6>
+                  <h6 class="rr-team-4-title"><a href="{{ route('user.doctor.show', $item->doctor->id) }}">{{ $item->doctor->name }}</a></h6>
                     <p>{{ $item->doctor->field_doctor->name }}</p>
                </div>
-               <div class="rr-team-4-arrow"> <a href="team.html"><i class="fa-solid fa-arrow-up"></i></a>
+               <div class="rr-team-4-arrow"> <a href="{{ route('user.doctor.index') }}"><i class="fa-solid fa-arrow-up"></i></a>
                </div>
             </div>
          </div>
@@ -435,7 +435,7 @@
                                 </div>
                             </div>
                             <div class="rr-blog-link">
-                                <a href="blog-details.html">Lihat Selengkapnya <i class="fa-light fa-angle-right"></i></a>
+                                <a href="{{ route('user.cimanews.show', $news->slug) }}">Lihat Selengkapnya <i class="fa-light fa-angle-right"></i></a>
                             </div>
 
                         </div>
