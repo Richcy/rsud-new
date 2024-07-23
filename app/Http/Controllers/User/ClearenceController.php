@@ -18,12 +18,12 @@ class ClearenceController extends Controller
                 $value->update([
                     'description' => $description
                 ]);
-
-                return response()->json([
-                    'success' => true,
-                    'message' => 'Berhasil'
-                ]);
             }
+            
+            return response()->json([
+                'success' => true,
+                'message' => 'Berhasil'
+            ]);
         } catch (\Throwable $th) {
             return response()->json([
                 'success' => false,
