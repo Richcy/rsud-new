@@ -99,7 +99,7 @@ class CimanewsController extends Controller
             if ($request->hasFile('img')) {
                 $file = $request->file('img');
                 $filename = 'cimanews_' . Carbon::now()->format('Ymd_His') . '_' . Str::random(5) . '.' . $file->getClientOriginalExtension();
-                $path = $file->storeAs('cimanews', $filename, 'public');
+                $path = $file->storeAs('articles', $filename, 'public');
             }
 
             // Simpan data ke database
@@ -187,7 +187,7 @@ class CimanewsController extends Controller
 
                 $file = $request->file('img');
                 $filename = 'cimanews_' . Carbon::now()->format('Ymd_His') . '_' . Str::random(5) . '.' . $file->getClientOriginalExtension();
-                $path = $file->storeAs('cimanews', $filename, 'public');
+                $path = $file->storeAs('articles', $filename, 'public');
             } else {
                 $path = $article->img;
             }
