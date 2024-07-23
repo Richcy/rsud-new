@@ -1,7 +1,7 @@
 @extends('admin.layouts.main')
 
 @push('vendor_css')
-
+<link rel="stylesheet" type="text/css" href="{{ asset('vuexy') }}/app-assets/vendors/css/forms/select/select2.min.css">
 @endpush
 
 @push('custom_css')
@@ -69,7 +69,7 @@
                                 <div class="col-md-6">
                                     <div class="mb-2">
                                         <label class="form-label" for="article_category_id">Kategori Acara: </label>
-                                        <select name="article_category_id"
+                                        <select name="article_category_id" id="article_category_id"
                                             class="form-select @error('article_category_id') is-invalid @enderror">
                                             <option selected disabled>Silakan Pilih Kategori Acara</option>
                                             @foreach ($categoryArticle as $item)
@@ -154,6 +154,7 @@
 @endsection
 
 @push('vendor_js')
+<script src="{{ asset('vuexy') }}/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
 @endpush
 
 @push('custom_js')
@@ -255,6 +256,8 @@
                     reader.readAsDataURL(file);
                 }
             });
+
+            $('#article_category_id').select2();
         });
     </script>
 @endpush

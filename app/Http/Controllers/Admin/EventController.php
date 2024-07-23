@@ -31,7 +31,7 @@ class EventController extends Controller
                 return Str::limit($row->description, 100);
             })
             ->editColumn('url', function($row) {
-                return '<a href="'. $row->url .'" target="_blank" class="btn btn-sm btn-info">Lihat</a>';
+                return $row->url ? '<a href="'. $row->url .'" target="_blank" class="btn btn-sm btn-info">Lihat</a>' : '-';
             })
             ->editColumn('created_at', function($row){
                 return Carbon::parse($row->created_at)->format('d-m-Y');

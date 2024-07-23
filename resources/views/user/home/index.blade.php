@@ -125,7 +125,6 @@
                              <span class="rr-tab-2">
                                 <span class="rr-tab-2__item d-flex justify-content-between align-items-center">
                                    <span class="rr-tab-2__item-info d-flex align-items-center">
-                                      <b> <i class="icofont-brain"></i></b>
                                       <span class="rr-tab-2__item-title m-0">Sambutan Direktur</span>
                                    </span>
                                 </span>
@@ -136,7 +135,6 @@
                              <span class="rr-tab-2">
                                 <span class="rr-tab-2__item d-flex justify-content-between align-items-center">
                                    <span class="rr-tab-2__item-info d-flex align-items-center">
-                                      <b><i class="icofont-ambulance-cross"></i></b>
                                       <span class="rr-tab-2__item-title m-0">Maklumat</span>
                                    </span>
                                 </span>
@@ -148,8 +146,7 @@
                              <span class="rr-tab-2">
                                 <span class="rr-tab-2__item d-flex justify-content-between align-items-center">
                                    <span class="rr-tab-2__item-info d-flex align-items-center">
-                                      <b><i class="icofont-heart-beat-alt"></i></b>
-                                      <span class="rr-tab-2__item-title m-0">Rating</span>
+                                      <span class="rr-tab-2__item-title m-0">Indeks Kepuasan Masyarakat</span>
                                    </span>
                                 </span>
                              </span>
@@ -160,7 +157,6 @@
                              <span class="rr-tab-2">
                                 <span class="rr-tab-2__item d-flex justify-content-between align-items-center">
                                    <span class="rr-tab-2__item-info d-flex align-items-center">
-                                      <b> <i class="icofont-blood"></i></b>
                                       <span class="rr-tab-2__item-title m-0">Organisasi</span>
                                    </span>
                                 </span>
@@ -279,8 +275,8 @@
                         <i class="fa-solid fa-hand-holding-medical"></i>
                     </div>
                     <div class="rr-features-content text-center">
-                       <h3 class="rr-features-title"><a href="service-details.html">Layanan Unggulan</a></h3>
-                       <a class="rr-features-btn" href="service-details.html"><span>Lihat Selengkapnya <i class="fa-solid fa-angle-right"></i></span></a>
+                       <h3 class="rr-features-title"><a href="{{ route('user.layanan_unggulan.index') }}">Layanan Unggulan</a></h3>
+                       <a class="rr-features-btn" href="{{ route('user.layanan_unggulan.index') }}"><span>Lihat Selengkapnya <i class="fa-solid fa-angle-right"></i></span></a>
                     </div>
                  </div>
               </div>
@@ -294,8 +290,8 @@
                         <i class="fa-solid fa-bed-pulse"></i>
                     </div>
                     <div class="rr-features-content text-center">
-                        <h3 class="rr-features-title"><a href="service-details.html">Instalasi Rawat Inap</a></h3>
-                        <a class="rr-features-btn" href="service-details.html"><span>Lihat Selengkapnya <i class="fa-solid fa-angle-right"></i></span></a>
+                        <h3 class="rr-features-title"><a href="{{ route('user.rawat_inap.index') }}">Instalasi Rawat Inap</a></h3>
+                        <a class="rr-features-btn" href="{{ route('user.rawat_inap.index') }}"><span>Lihat Selengkapnya <i class="fa-solid fa-angle-right"></i></span></a>
                      </div>
                  </div>
               </div>
@@ -309,8 +305,8 @@
                         <i class="fa-solid fa-hospital"></i>
                     </div>
                     <div class="rr-features-content text-center">
-                        <h3 class="rr-features-title"><a href="service-details.html">Instalas Rawat Jalan</a></h3>
-                        <a class="rr-features-btn" href="service-details.html"><span>Lihat Selengkapnya <i class="fa-solid fa-angle-right"></i></span></a>
+                        <h3 class="rr-features-title"><a href="{{ route('user.rawat_jalan.index') }}">Instalasi Rawat Jalan</a></h3>
+                        <a class="rr-features-btn" href="{{ route('user.rawat_jalan.index') }}"><span>Lihat Selengkapnya <i class="fa-solid fa-angle-right"></i></span></a>
                      </div>
                  </div>
               </div>
@@ -324,8 +320,8 @@
                         <i class="fa-solid fa-truck-medical"></i>
                     </div>
                     <div class="rr-features-content text-center">
-                        <h3 class="rr-features-title"><a href="service-details.html">Instalasi Gawat Darurat</a></h3>
-                        <a class="rr-features-btn" href="service-details.html"><span>Lihat Selengkapnya <i class="fa-solid fa-angle-right"></i></span></a>
+                        <h3 class="rr-features-title"><a href="{{ route('user.gawat_darurat.index') }}">Instalasi Gawat Darurat</a></h3>
+                        <a class="rr-features-btn" href="{{ route('user.gawat_darurat.index') }}"><span>Lihat Selengkapnya <i class="fa-solid fa-angle-right"></i></span></a>
                      </div>
                  </div>
               </div>
@@ -339,8 +335,8 @@
                         <i class="fa-solid fa-microscope"></i>
                     </div>
                     <div class="rr-features-content text-center">
-                        <h3 class="rr-features-title"><a href="service-details.html">Laboratorium</a></h3>
-                        <a class="rr-features-btn" href="service-details.html"><span>Lihat Selengkapnya <i class="fa-solid fa-angle-right"></i></span></a>
+                        <h3 class="rr-features-title"><a href="{{ route('user.laboratorium.index') }}">Laboratorium</a></h3>
+                        <a class="rr-features-btn" href="{{ route('user.laboratorium.index') }}"><span>Lihat Selengkapnya <i class="fa-solid fa-angle-right"></i></span></a>
                      </div>
                  </div>
               </div>
@@ -354,7 +350,7 @@
                         <i class="fa-solid fa-suitcase-medical"></i>
                     </div>
                     <div class="rr-features-content text-center">
-                        <h3 class="rr-features-title"><a href="service-details.html">Radiology</a></h3>
+                        <h3 class="rr-features-title"><a href=" ">Radiology</a></h3>
                         <a class="rr-features-btn" href="service-details.html"><span>Lihat Selengkapnya <i class="fa-solid fa-angle-right"></i></span></a>
                      </div>
                  </div>
@@ -383,10 +379,10 @@
                </div>
 
                <div class="rr-team-4-content text-center p-relative">
-                  <h6 class="rr-team-4-title"><a href="team.html">{{ $item->doctor->name }}</a></h6>
+                  <h6 class="rr-team-4-title"><a href="{{ route('user.doctor.show', $item->doctor->id) }}">{{ $item->doctor->name }}</a></h6>
                     <p>{{ $item->doctor->field_doctor->name }}</p>
                </div>
-               <div class="rr-team-4-arrow"> <a href="team.html"><i class="fa-solid fa-arrow-up"></i></a>
+               <div class="rr-team-4-arrow"> <a href="{{ route('user.doctor.index') }}"><i class="fa-solid fa-arrow-up"></i></a>
                </div>
             </div>
          </div>
@@ -439,7 +435,7 @@
                                 </div>
                             </div>
                             <div class="rr-blog-link">
-                                <a href="blog-details.html">Lihat Selengkapnya <i class="fa-light fa-angle-right"></i></a>
+                                <a href="{{ route('user.cimanews.show', $news->slug) }}">Lihat Selengkapnya <i class="fa-light fa-angle-right"></i></a>
                             </div>
 
                         </div>
@@ -481,7 +477,7 @@
                        </div>
                        <div class="rr-contact-text">
                         <h3 class="rr-contact-info-title">Website</h3>
-                          <span><a href="tel:+09627387877">SP4N LAPOR</a></span>
+                          <span><a href="https://www.lapor.go.id/" target="_blank">SP4N LAPOR</a></span>
                        </div>
                     </div>
                     <div class="rr-contact-item d-flex align-items-center p-relative">
@@ -490,7 +486,7 @@
                        </div>
                        <div class="rr-contact-text">
                           <h3 class="rr-contact-info-title">Whatsapp</h3>
-                          <span><a href="tel:+09627387877">+09627387877</a></span>
+                          <span><a href="https://api.whatsapp.com/send/?phone=6285864817874&text=Halo+Kak+.+.+.&type=phone_number&app_absent=0">(+62) 858-6481-7874</a></span>
                        </div>
                     </div>
                     <div class="rr-contact-item d-flex align-items-center p-relative">
@@ -499,7 +495,7 @@
                        </div>
                        <div class="rr-contact-text">
                           <h3 class="rr-contact-info-title">Nomor Telepon</h3>
-                          <span><a href="tel:+09627387877">+09627387877</a></span>
+                          <span><a href="tel:+09627387877">0263-2956-036</a></span>
                        </div>
                     </div>
                     <div class="rr-contact-item d-flex align-items-center p-relative">
@@ -508,7 +504,7 @@
                        </div>
                        <div class="rr-contact-text">
                           <h3 class="rr-contact-info-title">Insagram</h3>
-                          <span><a href="tel:+09627387877">Instagram</a></span>
+                          <span><a href="https://www.instagram.com/rsud.cimacan/" target="_blank">Instagram</a></span>
                        </div>
                     </div>
                     <div class="rr-contact-item d-flex align-items-center p-relative">
@@ -517,7 +513,7 @@
                        </div>
                        <div class="rr-contact-text">
                           <h3 class="rr-contact-info-title">Email</h3>
-                          <span><a href="tel:+09627387877">Email</a></span>
+                          <span><a href="mailto:rsud.cimacann@gmail.com">Email</a></span>
                        </div>
                     </div>
                     <div class="rr-contact-item d-flex align-items-center p-relative" style="padding-bottom: 30px !important;">
@@ -526,7 +522,7 @@
                        </div>
                        <div class="rr-contact-text">
                           <h3 class="rr-contact-info-title">Facebook</h3>
-                          <span><a href="tel:+09627387877">Facebook</a></span>
+                          <span><a href="https://www.facebook.com/profile.php?id=100071691815827" target="">Facebook</a></span>
                        </div>
                     </div>
                  </div>

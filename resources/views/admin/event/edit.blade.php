@@ -59,7 +59,7 @@
                                 <div class="col-md-6">
                                     <div class="mb-1">
                                         <label for="title" class="form-label">Judul Acara</label>
-                                        <input type="text" id="title" class="form-control @error('title') is-invalid @enderror" name="title" onkeyup="createSlug()" placeholder="Masukan Nama Diskon" value="{{ old('title', $event->title) }}">
+                                        <input type="text" id="title" class="form-control @error('title') is-invalid @enderror" name="title" onkeyup="createSlug()" placeholder="Masukan Judul Acara" value="{{ old('title', $event->title) }}">
 
                                         @error('title')
                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -95,7 +95,7 @@
                                 <div class="col-md-6">
                                     <div class="mb-1">
                                         <label for="url" class="form-label">URL</label>
-                                        <input type="text" id="url" class="form-control @error('url') is-invalid @enderror" name="url" onkeyup="createSlug()" placeholder="Masukan Nama Diskon" value="{{ old('url', $event->url) }}">
+                                        <input type="text" id="url" class="form-control @error('url') is-invalid @enderror" name="url" onkeyup="createSlug()" placeholder="Masukan Link URL Acara" value="{{ old('url', $event->url) }}">
 
                                         @error('url')
                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -124,7 +124,7 @@
                                     <div class="mb-1">
                                         <label for="start_time" class="form-label">Jam Mulai</label>
                                         <div class="input-group clockpicker">
-                                            <input type="text" class="form-control" id="start_time" name="start_time" value="{{ old('start_time', $event->start_time) }}" autocomplete="off">
+                                            <input type="text" class="form-control" id="start_time" name="start_time" value="{{ old('start_time', $event->start_time) }}" autocomplete="off" placeholder="09:00">
                                             <span class="input-group-text"><i class="bi bi-clock"></i></span>
                                         </div>
                                         @error('start_time')
@@ -136,7 +136,7 @@
                                     <div class="mb-1">
                                         <label for="end_time" class="form-label">Jam Selesai</label>
                                         <div class="input-group clockpicker">
-                                            <input type="text" class="form-control" id="end_time" name="end_time" value="{{ old('end_time', $event->end_time) }}" autocomplete="off">
+                                            <input type="text" class="form-control" id="end_time" name="end_time" value="{{ old('end_time', $event->end_time) }}" autocomplete="off" placeholder="17:00">
                                             <span class="input-group-text"><i class="bi bi-clock"></i></span>
                                         </div>
                                         @error('end_time')
@@ -198,7 +198,7 @@
                             </div>
 
                             {{-- Tombol submit --}}
-                            <div class="d-flex justify-content-end">
+                            <div class="d-flex justify-content-end mb-2 mx-2">
                                 <a href="{{ route('admin.event.index') }}" class="btn btn-secondary me-1">Kembali</a>
                                 <button type="submit" class="btn btn-primary">Simpan</button>
                             </div>

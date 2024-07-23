@@ -3,6 +3,7 @@
 @push('vendor_css')
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('vuexy') }}/app-assets/vendors/css/forms/select/select2.min.css">
 @endpush
 
 @push('custom_css')
@@ -65,7 +66,7 @@
                                     <div class="row g-0">
                                         <div class="col-3">
                                             <div class="input-group mb-1">
-                                                <input type="text" class="form-control" name="senin-start-time">
+                                                <input type="text" class="form-control" name="senin-start-time" placeholder="Contoh: 09:00">
                                                 <span class="input-group-text" style="background-color: #089544 !important; color: #FFFFFF !important; " ><i data-feather='clock' style="transform: scale(1.8)"></i></span>
                                             </div>
                                         </div>
@@ -74,7 +75,7 @@
                                         </div>
                                         <div class="col-3">
                                             <div class="input-group mb-1">
-                                                <input type="text" class="form-control" name="senin-end-time">
+                                                <input type="text" class="form-control" name="senin-end-time" placeholder="Contoh: 17:00">
                                                 <span class="input-group-text" style="background-color: #089544 !important; color: #FFFFFF !important; " ><i data-feather='clock' style="transform: scale(1.8)"></i></span>
                                             </div>
                                         </div>
@@ -85,7 +86,7 @@
                                     <div class="row g-0">
                                         <div class="col-3">
                                             <div class="input-group mb-1">
-                                                <input type="text" class="form-control" name="selasa-start-time">
+                                                <input type="text" class="form-control" name="selasa-start-time" placeholder="Contoh: 09:00">
                                                 <span class="input-group-text" style="background-color: #089544 !important; color: #FFFFFF !important; " ><i data-feather='clock' style="transform: scale(1.8)"></i></span>
                                             </div>
                                         </div>
@@ -94,7 +95,7 @@
                                         </div>
                                         <div class="col-3">
                                             <div class="input-group mb-1">
-                                                <input type="text" class="form-control" name="selasa-end-time">
+                                                <input type="text" class="form-control" name="selasa-end-time" placeholder="Contoh: 17:00">
                                                 <span class="input-group-text" style="background-color: #089544 !important; color: #FFFFFF !important; " ><i data-feather='clock' style="transform: scale(1.8)"></i></span>
                                             </div>
                                         </div>
@@ -107,7 +108,7 @@
                                     <div class="row g-0">
                                         <div class="col-3">
                                             <div class="input-group mb-1">
-                                                <input type="text" class="form-control" name="rabu-start-time">
+                                                <input type="text" class="form-control" name="rabu-start-time" placeholder="Contoh: 09:00">
                                                 <span class="input-group-text" style="background-color: #089544 !important; color: #FFFFFF !important; " ><i data-feather='clock' style="transform: scale(1.8)"></i></span>
                                             </div>
                                         </div>
@@ -116,7 +117,7 @@
                                         </div>
                                         <div class="col-3">
                                             <div class="input-group mb-1">
-                                                <input type="text" class="form-control" name="rabu-end-time">
+                                                <input type="text" class="form-control" name="rabu-end-time" placeholder="Contoh: 17:00">
                                                 <span class="input-group-text" style="background-color: #089544 !important; color: #FFFFFF !important; " ><i data-feather='clock' style="transform: scale(1.8)"></i></span>
                                             </div>
                                         </div>
@@ -129,7 +130,7 @@
                                     <div class="row g-0">
                                         <div class="col-3">
                                             <div class="input-group mb-1">
-                                                <input type="text" class="form-control" name="kamis-start-time">
+                                                <input type="text" class="form-control" name="kamis-start-time" placeholder="Contoh: 09:00">
                                                 <span class="input-group-text" style="background-color: #089544 !important; color: #FFFFFF !important; " ><i data-feather='clock' style="transform: scale(1.8)"></i></span>
                                             </div>
                                         </div>
@@ -138,7 +139,7 @@
                                         </div>
                                         <div class="col-3">
                                             <div class="input-group mb-1">
-                                                <input type="text" class="form-control" name="kamis-end-time">
+                                                <input type="text" class="form-control" name="kamis-end-time" placeholder="Contoh: 17:00">
                                                 <span class="input-group-text" style="background-color: #089544 !important; color: #FFFFFF !important; " ><i data-feather='clock' style="transform: scale(1.8)"></i></span>
                                             </div>
                                         </div>
@@ -151,7 +152,7 @@
                                     <div class="row g-0">
                                         <div class="col-3">
                                             <div class="input-group mb-1">
-                                                <input type="text" class="form-control" name="jumat-start-time">
+                                                <input type="text" class="form-control" name="jumat-start-time" placeholder="Contoh: 09:00">
                                                 <span class="input-group-text" style="background-color: #089544 !important; color: #FFFFFF !important; " ><i data-feather='clock' style="transform: scale(1.8)"></i></span>
                                             </div>
                                         </div>
@@ -160,7 +161,7 @@
                                         </div>
                                         <div class="col-3">
                                             <div class="input-group mb-1">
-                                                <input type="text" class="form-control" name="jumat-end-time">
+                                                <input type="text" class="form-control" name="jumat-end-time" placeholder="Contoh: 17:00">
                                                 <span class="input-group-text" style="background-color: #089544 !important; color: #FFFFFF !important; " ><i data-feather='clock' style="transform: scale(1.8)"></i></span>
                                             </div>
                                         </div>
@@ -173,7 +174,7 @@
                                     <div class="row g-0">
                                         <div class="col-3">
                                             <div class="input-group mb-1">
-                                                <input type="text" class="form-control" name="sabtu-start-time">
+                                                <input type="text" class="form-control" name="sabtu-start-time" placeholder="Contoh: 09:00">
                                                 <span class="input-group-text" style="background-color: #089544 !important; color: #FFFFFF !important; " ><i data-feather='clock' style="transform: scale(1.8)"></i></span>
                                             </div>
                                         </div>
@@ -182,7 +183,7 @@
                                         </div>
                                         <div class="col-3">
                                             <div class="input-group mb-1">
-                                                <input type="text" class="form-control" name="sabtu-end-time">
+                                                <input type="text" class="form-control" name="sabtu-end-time" placeholder="Contoh: 17:00">
                                                 <span class="input-group-text" style="background-color: #089544 !important; color: #FFFFFF !important; " ><i data-feather='clock' style="transform: scale(1.8)"></i></span>
                                             </div>
                                         </div>
@@ -193,7 +194,7 @@
                                     <div class="row g-0">
                                         <div class="col-3">
                                             <div class="input-group mb-1">
-                                                <input type="text" class="form-control" name="minggu-start-time">
+                                                <input type="text" class="form-control" name="minggu-start-time" placeholder="Contoh: 09:00">
                                                 <span class="input-group-text" style="background-color: #089544 !important; color: #FFFFFF !important; " ><i data-feather='clock' style="transform: scale(1.8)"></i></span>
                                             </div>
                                         </div>
@@ -202,7 +203,7 @@
                                         </div>
                                         <div class="col-3">
                                             <div class="input-group mb-1">
-                                                <input type="text" class="form-control" name="minggu-end-time">
+                                                <input type="text" class="form-control" name="minggu-end-time" placeholder="Contoh: 17:00">
                                                 <span class="input-group-text" style="background-color: #089544 !important; color: #FFFFFF !important; " ><i data-feather='clock' style="transform: scale(1.8)"></i></span>
                                             </div>
                                         </div>
@@ -226,7 +227,13 @@
 @endsection
 
 @push('vendor_js')
+<script src="{{ asset('vuexy') }}/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
 @endpush
 
 @push('custom_js')
+<script>
+    $(document).ready(function(){
+        $('#doctor_id').select2();
+    })
+</script>
 @endpush

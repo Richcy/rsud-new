@@ -48,14 +48,14 @@
                         <h2>Form Edit Kategori Artikel</h2>
                     </div>
                     <div class="card-body" style="padding-top: 6px !important;">
-                        <form action="{{ route('admin.category-event.update', $categoryArticle->id) }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('admin.category-event.update', $categoryEvent->id) }}" method="post" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="mb-1">
                                         <label for="name" class="form-label">Nama Kategori Artikel</label>
-                                        <input type="text" id="name" class="form-control @error('name') is-invalid @enderror" name="name" laceholder="Masukan Nama Kategori Artikel" value="{{ old('name', $categoryArticle->name) }}">
+                                        <input type="text" id="name" class="form-control @error('name') is-invalid @enderror" name="name" laceholder="Masukan Nama Kategori Artikel" value="{{ old('name', $categoryEvent->name) }}">
 
                                         @error('name')
                                             <div class="invalid-feedback">{{ $message }}</div>

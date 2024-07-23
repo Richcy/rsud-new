@@ -36,7 +36,7 @@
 
 
 	// 08. Nice Select Js
-	$('select').niceSelect();
+	// $('select').niceSelect();
 
 
 	///////////////////////////////////////////////////
@@ -127,7 +127,7 @@
 	var header_icon =
 		`<span class="header-icon">
 		<svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="htrr://www.w3.org/2000/svg">
-		<path d="M6.04088 0L0.535156 4.125V11H4.26484V8.59381C4.26484 7.64165 5.05698 6.87506 6.04088 6.87506C7.02477 6.87506 7.81692 7.64165 7.81692 8.59381V11H11.5466V4.125L6.04088 0Z" fill="#FFB302"/></svg>                                
+		<path d="M6.04088 0L0.535156 4.125V11H4.26484V8.59381C4.26484 7.64165 5.05698 6.87506 6.04088 6.87506C7.02477 6.87506 7.81692 7.64165 7.81692 8.59381V11H11.5466V4.125L6.04088 0Z" fill="#FFB302"/></svg>
 	</span>`;
 	$(header_icon).insertBefore('.menu-icon nav ul .menu-icon-2');
 
@@ -612,7 +612,7 @@
 		centerMode: true,
 		focusOnSelect: true,
 		centerPadding: 0
-	}); 
+	});
 
 	$('.testimonia-item-active').on('afterChange', function(event, slick, currentSlide){
 		$('.testimonial-thumb').removeClass('slick-img-width');
@@ -626,7 +626,7 @@
 	// 21. Counter Js
 	new PureCounter();
 
-	
+
 	// Jquery Appear raidal
 	if (typeof ($.fn.knob) != 'undefined') {
 		$('.knob').each(function () {
@@ -1019,6 +1019,6 @@
 			});
 		});
 	}
-	
+
 
 })(jQuery);

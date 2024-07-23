@@ -15,7 +15,7 @@ class FeaturedDoctorController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $data = FeaturedDoctor::with('doctor')->orderBy('sort');
+            $data = FeaturedDoctor::with('doctor')->orderBy('sort', 'ASC');
             return DataTables::of($data)
                 ->addIndexColumn()
                 ->addColumn('action',  'admin.featured-doctor.datatables.action')
@@ -29,6 +29,9 @@ class FeaturedDoctorController extends Controller
                         return '-';
                     }
                 })
+                ->setRowId(function($model) {
+                    return $model->id;
+                })
                 ->rawColumns(['action', 'img'])
                 ->make(true);
         }
@@ -40,6 +43,23 @@ class FeaturedDoctorController extends Controller
             $featuredDoctorCount = FeaturedDoctor::count();
 
         return view('admin.featured-doctor.index', compact('doctors', 'featuredDoctorCount'));
+    }
+
+    public function reorder(Request $request)
+    {
+        try {
+            $order = $request->input('order');
+            // Log::info($order);
+            foreach ($order as $item) {
+                DB::table('featured_doctors')
+                    ->where('id', $item['id'])
+                    ->update(['sort' => $item['newPosition']]);
+            }
+    
+            return response()->json(['status' => 'success']);
+        } catch (\Throwable $th) {
+            return response()->json(['status' => 'error', 'message' => $th->getMessage()], 500);
+        }
     }
 
     public function store(Request $request)

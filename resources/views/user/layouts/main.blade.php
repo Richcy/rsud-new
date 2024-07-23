@@ -211,30 +211,30 @@
                            <li class="has-dropdown">
                               <a href="#">Layanan</a>
                               <ul class="submenu rr-submenu">
-                                 <li><a href="team.html">Layanan Unggulan</a></li>
-                                 <li><a href="team.html">Instalasi Rawat Jalan</a></li>
-                                 <li><a href="team.html">Instalasi Rawat Inap</a></li>
-                                 <li><a href="team.html">Instalasi Gawat Darurat</a></li>
-                                 <li><a href="team.html">Laboratorium</a></li>
-                                 <li><a href="team.html">Hemodialisis</a></li>
-                                 <li><a href="team.html">Rehabilitasi Medik</a></li>
-                                 <li><a href="team.html">Radiologi</a></li>
-                                 <li><a href="team.html">Farmasi</a></li>
-                                 <li><a href="team.html">Ambulans</a></li>
-                                 <li><a href="team.html">Pengaduan</a></li>
+                                 <li><a href="{{ route('user.layanan_unggulan.index') }}">Layanan Unggulan</a></li>
+                                 <li><a href="{{ route('user.rawat_jalan.index') }}">Instalasi Rawat Jalan</a></li>
+                                 <li><a href="{{ route('user.rawat_inap.index') }}">Instalasi Rawat Inap</a></li>
+                                 <li><a href="{{ route('user.gawat_darurat.index') }}">Instalasi Gawat Darurat</a></li>
+                                 <li><a href="{{ route('user.laboratorium.index') }}">Laboratorium</a></li>
+                                 <li><a href="{{ route('user.hemodialisis.index') }}">Hemodialisis</a></li>
+                                 <li><a href="{{ route('user.rehab_medik.index') }}">Rehabilitasi Medik</a></li>
+                                 <li><a href="{{ route('user.radiology.index') }}">Radiologi</a></li>
+                                 <li><a href="{{ route('user.farmasi.index') }}">Farmasi</a></li>
+                                 <li><a href="{{ route('user.ambulance.index') }}">Ambulans</a></li>
+                                 <li><a href="{{ route('user.pengaduan.index') }}">Pengaduan</a></li>
                               </ul>
                            </li>
-                           <li><a href="contact.html">Dokter</a></li>
-                           <li><a href="contact.html">Event</a></li>
+                           <li><a href="{{ route('user.doctor.index') }}">Dokter</a></li>
+                           <li><a href="{{ route('user.event.index') }}">Event</a></li>
                            <li class="has-dropdown">
                             <a href="#">Artikel</a>
                             <ul class="submenu rr-submenu">
-                               <li><a href="team.html">Infomasi Kesehatan</a></li>
-                               <li><a href="team.html">Cimanews</a></li>
+                               <li><a href="{{ route('user.article.index') }}">Infomasi Kesehatan</a></li>
+                               <li><a href="{{ route('user.cimanews.index') }}">Cimanews</a></li>
                             </ul>
                          </li>
-                         <li><a href="contact.html">Karir</a></li>
-                         <li><a href="contact.html">Kontak</a></li>
+                         <li><a href="{{ route('user.career.index') }}">Karir</a></li>
+                         <li><a href="{{ route('user.contact.index') }}">Kontak</a></li>
                         </ul>
                      </nav>
                   </div>
@@ -268,7 +268,7 @@
        <!-- footer area start -->
        <div class="rr-footer-area pt-80 p-relative fix">
          <div class="rr-footer-right-shap d-none d-xl-block">
-            <img src="{{ asset('mekina') }}/assets/img/footer/footer-shap.png" alt="img">
+            {{-- <img src="{{ asset('mekina') }}/assets/img/footer/footer-shap.png" alt="img"> --}}
          </div>
          <div class="container">
             <div class="rr-footer-border">
@@ -295,7 +295,7 @@
                              <h5 class="text-white">
                                  Download Tartimah
                              </h5>
-                             <a href="">
+                             <a href="https://play.google.com/store/apps/details?id=com.reservcimacan&hl=in&gl=US" target="_blank">
                                 <img class="img-fluid me-4 mt-5" style="margin: 0 20px 0 -15px; padding: 0; height: 55%; width: 55%" src="{{ asset('assets/images/playstore-download-btn.webp') }}" alt="">
                              </a>
                             </div>
@@ -311,8 +311,8 @@
                               <li><a href="{{ route('user.profile.index') }}l">Profil Rumah Sakit</a></li>
                               <li><a href="{{ route('user.greeting.index') }}">Sambutan Direktur</a></li>
                               <li><a href="{{ route('user.structure.index') }}">Struktur Organisasi</a></li>
-                              <li><a href="service.html">Standar Pelayanan</a></li>
-                              <li><a href="service.html">Dokter</a></li>
+                              <li><a href="{{ route('user.standard_pelayanan.index') }}">Standar Pelayanan</a></li>
+                              <li><a href="{{ route('user.doctor.index') }}">Dokter</a></li>
                            </ul>
                         </div>
                      </div>
@@ -323,13 +323,13 @@
                         <h4 class="rr-footer-title">Layanan Kami</h4>
                         <div class="rr-footer-list">
                            <ul>
-                              <li><a href="service.html">Layanan Unggulan</a></li>
-                              <li><a href="service.html">Instalasi Rawat Jalan</a></li>
-                              <li><a href="service.html">Instalasi Rawat Inap</a></li>
-                              <li><a href="service.html">Instalasi Gawat Darurat</a></li>
-                              <li><a href="service.html">Laboratorium</a></li>
-                              <li><a href="service.html">Radiologi</a></li>
-                              <li><a href="service.html">Hermodialisis</a></li>
+                              <li><a href="{{ route('user.layanan_unggulan.index') }}">Layanan Unggulan</a></li>
+                              <li><a href="{{ route('user.rawat_jalan.index') }}">Instalasi Rawat Jalan</a></li>
+                              <li><a href="{{ route('user.rawat_inap.index') }}">Instalasi Rawat Inap</a></li>
+                              <li><a href="{{ route('user.gawat_darurat.index') }}">Instalasi Gawat Darurat</a></li>
+                              <li><a href="{{ route('user.laboratorium.index') }}">Laboratorium</a></li>
+                              <li><a href="{{ route('user.radiology.index') }}">Radiologi</a></li>
+                              <li><a href="{{ route('user.hemodialisis.index') }}">Hermodialisis</a></li>
                            </ul>
                         </div>
                      </div>
@@ -338,13 +338,13 @@
                      data-wow-delay=".9s">
                      <div class="rr-footer-widget footer-cols-4">
                         <h4 class="rr-footer-title">Lainnya</h4>
-                        <div class="rr-footer-contact">
+                        <div class="rr-footer-list ">
                            <ul>
-                                <li><a href="service.html">Event</a></li>
-                                <li><a href="service.html">Informasi Kesehatan</a></li>
-                                <li><a href="service.html">CimaNEWS</a></li>
-                                <li><a href="service.html">Karir</a></li>
-                                <li><a href="service.html">Kontak</a></li>
+                                <li><a href="{{ route('user.event.index') }}">Event</a></li>
+                                <li><a href="{{ route('user.article.index') }}">Informasi Kesehatan</a></li>
+                                <li><a href="{{ route('user.cimanews.index') }}">CimaNEWS</a></li>
+                                <li><a href="{{ route('user.career.index') }}">Karir</a></li>
+                                <li><a href="{{ route('user.contact.index') }}">Kontak</a></li>
                            </ul>
                         </div>
                      </div>
@@ -353,12 +353,12 @@
                      data-wow-delay=".9s">
                      <div class="rr-footer-widget footer-cols-4">
                         <h4 class="rr-footer-title">Pemerintahan</h4>
-                        <div class="rr-footer-contact">
+                        <div class="rr-footer-list ">
                            <ul>
-                                <li><a href="service.html">BPJS</a></li>
-                                <li><a href="service.html">Kemenkes</a></li>
-                                <li><a href="service.html">PEMDA Cianjur</a></li>
-                                <li><a href="service.html">DINKES Cianjur</a></li>
+                                <li><a href="https://www.bpjs-kesehatan.go.id/#/" target="_blank">BPJS</a></li>
+                                <li><a href="https://www.kemkes.go.id/id/home" target="_blank">Kemenkes</a></li>
+                                <li><a href="https://cianjurkab.go.id/" target="_blank">PEMDA Cianjur</a></li>
+                                <li><a href="https://dinkes.cianjurkab.go.id/" target="_blank">DINKES Cianjur</a></li>
                            </ul>
                         </div>
                      </div>

@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('vuexy/app-assets/vendors/css/editors/quill/quill.bubble.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('vuexy/app-assets/css/plugins/forms/form-quill-editor.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('vuexy/app-assets/css/plugins/forms/form-quill-editor.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('vuexy') }}/app-assets/vendors/css/forms/select/select2.min.css">
 @endpush
 
 @push('custom_css')
@@ -53,7 +54,7 @@
                                 <div class="col-md-6">
                                     <div class="mb-1">
                                         <label for="title" class="form-label">Judul Artikel</label>
-                                        <input type="text" id="title" class="form-control @error('title') is-invalid @enderror" name="title" onkeyup="createSlug()" placeholder="Masukan Nama Judul" value="{{ old('title') }}">
+                                        <input type="text" id="title" class="form-control @error('title') is-invalid @enderror" name="title" onkeyup="createSlug()" placeholder="Masukan Judul Artikel" value="{{ old('title') }}">
 
                                         @error('title')
                                             <div class="invalid-feedback">{{ $message }}</div>
@@ -73,7 +74,7 @@
                                 <div class="col-md-6">
                                     <div class="mb-2">
                                         <label class="form-label" for="article_category_id">Kategori Acara: </label>
-                                        <select name="article_category_id"
+                                        <select name="article_category_id" id="article_category_id"
                                             class="form-select @error('article_category_id') is-invalid @enderror">
                                             <option selected disabled>Silakan Pilih Kategori Acara</option>
                                             @foreach ($categoryArticle as $item)
@@ -157,6 +158,7 @@
     <script src="{{ asset('vuexy/app-assets/vendors/js/editors/quill/highlight.min.js') }}"></script>
     <script src="{{ asset('vuexy/app-assets/vendors/js/editors/quill/katex.min.js') }}"></script>
     <script src="{{ asset('vuexy/app-assets/vendors/js/editors/quill/quill.min.js') }}"></script>
+    <script src="{{ asset('vuexy') }}/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
 @endpush
 
 @push('custom_js')
@@ -258,6 +260,8 @@
                     reader.readAsDataURL(file);
                 }
             });
+
+            $('#article_category_id').select2();
         });
     </script>
 @endpush

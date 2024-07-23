@@ -53,7 +53,7 @@
                                 <div class="col-md-6">
                                     <div class="mb-1">
                                         <label for="title" class="form-label">Judul</label>
-                                        <input type="text" id="title" class="form-control @error('title') is-invalid @enderror" name="title" onkeyup="createSlug()" placeholder="Masukan Nama Diskon" value="{{ old('title', $career->title) }}">
+                                        <input type="text" id="title" class="form-control @error('title') is-invalid @enderror" name="title" onkeyup="createSlug()" placeholder="Masukan Judul Karir" value="{{ old('title', $career->title) }}">
 
                                         @error('title')
                                             <div class="invalid-feedback">{{ $message }}</div>
@@ -74,7 +74,7 @@
                                 <div class="col-md-6">
                                     <div class="mb-1">
                                         <label for="url" class="form-label">URL</label>
-                                        <input type="text" id="url" class="form-control @error('url') is-invalid @enderror" name="url" placeholder="Masukan Link" value="{{ old('url', $career->url) }}">
+                                        <input type="text" id="url" class="form-control @error('url') is-invalid @enderror" name="url" placeholder="Masukan Link URL Karir" value="{{ old('url', $career->url) }}">
 
                                         @error('url')
                                             <div class="invalid-feedback">{{ $message }}</div>
