@@ -2275,7 +2275,7 @@ class ArticleSeeder extends Seeder
                 $category_id = $kesehatanUmum->id;
             } else {
                 // Cimanews
-                $img = 'cimanews/' . $imgPath[1];
+                $img = 'articles/' . $imgPath[1];
                 $category_id = $cimanews->id;
             }
 
