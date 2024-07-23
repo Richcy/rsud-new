@@ -1,10 +1,8 @@
 
-@section('seo_keyword', 'Tentang RSUD CIMACAN, Biodata RSUD CIMACAN, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan')
-@section('seo_title', 'RSUD Cimacan | Beranda')
+@section('seo_keyword', 'Sambutan Direktur, rumah sakit umum daerah cimacan, rsud cimacan')
+@section('seo_title', 'RSUD Cimacan | Sambutan Direktur')
 @section('seo_desc',
-    'Rumah Sakit Umum Daerah Cimacan pada awalnya adalah Puskesmas Pacet (Cimacan) yang sudah berdiri
-    sejak tahun 1953, kemudian pada tahun 1981 statusnya meningkat menjadi Puskesmas DTP dan berubah status menjadi Rumah
-    Sakit dengan ditetapkannya Surat Keputusan Bupati Cianjur atas nama Pemerintah Daerah Kabupaten Cianjur Nomor 19 Tahu…')
+    'Puji syukur kami panjatkan kepada Allah SWT. atas segala anugerah yang telah diberikan sehingga pelayanan kesehatan kepada masyarakat masih dapat....')
 @section('seo_url', route('user.greeting.index'))
 @extends('user.layouts.main')
 @push('custom_css')

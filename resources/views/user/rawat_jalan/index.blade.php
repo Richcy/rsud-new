@@ -1,10 +1,8 @@
 
-@section('seo_keyword', 'Layanan Unggulan RSUD Cimacan, Rumah Sakit Di Cianjur, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan')
-@section('seo_title', 'RSUD Cimacan | Beranda')
+@section('seo_keyword', 'Instalasi Rawat Jalan, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan')
+@section('seo_title', 'RSUD Cimacan | Instalasi Rawat Jalan')
 @section('seo_desc',
-    'Rumah Sakit Umum Daerah Cimacan pada awalnya adalah Puskesmas Pacet (Cimacan) yang sudah berdiri
-    sejak tahun 1953, kemudian pada tahun 1981 statusnya meningkat menjadi Puskesmas DTP dan berubah status menjadi Rumah
-    Sakit dengan ditetapkannya Surat Keputusan Bupati Cianjur atas nama Pemerintah Daerah Kabupaten Cianjur Nomor 19 Tahu…')
+    'Instalasi Rawat Jalan (IRJ) adalah salah satu instalasi yang berada di RSD Cimacan yang memberikan pelayanan rawat jalan kepada pasien sesuai dengan...')
 @section('seo_url', route('user.rawat_jalan.index'))
 @extends('user.layouts.main')
 @push('custom_css')

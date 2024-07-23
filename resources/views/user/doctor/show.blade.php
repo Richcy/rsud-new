@@ -1,4 +1,4 @@
-@section('seo_keyword', $doctor->name, 'rumah sakit umum daerah cimacan, rsud cimacan')
+@section('seo_keyword', $doctor->name, 'Dokter, rumah sakit umum daerah cimacan, rsud cimacan')
 @section('seo_title', 'RSUD Cimacan | ', $doctor->name,)
 @section('seo_desc',
 'Daftar dokter spesialis Rumah Sakit Daerah Cimacan')
