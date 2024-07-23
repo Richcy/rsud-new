@@ -12,10 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('events', function (Blueprint $table) {
+            $table->string('location', 255)->nullable()->change();
+            $table->string('sub_desc', 255)->nullable()->change();
             $table->string('url', 255)->nullable()->change();
         });
-        Schema::table('career', function (Blueprint $table) {
+        Schema::table('careers', function (Blueprint $table) {
             $table->string('url', 255)->nullable()->change();
+            $table->string('sub_desc', 255)->nullable()->change();
         });
     }
 
@@ -24,11 +27,11 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('events', function (Blueprint $table) {
-            $table->dropColumn('url', 255);
-        });
-        Schema::table('career', function (Blueprint $table) {
-            $table->dropColumn('url', 255);
-        });
+        // Schema::table('events', function (Blueprint $table) {
+        //     $table->dropColumn('url', 255);
+        // });
+        // Schema::table('careers', function (Blueprint $table) {
+        //     $table->dropColumn('url', 255);
+        // });
     }
 };

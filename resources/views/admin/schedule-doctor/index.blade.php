@@ -50,28 +50,30 @@
                         <a href="{{ route('admin.schedule-doctor.create') }}" class="btn btn-primary">Tambah Jadwal Dokter</a>
                     </div>
                     <div class="card-body">
-                        <table class="table dataTable no-footer dtr-column" id="datatable-schedule-doctor">
-                            <thead>
-                                <tr>
-                                    <th rowspan="2" style="border: none !important;">Action</th>
-                                    <th rowspan="2" style="border: none !important;">#</th>
-                                    <th rowspan="2" style="border: none !important;">Dokter</th>
-                                    <th colspan="7" class="text-center">Jadwal</th>
-                                </tr>
-                                <tr>
-                                    <th>Senin</th>
-                                    <th>Selasa</th>
-                                    <th>Rabu</th>
-                                    <th>Kamis</th>
-                                    <th>Jumat</th>
-                                    <th>Sabtu</th>
-                                    <th>Minggu</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- Dynamic content will be loaded here -->
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table dataTable no-footer dtr-column" id="datatable-schedule-doctor">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2" style="border: none !important;">Action</th>
+                                        <th rowspan="2" style="border: none !important;">#</th>
+                                        <th rowspan="2" style="border: none !important;">Dokter</th>
+                                        <th colspan="7" class="text-center">Jadwal</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Senin</th>
+                                        <th>Selasa</th>
+                                        <th>Rabu</th>
+                                        <th>Kamis</th>
+                                        <th>Jumat</th>
+                                        <th>Sabtu</th>
+                                        <th>Minggu</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Dynamic content will be loaded here -->
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
