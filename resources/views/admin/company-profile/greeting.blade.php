@@ -51,7 +51,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="mb-1">
-                                                    <label for="description" class="form-label">Deskripsi</label>
+                                                    <label for="description" class="form-label">Sambutan</label>
                                                     <textarea name="description" id="description" cols="30" rows="50" class="form-control tinymce">{{ $data->description }}</textarea>
                                                     @error('description')
                                                     <div class="invalid-feedback d-block">{{ $message ?? 'Something error' }}</div>

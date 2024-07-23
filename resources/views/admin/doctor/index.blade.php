@@ -50,7 +50,7 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Nama</th>
-                                            <th>Gambar</th>
+                                            <th>Foto</th>
                                             <th>Bidang Keahlian</th>
                                             <th>Kantor/Unit Kerja</th>
                                             {{-- <th>NIP</th> --}}

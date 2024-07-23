@@ -45,7 +45,7 @@
                                     <div class="col-12">
                                         <div class="col-md-12">
                                             <div class="mb-1">
-                                                <label for="img" class="form-label">Stuktur Organisasi</label>
+                                                <label for="img" class="form-label">Penilaian Mutu</label>
                                                 <input type="file" accept="image/jpeg, image/png, image/jpg, image/gif" id="img" class="form-control @error('img') is-invalid @enderror" name="img">
                                                 <div id="avatar-content" class="mt-3">
                                                     @if($data->img)

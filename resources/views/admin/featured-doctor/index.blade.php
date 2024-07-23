@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('vuexy/app-assets/vendors/css/tables/datatable/responsive.bootstrap5.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('vuexy/app-assets/vendors/css/tables/datatable/buttons.bootstrap5.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('vuexy/app-assets/vendors/css/tables/datatable/rowGroup.bootstrap5.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('vuexy') }}/app-assets/vendors/css/forms/select/select2.min.css">
 @endpush
 
 @section('content')
@@ -97,6 +98,7 @@
 <script src="{{ asset('vuexy/app-assets/vendors/js/tables/datatable/buttons.html5.min.js') }}"></script>
 <script src="{{ asset('vuexy/app-assets/vendors/js/tables/datatable/buttons.print.min.js') }}"></script>
 <script src="{{ asset('vuexy/app-assets/vendors/js/tables/datatable/dataTables.rowGroup.min.js') }}"></script>
+<script src="{{ asset('vuexy') }}/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
 @endpush
 
 @push('custom_js')
@@ -188,10 +190,12 @@
                                 // Tampilkan pesan sukses
                                 swal("Bidang Dokter berhasil dihapus!", {
                                     icon: "success",
+                                }).then((willReload) => {
+                                    location.reload();
                                 });
 
                                 // Muat ulang tabel setelah penghapusan
-                                $('#datatable-featured-doctor').DataTable().ajax.reload();
+                                // $('#datatable-featured-doctor').DataTable().ajax.reload();
                             },
                             error: function(xhr, status, error) {
                                 // Tampilkan pesan error jika terjadi kesalahan
@@ -202,5 +206,11 @@
                 });
             });
         });
+
+        $(document).ready(function(){
+            $('#doctor_id').select2({
+                dropdownParent: $("#createModal")
+            });
+        })
     </script>
 @endpush

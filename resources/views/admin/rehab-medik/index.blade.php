@@ -59,7 +59,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="mb-1">
-                                                    <label for="description" class="form-label">Deskripsi</label>
+                                                    <label for="description" class="form-label">Deskripsi Rehab Medik</label>
                                                     <textarea name="description" id="description" cols="30" rows="50" class="form-control tinymce">{{ $data->description }}</textarea>
                                                     @error('description')
                                                     <div class="invalid-feedback d-block">{{ $message ?? 'Something error' }}</div>
@@ -68,7 +68,7 @@
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="mb-1">
-                                                    <label for="img" class="form-label">Banner Sambutan Direktur</label>
+                                                    <label for="img" class="form-label">Foto Banner Rehab Medik</label>
                                                     <input type="file" accept="image/jpeg, image/png, image/jpg, image/gif" id="img" class="form-control @error('img') is-invalid @enderror" name="img">
                                                     <div id="avatar-content" class="mt-3">
                                                         @if($data->banner)

@@ -306,13 +306,13 @@ class DoctorScheduleSeeder extends Seeder
         foreach ($t_schedule_doctor as $key => $value) {
             $payload_schedule[] = [
                 "doctor_id" => $value['doctor'],
-                "senin" => $value['senin'] == '' ? null : $value['senin'],
-                "selasa" => $value['selasa'] == '' ? null : $value['selasa'],
-                "rabu" => $value['rabu'] == '' ? null : $value['rabu'],
-                "kamis" => $value['kamis'] == '' ? null : $value['kamis'],
-                "jumat" => $value['jumat'] == '' ? null : $value['jumat'],
-                "sabtu" => $value['sabtu'] == '' ? null : $value['sabtu'],
-                "minggu" => $value['minggu'] == '' ? null : $value['minggu'],
+                "senin" => $value['senin'] == '' ? null : str_replace('-', ' - ', $value['senin']),
+                "selasa" => $value['selasa'] == '' ? null : str_replace('-', ' - ', $value['selasa']),
+                "rabu" => $value['rabu'] == '' ? null : str_replace('-', ' - ', $value['rabu']),
+                "kamis" => $value['kamis'] == '' ? null : str_replace('-', ' - ', $value['kamis']),
+                "jumat" => $value['jumat'] == '' ? null : str_replace('-', ' - ', $value['jumat']),
+                "sabtu" => $value['sabtu'] == '' ? null : str_replace('-', ' - ', $value['sabtu']),
+                "minggu" => $value['minggu'] == '' ? null : str_replace('-', ' - ', $value['minggu']),
                 "created_at" => now(),
                 "updated_at" => now(),
             ];

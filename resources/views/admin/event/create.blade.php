@@ -58,7 +58,7 @@
                                 <div class="col-md-6">
                                     <div class="mb-1">
                                         <label for="title" class="form-label">Judul Acara</label>
-                                        <input type="text" id="title" class="form-control @error('title') is-invalid @enderror" name="title" onkeyup="createSlug()" placeholder="Masukan Nama Diskon" value="{{ old('title') }}">
+                                        <input type="text" id="title" class="form-control @error('title') is-invalid @enderror" name="title" onkeyup="createSlug()" placeholder="Masukan Judul Acara" value="{{ old('title') }}">
 
                                         @error('title')
                                             <div class="invalid-feedback">{{ $message }}</div>
@@ -96,7 +96,7 @@
                                 <div class="col-md-6">
                                     <div class="mb-1">
                                         <label for="url" class="form-label">URL</label>
-                                        <input type="text" id="url" class="form-control @error('url') is-invalid @enderror" name="url" onkeyup="createSlug()" placeholder="Masukan Nama Diskon" value="{{ old('url') }}">
+                                        <input type="text" id="url" class="form-control @error('url') is-invalid @enderror" name="url" onkeyup="createSlug()" placeholder="Masukan Link URL Acara" value="{{ old('url') }}">
 
                                         @error('url')
                                             <div class="invalid-feedback">{{ $message }}</div>
@@ -125,7 +125,7 @@
                                     <div class="mb-1">
                                         <label for="start_date" class="form-label">Jam Mulai</label>
                                         <div class="input-group clockpicker" id="start_time">
-                                            <input type="text" class="form-control" id="input_start_time" name="start_time" value="" autocomplete="off">
+                                            <input type="text" class="form-control" id="input_start_time" name="start_time" value="" autocomplete="off" placeholder="09:00">
                                             <div class="input-group-append">
                                               <span class="input-group-text" style="background: #089544; border-radius: 0 5px 5px 0 !important;"><i class="bi bi-clock" style="color: #FFFFFF; transform: scale(1.4);"></i></span>
                                             </div>
@@ -139,7 +139,7 @@
                                     <div class="mb-1">
                                         <label for="end_date" class="form-label">Jam Selesai</label>
                                         <div class="input-group clockpicker" id="end_time">
-                                            <input type="text" class="form-control" id="input_end_time" name="end_time" value="" autocomplete="off">
+                                            <input type="text" class="form-control" id="input_end_time" name="end_time" value="" autocomplete="off" placeholder="17:00">
                                             <div class="input-group-append">
                                               <span class="input-group-text" style="background: #089544; border-radius: 0 5px 5px 0 !important;"><i class="bi bi-clock" style="color: #FFFFFF; transform: scale(1.4);"></i></span>
                                             </div>
@@ -202,7 +202,7 @@
                             </div>
 
                             {{-- button submit --}}
-                            <div class="d-flex justify-content-end">
+                            <div class="d-flex justify-content-end mb-2 mx-2">
                                 <a href="{{ route('admin.event.index') }}"
                                     class="btn btn-secondary me-1">Kembali</a>
                                 <button type="submit" class="btn btn-primary">Simpan</button>
