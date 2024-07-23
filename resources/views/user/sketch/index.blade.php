@@ -22,9 +22,9 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-12">
-                <span><small><a href="">Beranda</a> / <a href="">Tentang</a> / <strong>Struktur Rumah Sakit</strong></small></span>
+                <span><small><a href="">Beranda</a> / <a href="">Tentang</a> / <strong>Denah Rumah Sakit</strong></small></span>
                 <div class="text-left">
-                    <h3>STRUKTUR ORGANISASI RSUD CIMACAN</h3>
+                    <h3>DENAH RSUD CIMACAN</h3>
                 </div>
                 <div class="text-center">
                     <img style="" src="{{ asset('storage/'. $sketch->img) }}" alt="">

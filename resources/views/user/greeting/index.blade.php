@@ -24,7 +24,7 @@
             <div class="col-12">
                 <span><small><a href="">Beranda</a> / <a href="">Tentang</a> / <strong>Sambutan Direktur</strong></small></span>
                 <div class="text-center">
-                    <img style="height: 300px; width: 100%; object-fit:cover;" src="{{ asset('storage/'. $greeting->banner) }}" alt="">
+                    <img style="height: 300px; width: 500px; object-fit:cover;" src="{{ asset('storage/'. $greeting->banner) }}" alt="">
                 </div>
             </div>
 
