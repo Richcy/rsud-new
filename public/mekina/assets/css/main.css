@@ -8148,7 +8148,7 @@ body .ui-tooltip {
 }
 .rr-footer-list ul li a:hover {
   margin-left: 0;
-  color: var(--rr-theme-1);
+  color: var(--rr-common-black);
 }
 .rr-footer-contact {
   padding-top: 24px;
@@ -8168,7 +8168,7 @@ body .ui-tooltip {
   color: var(--rr-common-white);
 }
 .rr-footer-contact a:hover {
-  color: var(--rr-theme-1);
+  color: var(--rr-common-black);
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .rr-footer-contact a {

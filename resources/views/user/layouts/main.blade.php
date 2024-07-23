@@ -233,7 +233,7 @@
                                <li><a href="{{ route('user.cimanews.index') }}">Cimanews</a></li>
                             </ul>
                          </li>
-                         <li><a href="contact.html">Karir</a></li>
+                         <li><a href="{{ route('user.career.index') }}">Karir</a></li>
                          <li><a href="{{ route('user.contact.index') }}">Kontak</a></li>
                         </ul>
                      </nav>
@@ -268,7 +268,7 @@
        <!-- footer area start -->
        <div class="rr-footer-area pt-80 p-relative fix">
          <div class="rr-footer-right-shap d-none d-xl-block">
-            <img src="{{ asset('mekina') }}/assets/img/footer/footer-shap.png" alt="img">
+            {{-- <img src="{{ asset('mekina') }}/assets/img/footer/footer-shap.png" alt="img"> --}}
          </div>
          <div class="container">
             <div class="rr-footer-border">
@@ -295,7 +295,7 @@
                              <h5 class="text-white">
                                  Download Tartimah
                              </h5>
-                             <a href="">
+                             <a href="https://play.google.com/store/apps/details?id=com.reservcimacan&hl=in&gl=US" target="_blank">
                                 <img class="img-fluid me-4 mt-5" style="margin: 0 20px 0 -15px; padding: 0; height: 55%; width: 55%" src="{{ asset('assets/images/playstore-download-btn.webp') }}" alt="">
                              </a>
                             </div>
@@ -338,12 +338,12 @@
                      data-wow-delay=".9s">
                      <div class="rr-footer-widget footer-cols-4">
                         <h4 class="rr-footer-title">Lainnya</h4>
-                        <div class="rr-footer-contact">
+                        <div class="rr-footer-list ">
                            <ul>
-                                <li><a href="service.html">Event</a></li>
+                                <li><a href="{{ route('user.event.index') }}">Event</a></li>
                                 <li><a href="{{ route('user.article.index') }}">Informasi Kesehatan</a></li>
-                                <li><a href="service.html">CimaNEWS</a></li>
-                                <li><a href="service.html">Karir</a></li>
+                                <li><a href="{{ route('user.cimanews.index') }}">CimaNEWS</a></li>
+                                <li><a href="{{ route('user.career.index') }}">Karir</a></li>
                                 <li><a href="{{ route('user.contact.index') }}">Kontak</a></li>
                            </ul>
                         </div>
@@ -353,12 +353,12 @@
                      data-wow-delay=".9s">
                      <div class="rr-footer-widget footer-cols-4">
                         <h4 class="rr-footer-title">Pemerintahan</h4>
-                        <div class="rr-footer-contact">
+                        <div class="rr-footer-list ">
                            <ul>
-                                <li><a href="service.html">BPJS</a></li>
-                                <li><a href="service.html">Kemenkes</a></li>
-                                <li><a href="service.html">PEMDA Cianjur</a></li>
-                                <li><a href="service.html">DINKES Cianjur</a></li>
+                                <li><a href="https://www.bpjs-kesehatan.go.id/#/" target="_blank">BPJS</a></li>
+                                <li><a href="https://www.kemkes.go.id/id/home" target="_blank">Kemenkes</a></li>
+                                <li><a href="https://cianjurkab.go.id/" target="_blank">PEMDA Cianjur</a></li>
+                                <li><a href="https://dinkes.cianjurkab.go.id/" target="_blank">DINKES Cianjur</a></li>
                            </ul>
                         </div>
                      </div>

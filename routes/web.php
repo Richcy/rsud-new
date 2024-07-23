@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\User\EventController;
+use App\Http\Controllers\User\CareerController;
 use App\Http\Controllers\User\DoctorController;
 use App\Http\Controllers\User\SketchController;
 use App\Http\Controllers\User\ArticleController;
@@ -76,6 +77,9 @@ Route::name('user.')->group(function () {
 
     Route::get('/event', [EventController::class, 'index'])->name('event.index');
     Route::get('/event/{slug}', [EventController::class, 'show'])->name('event.show');
+
+    Route::get('/career', [CareerController::class, 'index'])->name('career.index');
+    Route::get('/career/{slug}', [CareerController::class, 'show'])->name('career.show');
 });
 
 Route::post('/logout', [LoginController::class, 'logout'])
