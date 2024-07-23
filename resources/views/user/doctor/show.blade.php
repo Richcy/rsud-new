@@ -121,7 +121,7 @@
                 </div>
                 <div class="py-3">
                     <div class="row">
-                        @foreach ($otherDoctor as $item)
+                        @forelse ($otherDoctor as $item)
                             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                                 <div class="rr-team-4-item p-relative mb-60">
                                     <div class="rr-team-4-thumb p-relative ">
@@ -137,7 +137,11 @@
                                     </div>
                                 </div>
                             </div>
-                        @endforeach
+                        @empty
+                           <div class="text-center">
+                              <p>Belum Ada Dokter Terbaru</p>
+                           </div>
+                        @endforelse
                     </div>
                 </div>
               </div>

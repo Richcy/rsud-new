@@ -1,6 +1,6 @@
 @section('seo_keyword', $cimanews->title, 'Cimanews, Berita, Blog, Berita rumah sakit, Berita rumah sakit umum daerah cimacan,Berita rsud cimacan')
 @section('seo_title', 'RSUD Cimacan | Cimanews')
-@section('seo_desc', $cimanews->sub_desc ? $cimanews->sub_desc : 'Detail Artikel', $cimanews->title)
+@section('seo_desc', $cimanews->sub_desc ? $cimanews->sub_desc : 'Detail Cimanews', $cimanews->title)
 @section('seo_url', route('user.cimanews.show', $cimanews->slug))
 @extends('user.layouts.main')
 @push('custom_css')
@@ -17,7 +17,7 @@
 @section('content')
 <div class="container my-4">
     <div class="row">
-        <span><small><a style="color:#121212" href="">Beranda</a> / <a style="color:#121212" href="{{ route('user.cimanews.index') }}">Artikel</a> / <strong>{{ $cimanews->title }}</strong></small></span>
+        <span><small><a style="color:#121212" href="">Beranda</a> / <a style="color:#121212" href="{{ route('user.cimanews.index') }}">Cimanews</a> / <strong>{{ $cimanews->title }}</strong></small></span>
         <!-- postbox area start -->
       <section class="postbox__area pt-100 pb-100">
         <div class="container">
@@ -47,7 +47,7 @@
               <div class="col-xxl-4 col-xl-4 col-lg-4">
                  <div class="sidebar__wrapper">
                     <div class="sidebar__widget sidebar__widget-bg mb-30">
-                       <h3 class="sidebar__widget-title">Artikel Terbaru</h3>
+                       <h3 class="sidebar__widget-title">Cimanews Terbaru</h3>
                        <div class="sidebar__widget-content">
                           <div class="sidebar__post">
                              @forelse ($otherArticle as $item)
