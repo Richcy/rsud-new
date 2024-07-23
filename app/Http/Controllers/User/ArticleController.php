@@ -33,9 +33,12 @@ class ArticleController extends Controller
         return view('user.article.index', compact('running_text', 'articles', 'categories'));
     }
 
-    public function show($id)
+    public function show($slug)
     {
         $running_text = RunningText::first();
-        return view('user.article.show', compact('running_text'));
+        $article = Article::where('slug', $slug)->first();
+        $categories = ArticleCategory::where('name', '!=', 'cimanews')->get();
+        $otherArticle = Article::where('slug', '!=', $slug)->where('article_category_id', $article->article_category_id)->limit(3)->get();
+        return view('user.article.show', compact('running_text', 'article', 'categories', 'otherArticle'));
     }
 }

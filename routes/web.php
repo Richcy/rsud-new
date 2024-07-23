@@ -67,7 +67,7 @@ Route::name('user.')->group(function () {
     Route::get('/doctor/{id}', [DoctorController::class, 'show'])->name('doctor.show');
 
     Route::get('/article', [ArticleController::class, 'index'])->name('article.index');
-    Route::get('/article/{id}', [ArticleController::class, 'show'])->name('article.show');
+    Route::get('/article/{slug}', [ArticleController::class, 'show'])->name('article.show');
 });
 
 Route::post('/logout', [LoginController::class, 'logout'])

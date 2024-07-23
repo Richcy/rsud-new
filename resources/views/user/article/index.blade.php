@@ -1,8 +1,7 @@
-@section('seo_keyword', 'Dokter, rumah sakit umum daerah cimacan, rsud cimacan')
+@section('seo_keyword', 'Artikel, Berita, Blog, rumah sakit, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan')
 @section('seo_title', 'RSUD Cimacan | Dokter')
-@section('seo_desc',
-'Daftar dokter spesialis Rumah Sakit Daerah Cimacan')
-@section('seo_url', route('user.farmasi.index'))
+@section('seo_desc', 'Daftar Artikel yang diterbitkan oleh Rumah Sakit Daerah Cimacan')
+@section('seo_url', route('user.article.index'))
 @extends('user.layouts.main')
 @push('custom_css')
 <link href="https://cdn.jsdelivr.net/npm/glightbox@3.0.6/dist/css/glightbox.min.css" rel="stylesheet">
@@ -93,7 +92,7 @@
                                 </div>
                             </div>
                             <div class="rr-blog-link">
-                                <a href="blog-details.html">Lihat Selengkapnya <i class="fa-light fa-angle-right"></i></a>
+                                <a href="{{ route('user.article.show', $item->slug) }}">Lihat Selengkapnya <i class="fa-light fa-angle-right"></i></a>
                             </div>
 
                         </div>
