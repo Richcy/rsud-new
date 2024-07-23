@@ -76,7 +76,7 @@
                         <h6 class="rr-team-4-title"><a href="#">{{ $item->name }}</a></h6>
                         <p>{{ $item->field_doctor->name }}</p>
                      </div>
-                     <div class="rr-team-4-arrow"> <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+                     <div class="rr-team-4-arrow"> <a href="{{ route('user.doctor.show', $item->id) }}"><i class="fa-solid fa-arrow-up"></i></a>
                      </div>
                   </div>
                </div>

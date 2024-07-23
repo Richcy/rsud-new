@@ -29,4 +29,12 @@ class DoctorController extends Controller
         // return $doctors;
         return view('user.doctor.index', compact('running_text', 'doctors', 'fields'));
     }
+
+    public function show(string $id)
+    {
+        $doctor = Doctor::with('field_doctor', 'schedule_doctor')->findOrFail($id);
+        $running_text = RunningText::first();
+        // return $doctor;
+        return view('user.doctor.show', compact('doctor', 'running_text'));
+    }
 }
