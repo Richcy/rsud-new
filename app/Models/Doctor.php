@@ -67,14 +67,8 @@ class Doctor extends Model
     {
         return $this->belongsTo(FieldDoctor::class, 'field_id', 'id');
     }
-
-    /**
-     * Get all of the schedule doctor for the Doctor
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
     public function schedule_doctor()
     {
-        return $this->hasMany(ScheduleDoctor::class, 'doctor_id', 'id');
+        return $this->hasOne(ScheduleDoctor::class, 'doctor_id', 'id');
     }
 }
