@@ -37,6 +37,7 @@
             .splide__slide img {
                 height: 300px; /* Height for small devices */
             }
+
         }
 
         @media (max-width: 576px) {
@@ -68,6 +69,32 @@
         .sambutan-description::after {
             content: '...';
             display: block;
+        }
+
+        @media(min-width:1024px) {
+            .custom-tab-img{
+                margin-top: 20px;
+                height: 50% !important;
+                width: 50% !important;
+            }
+        }
+        @media(max-width:1024px) {
+            .custom-tab-img{
+                height: 40% !important;
+                width: 40% !important;
+            }
+        }
+        @media(max-width:768px) {
+            .custom-tab-img{
+                height: 60% !important;
+                width: 60% !important;
+            }
+        }
+        @media(max-width:425px) {
+            .custom-tab-img{
+                height: 100% !important;
+                width: 100% !important;
+            }
         }
     </style>
 @endpush
@@ -179,23 +206,24 @@
                           <div class="rr-tab-2__section-box">
                              <div class="container p-0">
                                 <div class="row">
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 mb-3">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 mb-3 order-2 order-md-1">
                                         <div class="p-3 h-100 d-flex flex-column">
                                             <h2 class="rr-tab-2-title-3">Sambutan Direktur:</h2>
                                             <div class="sambutan-description mb-10">
                                                 {!! $sambutan->description !!}
                                             </div>
-                                            <a class="mt-auto rr-btn-black btn btn-dark " href="service.html">
+                                            <a class="mt-auto rr-btn-black btn btn-dark" href="{{ route('user.greeting.index') }}">
                                                 <span>Lihat Selengkapnya <i class="fa-sharp fa-solid fa-plus"></i></span>
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 mb-3">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 mb-3 order-1 order-md-2">
                                         <div class="p-relative p-3">
-                                            <img class="img-fluid"  src="{{ asset('storage/' . $sambutan->banner) }}" alt="img">
+                                            <img class="img-fluid" src="{{ asset('storage/' . $sambutan->banner) }}" alt="img">
                                         </div>
                                     </div>
                                 </div>
+
                              </div>
                           </div>
                        </div>
@@ -207,8 +235,8 @@
                              <div class="container p-0">
                                 <div class="row">
                                    <div class="col-xl-12 col-lg-12 col-md-12">
-                                      <div class="rr-tab-2__thumb rr-cursor-point-area text-end p-relative">
-                                         <img style="transform: scale(0.8);" class="w-100 img-fluid" src="{{ asset('storage/' . $maklumat->img) }}" alt="img">
+                                      <div class="rr-cursor-point-area text-center">
+                                         <img class="custom-tab-img " src="{{ asset('storage/' . $maklumat->img) }}" alt="img">
                                       </div>
                                    </div>
                                 </div>
@@ -223,8 +251,8 @@
                              <div class="container p-0">
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12  col-md-12">
-                                        <div class="rr-tab-2__thumb rr-cursor-point-area text-end p-relative">
-                                           <img style="transform: scale(0.5); margin-top: -400px" class="w-100 " src="{{ asset('storage/' . $rating->img) }}" alt="img">
+                                        <div class=" rr-cursor-point-area text-center" id="img-rating">
+                                           <img class="custom-tab-img" src="{{ asset('storage/' . $rating->img) }}" alt="img">
                                         </div>
                                      </div>
                                 </div>
@@ -239,8 +267,8 @@
                              <div class="container p-0">
                                <div class="row">
                                 <div class="col-xl-12 col-lg-12  col-md-12">
-                                    <div class="rr-tab-2__thumb rr-cursor-point-area text-end p-relative">
-                                       <img class="w-100 img-fluid" style="transform: scale(0.8);" src="{{ asset('storage/' . $structure->img) }}" alt="img">
+                                    <div class="rr-cursor-point-area text-center">
+                                       <img class="custom-tab-img" src="{{ asset('storage/' . $structure->img) }}" alt="img">
                                     </div>
                                  </div>
                                </div>
@@ -373,16 +401,18 @@
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
             <div class="rr-team-4-item p-relative mb-60">
                <div class="rr-team-4-thumb p-relative ">
-                  <div class="rr-team-4-img">
-                     <img class="w-100" src="{{ asset('storage/'. $item->doctor->img) }}" alt="img">
-                  </div>
+                <a href="{{ route('user.doctor.show', $item->doctor->id) }}">
+                    <div class="rr-team-4-img">
+                        <img class="w-100" src="{{ asset('storage/'. $item->doctor->img) }}" alt="img">
+                     </div>
+                </a>
                </div>
 
                <div class="rr-team-4-content text-center p-relative">
                   <h6 class="rr-team-4-title"><a href="{{ route('user.doctor.show', $item->doctor->id) }}">{{ $item->doctor->name }}</a></h6>
                     <p>{{ $item->doctor->field_doctor->name }}</p>
                </div>
-               <div class="rr-team-4-arrow"> <a href="{{ route('user.doctor.index') }}"><i class="fa-solid fa-arrow-up"></i></a>
+               <div class="rr-team-4-arrow"> <a href="{{ route('user.doctor.show', $item->doctor->id) }}"><i class="fa-solid fa-arrow-up"></i></a>
                </div>
             </div>
          </div>
@@ -390,7 +420,7 @@
        </div>
        <div class="row">
           <div class="team-btn text-center wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".9s">
-             <a class="rr-btn-black" href="team.html"><span>Lihat Semua Dokter <i
+             <a class="rr-btn-black" href="{{ route('user.doctor.index') }}"><span>Lihat Semua Dokter <i
                       class="fa-sharp fa-solid fa-plus"></i></span></a>
           </div>
        </div>
@@ -411,7 +441,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6 mb-30 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                     <div class="rr-blog-item">
                     <div class="rr-blog-thumb-main p-relative">
-                    <a href="blog-details.html">
+                    <a href="{{ route('user.cimanews.show', $news->slug) }}">
                         <div class="rr-blog-thumb">
                             <img src="{{ asset('storage/'. $news->img) }}" alt="img">
                         </div>
@@ -419,7 +449,7 @@
                     </div>
                     <div class="rr-blog-content rr-blog-content-opcity p-relative">
                         <div class="rr-blog-content-info d-flex mb-15">
-                            <span class=""><i class="fa-regular fa-calendar-days"></i>{{ $news->created_at }}</span>
+                            <span class=""><i class="fa-regular fa-calendar-days"></i>{{ \Carbon\Carbon::parse($news->created_at)->format('d-m-Y') }}</span>
                         </div>
                         <div class="rr-blog-text">
                             <h4 class="rr-blog-title mb-0 pb-10"><a href="blog-details.html">{{ $news->title }}</a></h4>
@@ -428,10 +458,10 @@
                         <div class="rr-blog-wrap d-flex align-items-center justify-content-between">
                             <div class="rr-blog-item-user d-flex align-items-center">
                                 <div class="rr-blog-item-user-thumb">
-                                <img src="{{ asset('mekina') }}/assets/img/blog/avada.png" alt="img">
+                                <img src="{{ asset('assets/images/icon-avatar.png') }}" alt="img">
                                 </div>
                                 <div class="rr-blog-item-user-content">
-                                <span class="rr-blog-item-user-title"><a href="blog-details.html">{{ $news->author }}</a></span>
+                                <span class="rr-blog-item-user-title"><a href="{{ route('user.cimanews.show', $news->slug) }}">{{ $news->author }}</a></span>
                                 </div>
                             </div>
                             <div class="rr-blog-link">
@@ -444,7 +474,7 @@
                 </div>
               @endforeach
               <div class="blog-btn text-center wow rrfadeUp pt-20" data-wow-duration=".9s" data-wow-delay=".9s" style="visibility: visible; animation-duration: 0.9s; animation-delay: 0.9s; animation-name: rrfadeUp;">
-                 <a class="rr-btn-black" href="team.html"><span>Lihat Semua CimaNEWS <i class="fa-sharp fa-solid fa-plus"></i></span></a>
+                 <a class="rr-btn-black" href="{{ route('user.cimanews.index') }}"><span>Lihat Semua CimaNEWS <i class="fa-sharp fa-solid fa-plus"></i></span></a>
               </div>
            </div>
         </div>

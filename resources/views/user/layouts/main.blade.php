@@ -78,8 +78,8 @@
                <div class="search__wrapper">
                   <div class="search__top d-flex justify-content-between align-items-center">
                      <div class="search__logo">
-                        <a href="index.html">
-                           <img src="{{ asset('mekina') }}/assets/img/logo/logo-white.png" alt="img">
+                        <a href="{{ route('user.home') }}">
+                           <img style="width: 10%; height: 10%" src="{{ asset('assets/images/rsc_white.png') }}" alt="img">
                         </a>
                      </div>
                      <div class="search__close">
@@ -95,9 +95,9 @@
                      </div>
                   </div>
                   <div class="search__form">
-                     <form action="#">
+                    <form action="{{ route('user.doctor.index') }}" method="GET">
                         <div class="search__input">
-                           <input class="search-input-field" type="text" placeholder="Type here to search...">
+                            <input class="search-input-field" type="text" name="name" placeholder="Cari Nama Dokter...">
                            <span class="search-focus-border"></span>
                            <button type="submit">
                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -123,11 +123,11 @@
    <div class="rroffcanvas-area">
       <div class="rroffcanvas">
          <div class="rroffcanvas__close-btn">
-            <button class="close-btn"><i class="fal fa-times"></i></button>
+            <button class="close-btn"><i style="color: #121212;" class="fal fa-times"></i></button>
          </div>
          <div class="rroffcanvas__logo">
             <a href="index.html">
-               <img src="{{ asset('mekina') }}/assets/img/logo/logo-white.png" alt="img">
+               <img src="{{ asset('assets/images/rsc_white.png') }}" style="width: 20%; height: 20%;" alt="img">
             </a>
          </div>
          <div class="rr-main-menu-mobile d-xl-none"></div>
@@ -138,25 +138,26 @@
             <ul>
                <li>
                   <i class="fa-light fa-location-dot"></i>
-                  <a href="htrrs://www.google.com/maps/@23.8223586,90.3661283,15z" target="_blank">Melbone st,
-                     Australia, Ny 12099</a>
+                  <a href="https://maps.app.goo.gl/mC5wEAztYb3jYmPf6" target="_blank">Jl. Raya Cimacan No.17A, Palasari,
+                    Kec. Cipanas, Kabupaten Cianjur,
+                    Jawa Barat 43253</a>
                </li>
                <li>
                   <i class="fas fa-envelope"></i>
-                  <a href="mailto:rubelmah55@gmail.com">rubelmah55@gmail.com</a>
+                  <a href="mailto:">rsud.cimacann@gmail.com</a>
                </li>
                <li>
                   <i class="fal fa-phone-alt"></i>
-                  <a href="tel:+48555223224">+48 555 223 224</a>
+                  <a href="tel:02632956036">0263-2956-036</a>
                </li>
             </ul>
          </div>
          <div class="rroffcanvas__social">
             <div class="social-icon">
-               <a href="#"><i class="fab fa-twitter"></i></a>
-               <a href="#"><i class="fab fa-instagram"></i></a>
-               <a href="#"><i class="fab fa-facebook-f"></i></a>
-               <a href="#"><i class="fab fa-pinterest-p"></i></a>
+               <a href="https://www.youtube.com/@rsud.cimacan"><i class="fab fa-youtube"></i></a>
+               <a href="https://www.instagram.com/rsud.cimacan/"><i class="fab fa-instagram"></i></a>
+               <a href="https://www.facebook.com/profile.php?id=100071691815827"><i class="fab fa-facebook-f"></i></a>
+               <a href="https://api.whatsapp.com/send/?phone=6285864817874&text=Halo+Kak+.+.+.&type=phone_number&app_absent=0"><i class="fab fa-whatsapp"></i></a>
             </div>
          </div>
       </div>
@@ -285,10 +286,10 @@
                            </div>
                         </div>
                         <div class="rr-footer-social mb-25">
-                           <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                           <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                           <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                           <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                           <a href="https://www.facebook.com/profile.php?id=100071691815827"><i class="fa-brands fa-facebook-f"></i></a>
+                           <a href="https://api.whatsapp.com/send/?phone=6285864817874&text=Halo+Kak+.+.+.&type=phone_number&app_absent=0"><i class="fa-brands fa-whatsapp"></i></a>
+                           <a href="https://www.youtube.com/@rsud.cimacan"><i class="fa-brands fa-youtube"></i></a>
+                           <a href="https://www.instagram.com/rsud.cimacan/"><i class="fa-brands fa-instagram"></i></a>
                         </div>
                         <div class="rr-footer-widget-content mb-25">
                             <div class="rr-footer-widget-content">
