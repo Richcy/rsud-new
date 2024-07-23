@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('vuexy/app-assets/vendors/css/tables/datatable/buttons.bootstrap5.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('vuexy/app-assets/vendors/css/tables/datatable/rowGroup.bootstrap5.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('vuexy') }}/app-assets/vendors/css/forms/select/select2.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/rowreorder/1.3.3/css/rowReorder.dataTables.min.css">
 @endpush
 
 @section('content')
@@ -99,6 +101,8 @@
 <script src="{{ asset('vuexy/app-assets/vendors/js/tables/datatable/buttons.print.min.js') }}"></script>
 <script src="{{ asset('vuexy/app-assets/vendors/js/tables/datatable/dataTables.rowGroup.min.js') }}"></script>
 <script src="{{ asset('vuexy') }}/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    
+<script type="text/javascript" src="https://cdn.datatables.net/rowreorder/1.3.3/js/dataTables.rowReorder.min.js"></script>
 @endpush
 
 @push('custom_js')
@@ -129,7 +133,49 @@
                     url: '//cdn.datatables.net/plug-ins/1.11.3/i18n/id.json'
                 },
                 displayLength: 25,
-                order: []
+                order: [],
+                rowReorder: {
+                    dataSrc: 'sort'
+                }
+            });
+
+            table.on('row-reorder', function(e, diff, edit) {
+                let reorderData = [];
+                for (let i = 0; i < diff.length; i++) {
+                    reorderData.push({
+                        id: diff[i].node.id, // Assuming each row has an id attribute that matches the database id
+                        newPosition: diff[i].newData
+                    });
+                }
+
+                // Send the updated order to the server
+                $.ajax({
+                    url: '{!! route('admin.featured-doctor.reorder') !!}', // Adjust the URL to your reorder route
+                    method: 'POST',
+                    data: {
+                        _token: '{{ csrf_token() }}',
+                        order: reorderData
+                    },
+                    success: function(response) {
+                        // Optionally, display a notification on success
+                        Swal.fire({
+                            title: 'Success!',
+                            text: 'Berhasil Mengubah Urutan.',
+                            icon: 'success',
+                            confirmButtonText: 'OK'
+                        });
+                    },
+                    error: function(response) {
+                        // Optionally, display a notification on error
+                        // console.log(response);
+                        Swal.fire({
+                            title: 'Error!',
+                            text: 'Terjadi Kesalahan Ketika Mengubah Urutan.',
+                            icon: 'error',
+                            confirmButtonText: 'OK'
+                        });
+                    }
+                });
             });
 
             // Create form submission
