@@ -481,7 +481,7 @@
                        </div>
                        <div class="rr-contact-text">
                         <h3 class="rr-contact-info-title">Website</h3>
-                          <span><a href="tel:+09627387877">SP4N LAPOR</a></span>
+                          <span><a href="https://www.lapor.go.id/" target="_blank">SP4N LAPOR</a></span>
                        </div>
                     </div>
                     <div class="rr-contact-item d-flex align-items-center p-relative">
@@ -490,7 +490,7 @@
                        </div>
                        <div class="rr-contact-text">
                           <h3 class="rr-contact-info-title">Whatsapp</h3>
-                          <span><a href="tel:+09627387877">+09627387877</a></span>
+                          <span><a href="https://api.whatsapp.com/send/?phone=6285864817874&text=Halo+Kak+.+.+.&type=phone_number&app_absent=0">(+62) 858-6481-7874</a></span>
                        </div>
                     </div>
                     <div class="rr-contact-item d-flex align-items-center p-relative">
@@ -499,7 +499,7 @@
                        </div>
                        <div class="rr-contact-text">
                           <h3 class="rr-contact-info-title">Nomor Telepon</h3>
-                          <span><a href="tel:+09627387877">+09627387877</a></span>
+                          <span><a href="tel:+09627387877">0263-2956-036</a></span>
                        </div>
                     </div>
                     <div class="rr-contact-item d-flex align-items-center p-relative">
@@ -508,7 +508,7 @@
                        </div>
                        <div class="rr-contact-text">
                           <h3 class="rr-contact-info-title">Insagram</h3>
-                          <span><a href="tel:+09627387877">Instagram</a></span>
+                          <span><a href="https://www.instagram.com/rsud.cimacan/" target="_blank">Instagram</a></span>
                        </div>
                     </div>
                     <div class="rr-contact-item d-flex align-items-center p-relative">
@@ -517,7 +517,7 @@
                        </div>
                        <div class="rr-contact-text">
                           <h3 class="rr-contact-info-title">Email</h3>
-                          <span><a href="tel:+09627387877">Email</a></span>
+                          <span><a href="mailto:rsud.cimacann@gmail.com">Email</a></span>
                        </div>
                     </div>
                     <div class="rr-contact-item d-flex align-items-center p-relative" style="padding-bottom: 30px !important;">
@@ -526,7 +526,7 @@
                        </div>
                        <div class="rr-contact-text">
                           <h3 class="rr-contact-info-title">Facebook</h3>
-                          <span><a href="tel:+09627387877">Facebook</a></span>
+                          <span><a href="https://www.facebook.com/profile.php?id=100071691815827" target="">Facebook</a></span>
                        </div>
                     </div>
                  </div>
