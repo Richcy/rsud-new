@@ -125,7 +125,6 @@
                              <span class="rr-tab-2">
                                 <span class="rr-tab-2__item d-flex justify-content-between align-items-center">
                                    <span class="rr-tab-2__item-info d-flex align-items-center">
-                                      <b> <i class="icofont-brain"></i></b>
                                       <span class="rr-tab-2__item-title m-0">Sambutan Direktur</span>
                                    </span>
                                 </span>
@@ -136,7 +135,6 @@
                              <span class="rr-tab-2">
                                 <span class="rr-tab-2__item d-flex justify-content-between align-items-center">
                                    <span class="rr-tab-2__item-info d-flex align-items-center">
-                                      <b><i class="icofont-ambulance-cross"></i></b>
                                       <span class="rr-tab-2__item-title m-0">Maklumat</span>
                                    </span>
                                 </span>
@@ -148,8 +146,7 @@
                              <span class="rr-tab-2">
                                 <span class="rr-tab-2__item d-flex justify-content-between align-items-center">
                                    <span class="rr-tab-2__item-info d-flex align-items-center">
-                                      <b><i class="icofont-heart-beat-alt"></i></b>
-                                      <span class="rr-tab-2__item-title m-0">Rating</span>
+                                      <span class="rr-tab-2__item-title m-0">Indeks Kepuasan Masyarakat</span>
                                    </span>
                                 </span>
                              </span>
@@ -160,7 +157,6 @@
                              <span class="rr-tab-2">
                                 <span class="rr-tab-2__item d-flex justify-content-between align-items-center">
                                    <span class="rr-tab-2__item-info d-flex align-items-center">
-                                      <b> <i class="icofont-blood"></i></b>
                                       <span class="rr-tab-2__item-title m-0">Organisasi</span>
                                    </span>
                                 </span>
