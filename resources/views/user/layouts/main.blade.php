@@ -229,7 +229,7 @@
                            <li class="has-dropdown">
                             <a href="#">Artikel</a>
                             <ul class="submenu rr-submenu">
-                               <li><a href="team.html">Infomasi Kesehatan</a></li>
+                               <li><a href="{{ route('user.article.index') }}">Infomasi Kesehatan</a></li>
                                <li><a href="team.html">Cimanews</a></li>
                             </ul>
                          </li>
@@ -341,10 +341,10 @@
                         <div class="rr-footer-contact">
                            <ul>
                                 <li><a href="service.html">Event</a></li>
-                                <li><a href="service.html">Informasi Kesehatan</a></li>
+                                <li><a href="{{ route('user.article.index') }}">Informasi Kesehatan</a></li>
                                 <li><a href="service.html">CimaNEWS</a></li>
                                 <li><a href="service.html">Karir</a></li>
-                                <li><a href="service.html">Kontak</a></li>
+                                <li><a href="{{ route('user.contact.index') }}">Kontak</a></li>
                            </ul>
                         </div>
                      </div>
