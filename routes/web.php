@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\HomeController;
+use App\Http\Controllers\User\DoctorController;
 use App\Http\Controllers\User\SketchController;
 use App\Http\Controllers\User\ContactController;
 use App\Http\Controllers\User\FarmasiController;
@@ -60,6 +61,7 @@ Route::name('user.')->group(function () {
     Route::get('/ambulance', [AmbulanceController::class, 'index'])->name('ambulance.index');
     Route::get('/pengaduan', [PengaduanController::class, 'index'])->name('pengaduan.index');
     Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
+    Route::get('/doctor', [DoctorController::class, 'index'])->name('doctor.index');
 });
 
 Route::post('/logout', [LoginController::class, 'logout'])

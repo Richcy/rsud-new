@@ -224,7 +224,7 @@
                                  <li><a href="{{ route('user.pengaduan.index') }}">Pengaduan</a></li>
                               </ul>
                            </li>
-                           <li><a href="contact.html">Dokter</a></li>
+                           <li><a href="{{ route('user.doctor.index') }}">Dokter</a></li>
                            <li><a href="contact.html">Event</a></li>
                            <li class="has-dropdown">
                             <a href="#">Artikel</a>
@@ -312,7 +312,7 @@
                               <li><a href="{{ route('user.greeting.index') }}">Sambutan Direktur</a></li>
                               <li><a href="{{ route('user.structure.index') }}">Struktur Organisasi</a></li>
                               <li><a href="{{ route('user.standard_pelayanan.index') }}">Standar Pelayanan</a></li>
-                              <li><a href="service.html">Dokter</a></li>
+                              <li><a href="{{ route('user.doctor.index') }}">Dokter</a></li>
                            </ul>
                         </div>
                      </div>
