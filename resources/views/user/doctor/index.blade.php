@@ -69,7 +69,11 @@
                         <div class="rr-team-4-item p-relative mb-60">
                             <div class="rr-team-4-thumb p-relative ">
                                 <div class="rr-team-4-img">
-                                <img class="w-100" src="{{ asset('storage/'. $item->img) }}" alt="img">
+                                    @if (empty($item->img) || !\Illuminate\Support\Facades\Storage::exists('public/' . $item->img))
+                                        <img class="w-100" src="{{ asset('assets/images/doctor.jpg') }}" alt="img">
+                                    @else
+                                        <img class="w-100" src="{{ asset('storage/' . $item->img) }}" alt="img">
+                                    @endif
                                 </div>
                             </div>
                             <div class="rr-team-4-content text-center p-relative">
