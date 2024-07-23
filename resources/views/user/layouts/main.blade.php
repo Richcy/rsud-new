@@ -205,23 +205,23 @@
                                  <li><a href="{{ route('user.quality.index') }}">Penilaian Mutu</a></li>
                                  <li><a href="{{ route('user.hak_kewajiban.index') }}">Hak dan Kewajiban Pasien</a></li>
                                  <li><a href="{{ route('user.maklumat_pelayanan.index') }}">Maklumat Pelayanan</a></li>
-                                 <li><a href="">Standar Pelayanan</a></li>
+                                 <li><a href="{{ route('user.standard_pelayanan.index') }}">Standar Pelayanan</a></li>
                               </ul>
                            </li>
                            <li class="has-dropdown">
                               <a href="#">Layanan</a>
                               <ul class="submenu rr-submenu">
-                                 <li><a href="team.html">Layanan Unggulan</a></li>
-                                 <li><a href="team.html">Instalasi Rawat Jalan</a></li>
-                                 <li><a href="team.html">Instalasi Rawat Inap</a></li>
-                                 <li><a href="team.html">Instalasi Gawat Darurat</a></li>
-                                 <li><a href="team.html">Laboratorium</a></li>
-                                 <li><a href="team.html">Hemodialisis</a></li>
-                                 <li><a href="team.html">Rehabilitasi Medik</a></li>
-                                 <li><a href="team.html">Radiologi</a></li>
-                                 <li><a href="team.html">Farmasi</a></li>
-                                 <li><a href="team.html">Ambulans</a></li>
-                                 <li><a href="team.html">Pengaduan</a></li>
+                                 <li><a href="{{ route('user.layanan_unggulan.index') }}">Layanan Unggulan</a></li>
+                                 <li><a href="{{ route('user.rawat_jalan.index') }}">Instalasi Rawat Jalan</a></li>
+                                 <li><a href="{{ route('user.rawat_inap.index') }}">Instalasi Rawat Inap</a></li>
+                                 <li><a href="{{ route('user.gawat_darurat.index') }}">Instalasi Gawat Darurat</a></li>
+                                 <li><a href="{{ route('user.laboratorium.index') }}">Laboratorium</a></li>
+                                 <li><a href="{{ route('user.hemodialisis.index') }}">Hemodialisis</a></li>
+                                 <li><a href="{{ route('user.rehab_medik.index') }}">Rehabilitasi Medik</a></li>
+                                 <li><a href="{{ route('user.radiology.index') }}">Radiologi</a></li>
+                                 <li><a href="{{ route('user.farmasi.index') }}">Farmasi</a></li>
+                                 <li><a href="{{ route('user.ambulance.index') }}">Ambulans</a></li>
+                                 <li><a href="{{ route('user.pengaduan.index') }}">Pengaduan</a></li>
                               </ul>
                            </li>
                            <li><a href="contact.html">Dokter</a></li>
@@ -234,7 +234,7 @@
                             </ul>
                          </li>
                          <li><a href="contact.html">Karir</a></li>
-                         <li><a href="contact.html">Kontak</a></li>
+                         <li><a href="{{ route('user.contact.index') }}">Kontak</a></li>
                         </ul>
                      </nav>
                   </div>
@@ -311,7 +311,7 @@
                               <li><a href="{{ route('user.profile.index') }}l">Profil Rumah Sakit</a></li>
                               <li><a href="{{ route('user.greeting.index') }}">Sambutan Direktur</a></li>
                               <li><a href="{{ route('user.structure.index') }}">Struktur Organisasi</a></li>
-                              <li><a href="service.html">Standar Pelayanan</a></li>
+                              <li><a href="{{ route('user.standard_pelayanan.index') }}">Standar Pelayanan</a></li>
                               <li><a href="service.html">Dokter</a></li>
                            </ul>
                         </div>
@@ -323,13 +323,13 @@
                         <h4 class="rr-footer-title">Layanan Kami</h4>
                         <div class="rr-footer-list">
                            <ul>
-                              <li><a href="service.html">Layanan Unggulan</a></li>
-                              <li><a href="service.html">Instalasi Rawat Jalan</a></li>
-                              <li><a href="service.html">Instalasi Rawat Inap</a></li>
-                              <li><a href="service.html">Instalasi Gawat Darurat</a></li>
-                              <li><a href="service.html">Laboratorium</a></li>
-                              <li><a href="service.html">Radiologi</a></li>
-                              <li><a href="service.html">Hermodialisis</a></li>
+                              <li><a href="{{ route('user.layanan_unggulan.index') }}">Layanan Unggulan</a></li>
+                              <li><a href="{{ route('user.rawat_jalan.index') }}">Instalasi Rawat Jalan</a></li>
+                              <li><a href="{{ route('user.rawat_inap.index') }}">Instalasi Rawat Inap</a></li>
+                              <li><a href="{{ route('user.gawat_darurat.index') }}">Instalasi Gawat Darurat</a></li>
+                              <li><a href="{{ route('user.laboratorium.index') }}">Laboratorium</a></li>
+                              <li><a href="{{ route('user.radiology.index') }}">Radiologi</a></li>
+                              <li><a href="{{ route('user.hemodialisis.index') }}">Hermodialisis</a></li>
                            </ul>
                         </div>
                      </div>
