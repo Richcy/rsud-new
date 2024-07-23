@@ -2,11 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\HomeController;
+use App\Http\Controllers\User\EventController;
 use App\Http\Controllers\User\DoctorController;
 use App\Http\Controllers\User\SketchController;
+use App\Http\Controllers\User\ArticleController;
 use App\Http\Controllers\User\ContactController;
 use App\Http\Controllers\User\FarmasiController;
 use App\Http\Controllers\User\QualityController;
+use App\Http\Controllers\User\CimanewsController;
 use App\Http\Controllers\User\GreetingController;
 use App\Http\Controllers\User\MaklumatController;
 use App\Http\Controllers\User\AmbulanceController;
@@ -64,6 +67,15 @@ Route::name('user.')->group(function () {
 
     Route::get('/doctor', [DoctorController::class, 'index'])->name('doctor.index');
     Route::get('/doctor/{id}', [DoctorController::class, 'show'])->name('doctor.show');
+
+    Route::get('/article', [ArticleController::class, 'index'])->name('article.index');
+    Route::get('/article/{slug}', [ArticleController::class, 'show'])->name('article.show');
+
+    Route::get('/cimanews', [CimanewsController::class, 'index'])->name('cimanews.index');
+    Route::get('/cimanews/{slug}', [CimanewsController::class, 'show'])->name('cimanews.show');
+
+    Route::get('/event', [EventController::class, 'index'])->name('event.index');
+    Route::get('/event/{slug}', [EventController::class, 'show'])->name('event.show');
 });
 
 Route::post('/logout', [LoginController::class, 'logout'])

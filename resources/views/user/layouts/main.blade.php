@@ -225,12 +225,12 @@
                               </ul>
                            </li>
                            <li><a href="{{ route('user.doctor.index') }}">Dokter</a></li>
-                           <li><a href="contact.html">Event</a></li>
+                           <li><a href="{{ route('user.event.index') }}">Event</a></li>
                            <li class="has-dropdown">
                             <a href="#">Artikel</a>
                             <ul class="submenu rr-submenu">
-                               <li><a href="team.html">Infomasi Kesehatan</a></li>
-                               <li><a href="team.html">Cimanews</a></li>
+                               <li><a href="{{ route('user.article.index') }}">Infomasi Kesehatan</a></li>
+                               <li><a href="{{ route('user.cimanews.index') }}">Cimanews</a></li>
                             </ul>
                          </li>
                          <li><a href="contact.html">Karir</a></li>
@@ -341,10 +341,10 @@
                         <div class="rr-footer-contact">
                            <ul>
                                 <li><a href="service.html">Event</a></li>
-                                <li><a href="service.html">Informasi Kesehatan</a></li>
+                                <li><a href="{{ route('user.article.index') }}">Informasi Kesehatan</a></li>
                                 <li><a href="service.html">CimaNEWS</a></li>
                                 <li><a href="service.html">Karir</a></li>
-                                <li><a href="service.html">Kontak</a></li>
+                                <li><a href="{{ route('user.contact.index') }}">Kontak</a></li>
                            </ul>
                         </div>
                      </div>

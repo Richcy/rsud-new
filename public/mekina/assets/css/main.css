@@ -5945,6 +5945,7 @@ body .ui-tooltip {
   color: var(--rr-common-white);
 }
 .rr-header-2-top {
+    background-color:  var(--rr-common-white) !important;
   padding: 20px 0;
 }
 .rr-header-2-top::before {
@@ -6135,7 +6136,7 @@ body .ui-tooltip {
   width: 100%;
   z-index: 99;
   visibility: visible;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: var(--rr-theme-1);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -13274,7 +13275,7 @@ body .ui-tooltip {
   box-shadow: 0px 0px 60px 0px rgba(30, 22, 22, 0.06);
   border: 1px solid #e8e7e7;
 }
-.rr-form-shape-1 {
+.rr- hape-1 {
   position: absolute;
   bottom: 0;
   right: 30px;

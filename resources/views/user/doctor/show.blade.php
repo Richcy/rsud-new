@@ -1,5 +1,5 @@
-@section('seo_keyword', 'Dokter, rumah sakit umum daerah cimacan, rsud cimacan')
-@section('seo_title', 'RSUD Cimacan | Dokter')
+@section('seo_keyword', $doctor->name, 'rumah sakit umum daerah cimacan, rsud cimacan')
+@section('seo_title', 'RSUD Cimacan | ', $doctor->name,)
 @section('seo_desc',
 'Daftar dokter spesialis Rumah Sakit Daerah Cimacan')
 @section('seo_url', route('user.farmasi.index'))
@@ -11,7 +11,7 @@
 @section('content')
       <!-- doctors details area start -->
       <div class="col-12 container">
-        <span><small><a href="">Beranda</a> / <a href="{{ route('user.doctor.index') }}">Dokter</a> / <strong>Detail Dokter</strong></small></span>
+        <span><small><a href="">Beranda</a> / <a href="{{ route('user.doctor.index') }}">Dokter</a> / <strong>{{ $doctor->name }}</strong></small></span>
       </div>
       <div id="primary" class="content-area pt-100 pb-100 ">
         <div class="container">
