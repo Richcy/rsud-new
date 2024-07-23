@@ -8207,7 +8207,7 @@ body .ui-tooltip {
   }
 }
 .rr-copyright-left p a {
-  color: var(--rr-common-black);
+  color: #2C50CB;
   font-weight: 600;
 }
 .rr-copyright-right a {

@@ -77,7 +77,9 @@
                                 </div>
                              </div>
                              @empty
-
+                                 <div class="text-center">
+                                    <p>Belum Ada Artikel Terbaru</p>
+                                 </div>
                              @endforelse
                           </div>
                        </div>

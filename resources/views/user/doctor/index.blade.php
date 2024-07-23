@@ -64,23 +64,31 @@
 
         <div class="col-12 pt-20 mt-20">
             <div class="row">
-                @foreach ($doctors as $item)
-                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
-                  <div class="rr-team-4-item p-relative mb-60">
-                     <div class="rr-team-4-thumb p-relative ">
-                        <div class="rr-team-4-img">
-                           <img class="w-100" src="{{ asset('storage/'. $item->img) }}" alt="img">
+                @forelse ($doctors as $item)
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+                        <div class="rr-team-4-item p-relative mb-60">
+                            <div class="rr-team-4-thumb p-relative ">
+                                <div class="rr-team-4-img">
+                                    @if (empty($item->img) || !\Illuminate\Support\Facades\Storage::exists('public/' . $item->img))
+                                        <img class="w-100" src="{{ asset('assets/images/doctor.jpg') }}" alt="img">
+                                    @else
+                                        <img class="w-100" src="{{ asset('storage/' . $item->img) }}" alt="img">
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="rr-team-4-content text-center p-relative">
+                                <h6 class="rr-team-4-title"><a href="{{ route('user.doctor.show', $item->id) }}">{{ $item->name }}</a></h6>
+                                <p>{{ $item->field_doctor->name }}</p>
+                            </div>
+                            <div class="rr-team-4-arrow"> <a href="{{ route('user.doctor.show', $item->id) }}"><i class="fa-solid fa-arrow-up"></i></a>
+                            </div>
                         </div>
-                     </div>
-                     <div class="rr-team-4-content text-center p-relative">
-                        <h6 class="rr-team-4-title"><a href="#">{{ $item->name }}</a></h6>
-                        <p>{{ $item->field_doctor->name }}</p>
-                     </div>
-                     <div class="rr-team-4-arrow"> <a href="{{ route('user.doctor.show', $item->id) }}"><i class="fa-solid fa-arrow-up"></i></a>
-                     </div>
-                  </div>
-               </div>
-                @endforeach
+                    </div>
+                @empty
+                    <div class="text-center">
+                        <h5>Data Tidak Tersedia</h5>
+                    </div>
+                @endforelse
             </div>
             <div class="mt-4">
                 {{  $doctors->links('vendor.pagination.custom') }}
