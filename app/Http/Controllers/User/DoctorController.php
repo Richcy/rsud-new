@@ -34,7 +34,13 @@ class DoctorController extends Controller
     {
         $doctor = Doctor::with('field_doctor', 'schedule_doctor')->findOrFail($id);
         $running_text = RunningText::first();
-        // return $doctor;
-        return view('user.doctor.show', compact('doctor', 'running_text'));
+        $otherDoctor = Doctor::with('field_doctor')
+                            ->where('id', '!=', $id)
+                            ->inRandomOrder()
+                            ->limit(4)
+                            ->get();
+
+        return view('user.doctor.show', compact('doctor', 'running_text', 'otherDoctor'));
     }
+
 }
