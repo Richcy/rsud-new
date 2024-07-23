@@ -1,7 +1,7 @@
-@section('seo_keyword', 'Artikel, Berita, Blog, rumah sakit, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan')
-@section('seo_title', 'RSUD Cimacan | Artikel')
-@section('seo_desc', 'Daftar Artikel yang diterbitkan oleh Rumah Sakit Daerah Cimacan')
-@section('seo_url', route('user.article.index'))
+@section('seo_keyword', 'Cimanews, Berita, Blog, Berita rumah sakit, Berita rumah sakit umum daerah cimacan,Berita rsud cimacan')
+@section('seo_title', 'RSUD Cimacan | Cimanews')
+@section('seo_desc', 'Daftar Berita terbaru yang diterbitkan oleh Rumah Sakit Daerah Cimacan')
+@section('seo_url', route('user.cimanews.index'))
 @extends('user.layouts.main')
 @push('custom_css')
 <link href="https://cdn.jsdelivr.net/npm/glightbox@3.0.6/dist/css/glightbox.min.css" rel="stylesheet">
@@ -21,40 +21,29 @@
 @section('content')
 <div class="container my-4">
     <div class="row">
-        <span><small><a href="">Beranda</a> / <strong>Article</strong></small></span>
+        <span><small><a href="">Beranda</a> / <strong>Cimanews</strong></small></span>
         <div class="col-xl-12 mt-5 pt-5 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
             <div class="rr-price-2-title-box text-center mb-45">
-               <h4 class="rr-section-title rr-section-title-space">Artikel</h4>
+               <h4 class="rr-section-title rr-section-title-space">Cimanews</h4>
             </div>
          </div>
         <div class="col-12 py-2 pb-2">
             <div class="row container">
               <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title">Filter Artikel</h5>
+                    <h5 class="card-title">Filter Cimanews</h5>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('user.article.index') }}" method="GET">
+                    <form action="{{ route('user.cimanews.index') }}" method="GET">
                         <div class="row">
-                            <div class="col-md-6 col-12">
-                                <label for="category" class="form-label">Kategori</label>
-                                <select name="category" id="category" class="form-select">
-                                    <option selected>Pilih Kategori Artikel</option>
-                                    @foreach ($categories as $category)
-                                        <option value="{{ $category->id }}" {{ request('category') == $category->id ? 'selected' : '' }}>
-                                            {{ $category->name }}
-                                        </option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="col-md-6 col-12">
-                                <label for="title" class="form-label">Judul Artickel</label>
-                                <input type="title" type="text" name="title" class="form-control" placeholder="Judul Artikel" id="title" value="{{ request('title') }}">
+                            <div class="col-md-12 col-12">
+                                <label for="title" class="form-label">Judul Cimanews</label>
+                                <input type="title" type="text" name="title" class="form-control" placeholder="Judul Cimanews" id="title" value="{{ request('title') }}">
                                 {{-- <input type="text" name="name" id="name" class="form-control" placeholder="Nama Dokter" value="{{ request('name') }}"> --}}
                             </div>
                         </div>
                         <div class="d-flex justify-content-end my-1 mt-3">
-                            <button type="reset" class="btn btn-secondary me-1" onclick="window.location='{{ route('user.article.index') }}'">Reset</button>
+                            <button type="reset" class="btn btn-secondary me-1" onclick="window.location='{{ route('user.cimanews.index') }}'">Reset</button>
                             <button type="submit" class="btn btn-primary">Cari</button>
                         </div>
                     </form>
@@ -64,7 +53,7 @@
         </div>
         <div class="col-12 py-3">
             <div class="row">
-                @foreach ($articles as $item)
+                @forelse ($cimanews as $item)
                 <div class="col-xl-4 col-lg-4 col-md-6 mb-30 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                     <div class="rr-blog-item">
                     <div class="rr-blog-thumb-main p-relative">
@@ -92,17 +81,21 @@
                                 </div>
                             </div>
                             <div class="rr-blog-link">
-                                <a href="{{ route('user.article.show', $item->slug) }}">Lihat Selengkapnya <i class="fa-light fa-angle-right"></i></a>
+                                <a href="{{ route('user.cimanews.show', $item->slug) }}">Lihat Selengkapnya <i class="fa-light fa-angle-right"></i></a>
                             </div>
 
                         </div>
                     </div>
                     </div>
                 </div>
-                @endforeach
+                @empty
+                    <div class="text-center">
+                        <h5>Cimanews Tidak Ditemukan</h5>
+                    </div>
+                @endforelse
             </div>
             <div class="mt-4">
-                {{  $articles->links('vendor.pagination.custom') }}
+                {{  $cimanews->links('vendor.pagination.custom') }}
             </div>
         </div>
     </div>
