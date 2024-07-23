@@ -221,7 +221,7 @@
                                  <li><a href="{{ route('user.radiology.index') }}">Radiologi</a></li>
                                  <li><a href="{{ route('user.farmasi.index') }}">Farmasi</a></li>
                                  <li><a href="{{ route('user.ambulance.index') }}">Ambulans</a></li>
-                                 <li><a href="">Pengaduan</a></li>
+                                 <li><a href="{{ route('user.pengaduan.index') }}">Pengaduan</a></li>
                               </ul>
                            </li>
                            <li><a href="contact.html">Dokter</a></li>
@@ -234,7 +234,7 @@
                             </ul>
                          </li>
                          <li><a href="contact.html">Karir</a></li>
-                         <li><a href="contact.html">Kontak</a></li>
+                         <li><a href="{{ route('user.contact.index') }}">Kontak</a></li>
                         </ul>
                      </nav>
                   </div>

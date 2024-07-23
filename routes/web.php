@@ -3,11 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\User\SketchController;
+use App\Http\Controllers\User\ContactController;
 use App\Http\Controllers\User\FarmasiController;
 use App\Http\Controllers\User\QualityController;
 use App\Http\Controllers\User\GreetingController;
 use App\Http\Controllers\User\MaklumatController;
 use App\Http\Controllers\User\AmbulanceController;
+use App\Http\Controllers\User\PengaduanController;
 use App\Http\Controllers\User\RadiologyController;
 use App\Http\Controllers\User\StructureController;
 use App\Http\Controllers\User\RehabMedikController;
@@ -56,6 +58,8 @@ Route::name('user.')->group(function () {
     Route::get('/radiology', [RadiologyController::class, 'index'])->name('radiology.index');
     Route::get('/farmasi', [FarmasiController::class, 'index'])->name('farmasi.index');
     Route::get('/ambulance', [AmbulanceController::class, 'index'])->name('ambulance.index');
+    Route::get('/pengaduan', [PengaduanController::class, 'index'])->name('pengaduan.index');
+    Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
 });
 
 Route::post('/logout', [LoginController::class, 'logout'])
