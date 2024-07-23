@@ -1,4 +1,4 @@
-@section('seo_keyword', $event->title, 'rumah sakit umum daerah cimacan, rsud cimacan')
+@section('seo_keyword', $event->title, 'event, acara, agenda, rumah sakit umum daerah cimacan, rsud cimacan')
 @section('seo_title', 'RSUD Cimacan | Event Detail')
 @section('seo_desc', $event->sub_desc ? $event->sub_desc : 'Detail Event', $event->title)
 @section('seo_url', route('user.event.show', $event->slug))

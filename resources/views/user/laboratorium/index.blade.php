@@ -1,10 +1,8 @@
 
-@section('seo_keyword', 'Layanan Unggulan RSUD Cimacan, Rumah Sakit Di Cianjur, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan')
-@section('seo_title', 'RSUD Cimacan | Beranda')
+@section('seo_keyword', 'Laboratorium, rumah sakit, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan')
+@section('seo_title', 'RSUD Cimacan | Laboratorium')
 @section('seo_desc',
-    'Rumah Sakit Umum Daerah Cimacan pada awalnya adalah Puskesmas Pacet (Cimacan) yang sudah berdiri
-    sejak tahun 1953, kemudian pada tahun 1981 statusnya meningkat menjadi Puskesmas DTP dan berubah status menjadi Rumah
-    Sakit dengan ditetapkannya Surat Keputusan Bupati Cianjur atas nama Pemerintah Daerah Kabupaten Cianjur Nomor 19 Tahu…')
+    'Laboratorium merupakan unit diagnostik dengan pelayanan selama 24 jam yang didukung oleh tenaga profesional berupa dokter dan paramedis yang memil...')
 @section('seo_url', route('user.laboratorium.index'))
 @extends('user.layouts.main')
 @push('custom_css')

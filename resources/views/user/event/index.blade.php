@@ -55,7 +55,7 @@
                         </div>
                         <div class="d-flex justify-content-end my-1 mt-3">
                             <button type="reset" class="btn btn-secondary me-1" onclick="window.location='{{ route('user.doctor.index') }}'">Reset</button>
-                            <button type="submit" class="btn btn-primary">Cari</button>
+                            <button type="submit" class="btn btn-primary" style="background: #A82024 !important;">Cari</button>
                         </div>
                     </form>
                 </div>

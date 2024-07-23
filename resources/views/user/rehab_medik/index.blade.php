@@ -1,10 +1,8 @@
 
-@section('seo_keyword', 'Layanan Unggulan RSUD Cimacan, Rumah Sakit Di Cianjur, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan')
-@section('seo_title', 'RSUD Cimacan | Beranda')
+@section('seo_keyword', 'rehab medik, rehab_medik, rumah sakit, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan')
+@section('seo_title', 'RSUD Cimacan | Rehab Medik')
 @section('seo_desc',
-    'Rumah Sakit Umum Daerah Cimacan pada awalnya adalah Puskesmas Pacet (Cimacan) yang sudah berdiri
-    sejak tahun 1953, kemudian pada tahun 1981 statusnya meningkat menjadi Puskesmas DTP dan berubah status menjadi Rumah
-    Sakit dengan ditetapkannya Surat Keputusan Bupati Cianjur atas nama Pemerintah Daerah Kabupaten Cianjur Nomor 19 Tahu…')
+    'rehab_medik...')
 @section('seo_url', route('user.rehab_medik.index'))
 @extends('user.layouts.main')
 @push('custom_css')
