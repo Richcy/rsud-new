@@ -48,7 +48,7 @@
                                 <div class="col-md-6">
                                     <div class="mb-1">
                                         <label for="title" class="form-label">Judul Cimanews</label>
-                                        <input type="text" id="title" class="form-control @error('title') is-invalid @enderror" name="title" onkeyup="createSlug()" placeholder="Masukan Nama Judul" value="{{ old('title', $cimanews->title) }}">
+                                        <input type="text" id="title" class="form-control @error('title') is-invalid @enderror" name="title" onkeyup="createSlug()" placeholder="Masukan Judul Cimanews" value="{{ old('title', $cimanews->title) }}">
 
                                         @error('title')
                                             <div class="invalid-feedback">{{ $message }}</div>

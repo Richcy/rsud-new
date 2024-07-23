@@ -51,7 +51,7 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama Kategori</th>
+                                            <th>Nama Bidang</th>
                                             <th>Tindakan</th>
                                         </tr>
                                     </thead>

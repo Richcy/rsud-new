@@ -290,6 +290,7 @@ Route::prefix('administrator')->name('admin.')->group(function () {
     Route::resource('field-doctor', FieldDoctorController::class);
     Route::resource('doctor', DoctorController::class);
     Route::resource('featured-doctor', FeaturedDoctorController::class);
+    Route::post('/featured-doctor-reorder', [FeaturedDoctorController::class, 'reorder'])->name('featured-doctor.reorder');
     Route::resource('schedule-doctor', ScheduleDoctorController::class);
     Route::resource('admin', AdminController::class);
 });

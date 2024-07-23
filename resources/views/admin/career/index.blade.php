@@ -191,7 +191,7 @@
                         }
                     });
                 } else if (result.dismiss === Swal.DismissReason.cancel) {
-                    Swal.fire('Batal', 'Perubahan status dibatalkan.', 'info');
+                    // Swal.fire('Batal', 'Perubahan status dibatalkan.', 'info');
                 }
             });
         });

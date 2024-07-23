@@ -52,8 +52,8 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="mb-1">
-                                            <label for="title" class="form-label">Nama SubService</label>
-                                            <input type="text" id="title" class="form-control @error('title') is-invalid @enderror" name="title" onkeyup="createSlug()" placeholder="Masukan Nama Diskon" value="{{ old('title', $subService->title) }}">
+                                            <label for="title" class="form-label">Nama Sub Service</label>
+                                            <input type="text" id="title" class="form-control @error('title') is-invalid @enderror" name="title" onkeyup="createSlug()" placeholder="Masukan Nama Sub Service" value="{{ old('title', $subService->title) }}">
                                             @error('title')
                                                 <div class="invalid-feedback">{{ $message }}</div>
                                             @enderror
@@ -70,7 +70,7 @@
                                     </div>
                                     <div class="col-md-12">
                                         <div class="mb-1">
-                                            <label for="description" class="form-label">Deskripsi</label>
+                                            <label for="description" class="form-label">Deskripsi Sub Service</label>
                                             <textarea name="description" id="description" cols="30" rows="50" class="form-control tinymce">{{ old('description', $subService->description) }}</textarea>
                                             @error('description')
                                                 <div class="invalid-feedback d-block">{{ $message ?? 'Something error' }}</div>
@@ -80,7 +80,7 @@
                                 </div>
                                 {{-- button submit --}}
                                 <div class="d-flex justify-content-end mt-2">
-                                    <a href="{{ route('admin.profileGallery.index') }}"
+                                    <a href="{{ route('admin.radiology.sub-service.index', $subService->service_id) }}"
                                         class="btn btn-secondary me-1">Kembali</a>
                                     <button type="submit" class="btn btn-primary">Simpan</button>
                                 </div>

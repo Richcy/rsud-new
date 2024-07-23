@@ -70,7 +70,7 @@
                                             <div class="row g-0">
                                                 <div class="col-3">
                                                     <div class="input-group mb-1">
-                                                        <input type="text" class="form-control" name="{{ $day }}-start-time" value="{{ old("{$day}-start-time", isset($scheduleDoctor->{$day}) ? explode(' - ', $scheduleDoctor->{$day})[0] : '') }}">
+                                                        <input type="text" class="form-control" name="{{ $day }}-start-time" value="{{ old("{$day}-start-time", isset($scheduleDoctor->{$day}) ? explode(' - ', $scheduleDoctor->{$day})[0] : '') }}" placeholder="Contoh: 09:00">
                                                         <span class="input-group-text" style="background-color: #089544 !important; color: #FFFFFF !important; "><i data-feather='clock' style="transform: scale(1.8)"></i></span>
                                                     </div>
                                                 </div>
@@ -79,7 +79,7 @@
                                                 </div>
                                                 <div class="col-3">
                                                     <div class="input-group mb-1">
-                                                        <input type="text" class="form-control" name="{{ $day }}-end-time" value="{{ old("{$day}-end-time", isset($scheduleDoctor->{$day}) ? explode(' - ', $scheduleDoctor->{$day})[1] : '') }}">
+                                                        <input type="text" class="form-control" name="{{ $day }}-end-time" value="{{ old("{$day}-end-time", isset($scheduleDoctor->{$day}) ? explode(' - ', $scheduleDoctor->{$day})[1] : '') }}" placeholder="Contoh: 17:00">
                                                         <span class="input-group-text" style="background-color: #089544 !important; color: #FFFFFF !important; "><i data-feather='clock' style="transform: scale(1.8)"></i></span>
                                                     </div>
                                                 </div>
