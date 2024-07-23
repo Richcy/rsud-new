@@ -350,8 +350,8 @@
                         <i class="fa-solid fa-suitcase-medical"></i>
                     </div>
                     <div class="rr-features-content text-center">
-                        <h3 class="rr-features-title"><a href=" ">Radiology</a></h3>
-                        <a class="rr-features-btn" href="service-details.html"><span>Lihat Selengkapnya <i class="fa-solid fa-angle-right"></i></span></a>
+                        <h3 class="rr-features-title"><a href="{{ route('user.radiology.index') }}">Radiology</a></h3>
+                        <a class="rr-features-btn" href="{{ route('user.radiology.index') }}"><span>Lihat Selengkapnya <i class="fa-solid fa-angle-right"></i></span></a>
                      </div>
                  </div>
               </div>
