@@ -2,7 +2,7 @@
 @section('seo_title', 'RSUD Cimacan | Dokter')
 @section('seo_desc',
 'Daftar dokter spesialis Rumah Sakit Daerah Cimacan')
-@section('seo_url', route('user.farmasi.index'))
+@section('seo_url', route('user.doctor.index'))
 @extends('user.layouts.main')
 @push('custom_css')
     <style>
