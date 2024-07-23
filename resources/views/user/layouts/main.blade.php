@@ -36,6 +36,116 @@
    <link rel="stylesheet" href="{{ asset('mekina') }}/assets/css/custom-animation.css">
    <link rel="stylesheet" href="{{ asset('mekina') }}/assets/css/main.css">
 
+   <style>
+
+.standard-pelayanan img{
+    max-width: 65%;
+    max-height: auto;
+}
+
+/*end standard pelayanan section*/
+
+/*Floating section*/
+
+.icon-bar-share {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0;
+  z-index: 1;
+}
+
+.st-2{
+    top: 81%;
+}
+
+.desc-share{
+    display: none !important;
+}
+
+.icon-bar-share a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.5s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.icon-bar-share a:hover {
+  background-color: #000;
+  margin-left: -30px;
+}
+
+.desc-ambulance{
+    display: none !important;
+    transition: all 0.5s ease;
+}
+
+a:hover .desc-ambulance {
+  display: block !important;
+}
+
+
+.google-share {
+  background: #dd4b39;
+  color: white;
+}
+
+.whatsapp-share {
+  background: #01923f;
+  color: white;
+}
+
+.ambulance-share {
+  background: #F6511D;
+  color: white;
+}
+
+#ambulance:hover .new-ambulance{
+    opacity: 1;
+}
+
+.content-share {
+  margin-left: 75px;
+  font-size: 30px;
+}
+
+.icon-bar-share a:hover{
+    color: #fff !important;
+}
+
+.icon-bar-share a:active{
+    color: #fff !important;
+}
+
+.icon-bar-share a:focus{
+    color: #fff !important;
+}
+
+.icon-bar-share-mob{
+position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   /*background-color: red;*/
+   color: white;
+   text-align: center;
+}
+
+.icon-bar-share-mob .icon-ambulance-mob{
+    background-color: red;
+}
+
+.icon-bar-share-mob .icon-wa-mob{
+    background-color: blue;
+}
+
+
+/*End responsive section*/
+   </style>
    @stack('custom_css')
 </head>
 
@@ -44,6 +154,11 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="htrrs://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
       <![endif]-->
 
+      <div class="icon-bar-share">
+         <a class="ambulance-share" target="_blank" data-bs-toggle="modal" data-bs-target="#ambulance-modal"><i class="old-ambulance fa fa-ambulance"></i></a>
+         <a class="whatsapp-share" target="_blank" data-bs-toggle="modal" data-bs-target="#phone-modal"><i class="fa fa-phone"></i></a>
+          <a class="google-share" target="_blank" data-bs-toggle="modal" data-bs-target="#google-modal"><i class="fa-brands fa-google-play"></i></a>
+       </div>
 
 <!-- preloader start -->
 <div id="loading">
@@ -370,6 +485,8 @@
       </div>
       <!-- footer area end -->
 
+
+
          <!-- copy-right area start -->
          <div class="rr-copyright-area p-relative">
             <div class="container rr-copyright-broder rr-copyright-space">
@@ -387,6 +504,85 @@
       </div>
    </footer>
 
+
+<!-- ambulance Modal -->
+<div class="modal fade" id="ambulance-modal" tabindex="-1" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-10">
+              <!-- <h4>Call Ambulance</h4> -->
+            </div>
+            <div class="col-md-2 close-modal">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="text-center">
+            <h2>Kontak Ambulance :</h2>
+            <p>(+62) 811-2465-888</p>
+            <a href="tel:+628112465888" class="btn btn-warning call-ambulance hidden-lg hidden-md">Telepon Ambulans</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phone Modal -->
+  <div class="modal fade" id="phone-modal" tabindex="-1" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-10">
+              <!-- <h4>Call Ambulance</h4> -->
+            </div>
+            <div class="col-md-2 close-modal">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="contact-ambulance text-center">
+            <h2>Kontak RSUD Cimacan :</h2>
+            <div class="phone-number-modal"><span> 0263 2956 036 </span></div>
+            <div class="clock-title-modal"><span> Jam Operasional :</span></div>
+            <div class="detail-clock-modal"><span> 08.00 - 20.00 WIB</span></div>
+            <a href="tel:+622632956036" class="btn btn-warning call-ambulance hidden-lg hidden-md">Call Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Google Playstore Modal -->
+  <div class="modal fade" id="google-modal" tabindex="-1" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-10">
+              <!-- <h4>Call Ambulance</h4> -->
+            </div>
+            <div class="col-md-2 close-modal">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="google-play-content text-center">
+            <h2>Pasien Umum :</h2>
+            <div class="tartimah-modal">
+                <a href="https://play.google.com/store/apps/details?id=com.reservcimacan" target="_blank" class="btn btn-info">Tartimah</a>
+            </div>
+            <h2>Pasien BPJS :</h2>
+            <div class="jkn-modal">
+                <a href="https://play.google.com/store/apps/details?id=app.bpjs.mobile" target="_blank" class="btn btn-info">Mobile JKN</a>
+                <br>
+                <a href="https://www.youtube.com/watch?v=ML2vGaaiQK8&ab_channel=BPJSKesehatan" target="_blank" class="btn btn-info mt-15 pt-5"> Tutorial Mobile JKN</a>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 

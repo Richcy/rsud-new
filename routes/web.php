@@ -19,6 +19,7 @@ use App\Http\Controllers\User\RadiologyController;
 use App\Http\Controllers\User\StructureController;
 use App\Http\Controllers\User\RehabMedikController;
 use App\Http\Controllers\Admin\Auth\LoginController;
+use App\Http\Controllers\User\ClearenceController;
 use App\Http\Controllers\User\HemodialisisController;
 use App\Http\Controllers\User\LaboratoriumController;
 use App\Http\Controllers\User\CompanyProfileController;
@@ -80,6 +81,8 @@ Route::name('user.')->group(function () {
 
     Route::get('/career', [CareerController::class, 'index'])->name('career.index');
     Route::get('/career/{slug}', [CareerController::class, 'show'])->name('career.show');
+
+    Route::get('/clearence-edit-base-url-description', [ClearenceController::class, 'editBaseUrlDescription']);
 });
 
 Route::post('/logout', [LoginController::class, 'logout'])
