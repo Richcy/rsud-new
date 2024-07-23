@@ -64,7 +64,7 @@
         </div>
         <div class="col-12 py-3">
             <div class="row">
-                @foreach ($articles as $item)
+                @forelse ($articles as $item)
                 <div class="col-xl-4 col-lg-4 col-md-6 mb-30 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                     <div class="rr-blog-item">
                     <div class="rr-blog-thumb-main p-relative">
@@ -79,16 +79,16 @@
                             <span class=""><i class="fa-regular fa-calendar-days"></i>{{ $item->created_at->format('d-m-Y') }}</span>
                         </div>
                         <div class="rr-blog-text">
-                            <h4 class="rr-blog-title mb-0 pb-10"><a href="blog-details.html">{{ $item->title }}</a></h4>
+                            <h4 class="rr-blog-title mb-0 pb-10"><a href="{{ route('user.article.show', $item->slug) }}">{{ $item->title }}</a></h4>
                             <p>{{ \Illuminate\Support\Str::limit($item->sub_desc, 120) }}</p>
                         </div>
                         <div class="rr-blog-wrap d-flex align-items-center justify-content-between">
                             <div class="rr-blog-item-user d-flex align-items-center">
                                 <div class="rr-blog-item-user-thumb">
-                                <img src="{{ asset('mekina') }}/assets/img/blog/avada.png" alt="img">
+                                <img src="{{ asset('assets/images/icon-avatar.png') }}" alt="img" style="width: 20px !important; height: 20px !important;">
                                 </div>
                                 <div class="rr-blog-item-user-content">
-                                <span class="rr-blog-item-user-title"><a href="blog-details.html">{{ $item->author }}</a></span>
+                                <span class="rr-blog-item-user-title">{{ ucfirst($item->author) }}</span>
                                 </div>
                             </div>
                             <div class="rr-blog-link">
@@ -99,7 +99,11 @@
                     </div>
                     </div>
                 </div>
-                @endforeach
+                @empty
+                    <div class="text-center">
+                        <h5>Data Tidak Tersedia</h5>
+                    </div>
+                @endforelse
             </div>
             <div class="mt-4">
                 {{  $articles->links('vendor.pagination.custom') }}

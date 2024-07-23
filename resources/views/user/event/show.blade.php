@@ -76,7 +76,7 @@
                        <h3 class="sidebar__widget-title">Event Terbaru</h3>
                        <div class="sidebar__widget-content">
                           <div class="sidebar__post">
-                             @foreach ($relatedEvent as $item)
+                             @forelse ($relatedEvent as $item)
                                  <div class="rc__post mb-25 d-flex align-items-center">
                                     <div class="rc__post-thumb mr-20">
                                        <a href="{{ route('user.event.show', $item->slug) }}"><img src="{{ asset('storage/'. $item->img) }}" alt="img" style="width: 60px !important; height: 60px !important;"></a>
@@ -91,7 +91,11 @@
                                        </h3>
                                     </div>
                                  </div>
-                              @endforeach
+                              @empty
+                                 <div class="text-center">
+                                    <p>Belum Ada Event Terbaru</p>
+                                 </div>
+                              @endforelse
                           </div>
                        </div>
                     </div>
