@@ -25,7 +25,12 @@
 
                           <div class=" col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
                              <div class="rr-item-about-team">
-                                <img style="transform: scale(1.3)" src="{{ asset('storage/'. $doctor->img) }}" alt="">
+                                @if (empty($doctor->img) || !\Illuminate\Support\Facades\Storage::exists('public/' . $doctor->img))
+                                    <img class="w-100" src="{{ asset('assets/images/doctor.jpg') }}" alt="img">
+                                @else
+                                    {{-- <img class="w-100" src="{{ asset('storage/' . $item->img) }}" alt="img"> --}}
+                                    <img style="transform: scale(1.3)" src="{{ asset('storage/'. $doctor->img) }}" alt="">
+                                @endif
                                 <div class="rr-item-content mt-20">
                                    {{-- <h5 class="rr-item-text">{{ $doctor->name }}</h5>
                                    <p class="rr-item-designation">{{ $doctor->field_doctor->name }}</p> --}}
