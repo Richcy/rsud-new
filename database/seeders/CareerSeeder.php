@@ -179,7 +179,7 @@ class CareerSeeder extends Seeder
 
             $payload_career[] = [
                 'title' => $value['title'],
-                'slug' => str_replace(' ', '_', strtolower($value['title'])) . '_' . $this->generateRandomString(5),
+                'slug' => str_replace(' ', '-', strtolower($value['title'])) . '-' . $this->generateRandomString(5),
                 'sub_desc' => $value['sub_desc'] == '' ? null : $value['sub_desc'],
                 'description' => $value['description'],
                 'image' => $value['img'],
