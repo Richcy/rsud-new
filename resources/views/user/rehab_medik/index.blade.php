@@ -45,7 +45,7 @@
                 </div>
                 <div class="row">
                     <div class="{{ $image->isNotEmpty() ? 'col-12 col-md-6 col-lg-8' : 'col-12' }}">
-                        <div class="container pt-5" id="description">
+                        <div class="pt-5" id="description">
                             {!! $rehab_medik->description !!}
                         </div>
                         <div class="accordion" id="accordionExample">

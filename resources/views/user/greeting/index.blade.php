@@ -28,10 +28,10 @@
 
             <div class="col-12 my-4">
                 <div class="text-left">
-                    <h3>PROFIL RSUD CIMACAN</h3>
+                    <h3>SASMBUTAN DIRKETUR</h3>
                 </div>
 
-                <div class="container pt-5" id="description">
+                <div class="pt-5" id="description">
                     {!! $greeting->description !!}
                 </div>
             </div>

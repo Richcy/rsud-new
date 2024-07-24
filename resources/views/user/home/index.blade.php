@@ -399,24 +399,29 @@
           </div>
           @foreach ($doctors as $item)
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
-            <div class="rr-team-4-item p-relative mb-60">
-               <div class="rr-team-4-thumb p-relative ">
-                <a href="{{ route('user.doctor.show', $item->doctor->id) }}">
-                    <div class="rr-team-4-img">
-                        <img class="w-100" src="{{ asset('storage/'. $item->doctor->img) }}" alt="img">
-                     </div>
-                </a>
-               </div>
-
-               <div class="rr-team-4-content text-center p-relative">
-                  <h6 class="rr-team-4-title"><a href="{{ route('user.doctor.show', $item->doctor->id) }}">{{ $item->doctor->name }}</a></h6>
-                    <p>{{ $item->doctor->field_doctor->name }}</p>
-               </div>
-               <div class="rr-team-4-arrow"> <a href="{{ route('user.doctor.show', $item->doctor->id) }}"><i class="fa-solid fa-arrow-up"></i></a>
-               </div>
-            </div>
-         </div>
+              <div class="rr-team-4-item p-relative mb-60 d-flex flex-column h-100">
+                  <div class="rr-team-4-thumb p-relative">
+                      <a href="{{ route('user.doctor.show', $item->doctor->id) }}">
+                          <div class="rr-team-4-img">
+                              <img class="w-100" src="{{ asset('storage/'. $item->doctor->img) }}" alt="img">
+                          </div>
+                      </a>
+                  </div>
+                  <div class="rr-team-4-content text-center p-relative mt-auto">
+                      <h6 class="rr-team-4-title">
+                          <a href="{{ route('user.doctor.show', $item->doctor->id) }}">{{ $item->doctor->name }}</a>
+                      </h6>
+                      <p>{{ $item->doctor->field_doctor->name }}</p>
+                  </div>
+                  <div class="rr-team-4-arrow mt-auto">
+                      <a href="{{ route('user.doctor.show', $item->doctor->id) }}">
+                          <i class="fa-solid fa-arrow-up"></i>
+                      </a>
+                  </div>
+              </div>
+          </div>
           @endforeach
+
        </div>
        <div class="row">
           <div class="team-btn text-center wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".9s">
@@ -458,11 +463,11 @@
                         <div class="rr-blog-wrap d-flex align-items-center justify-content-between">
                             <div class="rr-blog-item-user d-flex align-items-center">
                                 <div class="rr-blog-item-user-thumb">
-                                <img src="{{ asset('assets/images/icon-avatar.png') }}" alt="img">
-                                </div>
-                                <div class="rr-blog-item-user-content">
-                                <span class="rr-blog-item-user-title"><a href="{{ route('user.cimanews.show', $news->slug) }}">{{ $news->author }}</a></span>
-                                </div>
+                                    <img src="{{ asset('assets/images/icon-avatar.png') }}" style="width: 20px; height: 20px" alt="img">
+                                 </div>
+                                 <div class="rr-blog-item-user-content">
+                                    <span class="rr-blog-item-user-title"><a href="blog-details.html">Dr: Meran Bara</a></span>
+                                 </div>
                             </div>
                             <div class="rr-blog-link">
                                 <a href="{{ route('user.cimanews.show', $news->slug) }}">Lihat Selengkapnya <i class="fa-light fa-angle-right"></i></a>
