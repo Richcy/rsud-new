@@ -68,7 +68,7 @@
                                 <span class=""><i class="fa-regular fa-calendar-days"></i>{{ $item->created_at->format('d-m-Y') }}</span>
                             </div>
                             <div class="rr-blog-text">
-                                <h4 class="rr-blog-title mb-0 pb-10"><a href="blog-details.html">{{ $item->title }}</a></h4>
+                                <h4 class="rr-blog-title mb-0 pb-10"><a href="{{  route('user.career.show', $item->slug) }}">{{ $item->title }}</a></h4>
                                 <p>{{ \Illuminate\Support\Str::limit($item->sub_desc, 120) }}</p>
                             </div>
                             <div class="rr-blog-wrap d-flex align-items-center justify-content-between">
