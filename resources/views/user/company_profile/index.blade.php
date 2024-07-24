@@ -30,7 +30,7 @@
                     <h3>PROFIL RSUD CIMACAN</h3>
                 </div>
 
-                <div class="container pt-5" id="description">
+                <div class="pt-5" id="description">
                     {!! $profile->description !!}
                 </div>
             </div>
