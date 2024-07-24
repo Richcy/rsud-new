@@ -64,7 +64,7 @@
                                     </div>
                                 </div>
                             @empty
-                                <p>No sub services available.</p>
+
                             @endforelse
                         </div>
                     </div>
