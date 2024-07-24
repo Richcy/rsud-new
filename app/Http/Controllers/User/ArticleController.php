@@ -29,7 +29,7 @@ class ArticleController extends Controller
             return $query->where('title', 'like', '%' . $search . '%');
         })
         ->orderBy('created_at', 'asc')
-        ->paginate(8);
+        ->paginate(6);
         return view('user.article.index', compact('running_text', 'articles', 'categories'));
     }
 

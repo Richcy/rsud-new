@@ -29,7 +29,7 @@ class CimanewsController extends Controller
             return $query->where('title', 'like', '%' . $search . '%');
         })
         ->orderBy('created_at', 'asc')
-        ->paginate(8);
+        ->paginate(6);
         return view('user.cimanews.index', compact('running_text', 'cimanews', 'categories'));
     }
 
