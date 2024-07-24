@@ -95,7 +95,7 @@ class ScheduleDoctorController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator)->withInput();
+            return redirect()->back()->withErrors($validator)->withInput($request->all())->with('error', $validator->errors()->first());
         }
 
         try {
@@ -203,7 +203,7 @@ class ScheduleDoctorController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator)->withInput();
+            return redirect()->back()->withErrors($validator)->withInput($request->all())->with('error', $validator->errors()->first());
         }
 
         try {

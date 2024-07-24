@@ -106,7 +106,7 @@
                                 <div class="col-md-6">
                                     <div class="mb-1">
                                         <label for="start_date" class="form-label">Tanggal Mulai</label>
-                                        <input type="text" id="start_date" name="start_date" class="form-control flatpickr-basic" placeholder="YYYY-MM-DD" value="{{ old('start_date') }}" />
+                                        <input type="text" id="start_date" name="start_date" class="form-control flatpickr-basic @error('start_date') is-invalid @enderror" placeholder="YYYY-MM-DD" value="{{ old('start_date') }}" />
                                         @error('start_date')
                                             <div class="invalid-feedback">{{ $message }}</div>
                                         @enderror
@@ -115,7 +115,7 @@
                                 <div class="col-md-6">
                                     <div class="mb-1">
                                         <label for="end_date" class="form-label">Tanggal Selesai</label>
-                                        <input type="text" id="end_date" name="end_date" class="form-control flatpickr-basic" placeholder="YYYY-MM-DD" value="{{ old('end_date') }}" />
+                                        <input type="text" id="end_date" name="end_date" class="form-control flatpickr-basic @error('end_date') is-invalid @enderror" placeholder="YYYY-MM-DD" value="{{ old('end_date') }}" />
                                         @error('end_date')
                                             <div class="invalid-feedback">{{ $message }}</div>
                                         @enderror
@@ -125,7 +125,7 @@
                                     <div class="mb-1">
                                         <label for="start_date" class="form-label">Jam Mulai</label>
                                         <div class="input-group clockpicker" id="start_time">
-                                            <input type="text" class="form-control" id="input_start_time" name="start_time" value="" autocomplete="off" placeholder="09:00">
+                                            <input type="text" class="form-control @error('start_time') is-invalid @enderror" id="input_start_time" name="start_time" value="" autocomplete="off" placeholder="09:00">
                                             <div class="input-group-append">
                                               <span class="input-group-text" style="background: #089544; border-radius: 0 5px 5px 0 !important;"><i class="bi bi-clock" style="color: #FFFFFF; transform: scale(1.4);"></i></span>
                                             </div>
@@ -139,7 +139,7 @@
                                     <div class="mb-1">
                                         <label for="end_date" class="form-label">Jam Selesai</label>
                                         <div class="input-group clockpicker" id="end_time">
-                                            <input type="text" class="form-control" id="input_end_time" name="end_time" value="" autocomplete="off" placeholder="17:00">
+                                            <input type="text" class="form-control @error('end_time') is-invalid @enderror" id="input_end_time" name="end_time" value="" autocomplete="off" placeholder="17:00">
                                             <div class="input-group-append">
                                               <span class="input-group-text" style="background: #089544; border-radius: 0 5px 5px 0 !important;"><i class="bi bi-clock" style="color: #FFFFFF; transform: scale(1.4);"></i></span>
                                             </div>
