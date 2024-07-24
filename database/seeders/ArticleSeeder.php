@@ -2287,7 +2287,7 @@ class ArticleSeeder extends Seeder
 
             $payload_article[] = [
                 'title' => $value['title'],
-                'slug' => str_replace(' ', '_', strtolower($value['title'])) . '_' . $this->generateRandomString(5),
+                'slug' => str_replace(' ', '-', strtolower($value['title'])) . '-' . $this->generateRandomString(5),
                 'sub_desc' => $value['sub_desc'],
                 'article_category_id' => $category_id,
                 'description' => $value['description'],
