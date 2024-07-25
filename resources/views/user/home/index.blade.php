@@ -580,7 +580,7 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.4038199017186!2d107.02980937515613!3d-6.7204789657083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69b3c04cf9e9eb%3A0x2032315f50965be4!2sRSUD%20Cimacan!5e0!3m2!1sid!2sid!4v1721577992569!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="col-md-5 col-12">
-                <div class="rr-contact-form-box text-center mt-90">
+                <div class="rr-contact-form-box text-center mt-90" style="padding: 30px 0 !important;">
                     <h4 class="rr-section-title">Alamat Kami</h4>
                     <div class="pt-20">
                         <i style="font-size: 50px; color:#A82024" class="fa-solid fa-location-dot mb-20"></i>
