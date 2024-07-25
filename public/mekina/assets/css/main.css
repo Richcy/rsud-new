@@ -13037,7 +13037,7 @@ body .ui-tooltip {
 }
 .rr-contact-form-box {
   background: #f2f4f9;
-  padding: 0;
+  /* padding: 0; */
 }
 @media (max-width: 767px) {
   .rr-contact-form-box {
