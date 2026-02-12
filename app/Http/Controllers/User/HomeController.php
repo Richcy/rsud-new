@@ -16,12 +16,12 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $sliders = Slider::orderBy('sort','asc')->get();
+        $sliders = Slider::orderBy('sort', 'asc')->get();
         $sambutan = Service::where('type', 'about_home')->first();
 
-    // if ($sambutan) {
-    //     $sambutan->description = Str::limit($sambutan->description, 400);
-    // }
+        // if ($sambutan) {
+        //     $sambutan->description = Str::limit($sambutan->description, 400);
+        // }
 
         // return $sambutan;
 
@@ -29,11 +29,12 @@ class HomeController extends Controller
         $rating = ImageProfile::where('type', 'quality')->first();
         $structure = ImageProfile::where('type', 'structure')->first();
         $doctors = FeaturedDoctor::with('doctor', 'doctor.field_doctor')->orderBy('sort', 'asc')->get();
-        $cimanews = Article::whereHas('article_category', function($query) {
+        $cimanews = Article::whereHas('article_category', function ($query) {
             $query->where('name', 'cimanews');
         })->select('articles.*') // ambil kolom yang diperlukan
-          ->limit(3)
-          ->get();
+            ->orderBy('created_at', 'desc')
+            ->limit(3)
+            ->get();
         $running_text = RunningText::first();
         return view('user.home.index', compact('sliders', 'sambutan', 'maklumat', 'rating', 'structure', 'doctors', 'cimanews', 'running_text'));
     }

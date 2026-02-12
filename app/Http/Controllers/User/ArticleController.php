@@ -25,11 +25,11 @@ class ArticleController extends Controller
                 $query->where('name', '!=', 'cimanews');
             }
         })
-        ->when($search, function ($query, $search) {
-            return $query->where('title', 'like', '%' . $search . '%');
-        })
-        ->orderBy('created_at', 'asc')
-        ->paginate(6);
+            ->when($search, function ($query, $search) {
+                return $query->where('title', 'like', '%' . $search . '%');
+            })
+            ->orderBy('created_at', 'desc')
+            ->paginate(6);
         return view('user.article.index', compact('running_text', 'articles', 'categories'));
     }
 

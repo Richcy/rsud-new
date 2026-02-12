@@ -488,7 +488,7 @@ Sakit dengan ditetapkannya Surat Keputusan Bupati Cianjur atas nama Pemerintah D
                            <img src="{{ asset('assets/images/icon-avatar.png') }}" style="width: 20px; height: 20px" alt="img">
                         </div>
                         <div class="rr-blog-item-user-content">
-                           <span class="rr-blog-item-user-title"><a href="blog-details.html">Dr: Meran Bara</a></span>
+                           <span class="rr-blog-item-user-title">{{ ucfirst($news->author) }}</span>
                         </div>
                      </div>
                      <div class="rr-blog-link">
@@ -507,6 +507,85 @@ Sakit dengan ditetapkannya Surat Keputusan Bupati Cianjur atas nama Pemerintah D
    </div>
 </div>
 <!-- blog area end -->
+
+<!-- features area start -->
+<section class="rr-features-area pt-90 pb-70 fix">
+   <div class="container">
+      <div class="row">
+         <div class="col-xl-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+            <div class="rr-features-title-box text-center mb-45">
+               <h4 class="rr-section-title">Mitra Kerjasama</h4>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+            <div class="rr-features-item p-relative wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+               <div class="rr-features-content text-center">
+                  <div style="min-height:160px; display:flex; align-items:center; justify-content:center;">
+                     <img class="w-100" src="{{ asset('assets/images/admedika.png') }}" alt="Logo AdMedika">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+            <div class="rr-features-item p-relative wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+               <div class="rr-features-content text-center">
+                  <div style="min-height:160px; display:flex; align-items:center; justify-content:center;">
+                     <img class="w-100" src="{{ asset('assets/images/pertamedika.png') }}" alt="Logo Pertamedika">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+            <div class="rr-features-item p-relative wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+               <div class="rr-features-content text-center">
+                  <div style="min-height:160px; display:flex; align-items:center; justify-content:center;">
+                     <img class="w-100" src="{{ asset('assets/images/hac.png') }}" alt="Logo HAC">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+            <div class="rr-features-item p-relative wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+               <div class="rr-features-content text-center">
+                  <div style="min-height:160px; display:flex; align-items:center; justify-content:center;">
+                     <img class="w-100" src="{{ asset('assets/images/grandaston.png') }}" alt="Logo Grand Aston">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+            <div class="rr-features-item p-relative wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+               <div class="rr-features-content text-center">
+                  <div style="min-height:160px; display:flex; align-items:center; justify-content:center;">
+                     <img class="w-100" src="{{ asset('assets/images/bpjs.png') }}" alt="Logo BPJS">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+            <div class="rr-features-item p-relative wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+               <div class="rr-features-content text-center">
+                  <div style="min-height:160px; display:flex; align-items:center; justify-content:center;">
+                     <img class="w-100" src="{{ asset('assets/images/bpjstk.png') }}" alt="Logo BPJS TK">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+            <div class="rr-features-item p-relative wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+               <div class="rr-features-content text-center">
+                  <div style="min-height:160px; display:flex; align-items:center; justify-content:center;">
+                     <img class="w-100" src="{{ asset('assets/images/jasaraharja.png') }}" alt="Logo Jasa Raharja">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<!-- features area end -->
 
 <!-- contact area start -->
 <section class="rr-contact-area fix">

@@ -25,11 +25,11 @@ class CimanewsController extends Controller
                 $query->where('name', 'cimanews');
             }
         })
-        ->when($search, function ($query, $search) {
-            return $query->where('title', 'like', '%' . $search . '%');
-        })
-        ->orderBy('created_at', 'asc')
-        ->paginate(6);
+            ->when($search, function ($query, $search) {
+                return $query->where('title', 'like', '%' . $search . '%');
+            })
+            ->orderBy('created_at', 'desc')
+            ->paginate(6);
         return view('user.cimanews.index', compact('running_text', 'cimanews', 'categories'));
     }
 
