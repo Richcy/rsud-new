@@ -86,5 +86,5 @@ Route::name('user.')->group(function () {
 });
 
 Route::post('/logout', [LoginController::class, 'logout'])
-                ->middleware('auth')
-                ->name('logout');
+    ->middleware('auth')
+    ->name('logout');
