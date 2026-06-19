@@ -320,6 +320,7 @@
                                  <li><a href="{{ route('user.hak_kewajiban.index') }}">Hak dan Kewajiban Pasien</a></li>
                                  <li><a href="{{ route('user.maklumat_pelayanan.index') }}">Maklumat Pelayanan</a></li>
                                  <li><a href="{{ route('user.standard_pelayanan.index') }}">Standar Pelayanan</a></li>
+                                 <li><a href="{{ route('user.dokumen_pelayanan_publik.index') }}">Dokumen Pelayanan Publik</a></li>
                               </ul>
                            </li>
                            <li class="has-dropdown">

@@ -26,6 +26,7 @@ use App\Http\Controllers\User\CompanyProfileController;
 use App\Http\Controllers\User\HakDanKewajibanController;
 use App\Http\Controllers\User\LayananUnggulanController;
 use App\Http\Controllers\User\StandardPelayananController;
+use App\Http\Controllers\User\DokumenPelayananPublikController;
 use App\Http\Controllers\User\InstalasiRawatInapController;
 use App\Http\Controllers\User\InstalasiRawatJalanController;
 use App\Http\Controllers\User\InstalasiGawatDaruratController;
@@ -53,6 +54,7 @@ Route::name('user.')->group(function () {
     Route::get('/hak_kewajiban', [HakDanKewajibanController::class, 'index'])->name('hak_kewajiban.index');
     Route::get('/maklumat_pelayanan', [MaklumatController::class, 'index'])->name('maklumat_pelayanan.index');
     Route::get('/standard_pelayanan', [StandardPelayananController::class, 'index'])->name('standard_pelayanan.index');
+    Route::get('/dokumen_pelayanan_publik', [DokumenPelayananPublikController::class, 'index'])->name('dokumen_pelayanan_publik.index');
 
     Route::get('/layanan_unggulan', [LayananUnggulanController::class, 'index'])->name('layanan_unggulan.index');
     Route::get('/rawat_inap', [InstalasiRawatInapController::class, 'index'])->name('rawat_inap.index');
