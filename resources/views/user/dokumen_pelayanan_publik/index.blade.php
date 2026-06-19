@@ -40,11 +40,18 @@
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div class="accordion-body text-center">
-                            <embed
+                            <iframe
                                 src="{{ asset('assets/images/stadartd_pelayanan/GL M IQBAL.pdf') }}"
-                                type="application/pdf"
                                 width="100%"
-                                height="700px">
+                                style="height:clamp(500px,75dvh,850px);">
+                            </iframe>
+                            <div class="mb-3">
+                                <a href="{{ asset('assets/images/stadartd_pelayanan/GL M IQBAL.pdf') }}"
+                                    target="_blank"
+                                    class="btn btn-primary">
+                                    📄 Buka PDF di Tab Baru
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -57,11 +64,18 @@
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div class="accordion-body text-center">
-                            <embed
+                            <iframe
                                 src="{{ asset('assets/images/stadartd_pelayanan/GL M IQBAL.pdf') }}"
-                                type="application/pdf"
                                 width="100%"
-                                height="700px">
+                                style="height:clamp(500px,75dvh,850px);">
+                            </iframe>
+                            <div class="mb-3">
+                                <a href="{{ asset('assets/images/stadartd_pelayanan/GL M IQBAL.pdf') }}"
+                                    target="_blank"
+                                    class="btn btn-primary">
+                                    📄 Buka PDF di Tab Baru
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -74,11 +88,18 @@
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                         <div class="accordion-body text-center">
-                            <embed
+                            <iframe
                                 src="{{ asset('assets/images/stadartd_pelayanan/GL M IQBAL.pdf') }}"
-                                type="application/pdf"
                                 width="100%"
-                                height="700px">
+                                style="height:clamp(500px,75dvh,850px);">
+                            </iframe>
+                            <div class="mb-3">
+                                <a href="{{ asset('assets/images/stadartd_pelayanan/GL M IQBAL.pdf') }}"
+                                    target="_blank"
+                                    class="btn btn-primary">
+                                    📄 Buka PDF di Tab Baru
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
