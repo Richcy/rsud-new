@@ -21,30 +21,30 @@ class EventController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $data = Event::with('event_category')->orderBy('created_at', 'asc')->get();
+            $data = Event::with('event_category')->orderBy('created_at', 'desc')->get();
             return DataTables::of($data)
-            ->addIndexColumn()
-            ->addColumn('event_category', function($row){
-                return $row->event_category->name;
-            })
-            ->editColumn('description', function($row){
-                return Str::limit($row->description, 100);
-            })
-            ->editColumn('url', function($row) {
-                return $row->url ? '<a href="'. $row->url .'" target="_blank" class="btn btn-sm btn-info">Lihat</a>' : '-';
-            })
-            ->editColumn('created_at', function($row){
-                return Carbon::parse($row->created_at)->format('d-m-Y');
-            })
-            ->editColumn('start_date', function($row){
-                return Carbon::parse($row->start_date)->translatedFormat('d-m-Y');
-            })
-            ->editColumn('end_date', function($row){
-                return Carbon::parse($row->end_date)->translatedFormat('d-m-Y');
-            })
-            ->addColumn('action', 'admin.event.datatables.action')
-            ->rawColumns(['action', 'url', 'description'])
-            ->make(true);
+                ->addIndexColumn()
+                ->addColumn('event_category', function ($row) {
+                    return $row->event_category->name;
+                })
+                ->editColumn('description', function ($row) {
+                    return Str::limit($row->description, 100);
+                })
+                ->editColumn('url', function ($row) {
+                    return $row->url ? '<a href="' . $row->url . '" target="_blank" class="btn btn-sm btn-info">Lihat</a>' : '-';
+                })
+                ->editColumn('created_at', function ($row) {
+                    return Carbon::parse($row->created_at)->format('d-m-Y');
+                })
+                ->editColumn('start_date', function ($row) {
+                    return Carbon::parse($row->start_date)->translatedFormat('d-m-Y');
+                })
+                ->editColumn('end_date', function ($row) {
+                    return Carbon::parse($row->end_date)->translatedFormat('d-m-Y');
+                })
+                ->addColumn('action', 'admin.event.datatables.action')
+                ->rawColumns(['action', 'url', 'description'])
+                ->make(true);
         }
         return view('admin.event.index');
     }
