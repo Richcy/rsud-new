@@ -44,7 +44,7 @@ class EventController extends Controller
         $relatedEvent = DB::table('events')
             ->where('event_category_id', $event->event_category_id)
             ->where('id', '!=', $event->id)
-            ->orderBy('created_at', 'DESC')->limit(3)->get();
+            ->orderBy('created_at', 'desc')->limit(3)->get();
         // return [$event, $categories, $relatedEvent];
 
         return view('user.event.show', compact('running_text', 'event', 'categories', 'relatedEvent'));

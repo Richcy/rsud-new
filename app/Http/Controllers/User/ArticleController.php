@@ -38,7 +38,7 @@ class ArticleController extends Controller
         $running_text = RunningText::first();
         $article = Article::where('slug', $slug)->first();
         $categories = ArticleCategory::where('name', '!=', 'cimanews')->get();
-        $otherArticle = Article::where('slug', '!=', $slug)->where('article_category_id', $article->article_category_id)->limit(3)->get();
+        $otherArticle = Article::where('slug', '!=', $slug)->where('article_category_id', $article->article_category_id)->orderBy('created_at', 'desc')->limit(3)->get();
         return view('user.article.show', compact('running_text', 'article', 'categories', 'otherArticle'));
     }
 }

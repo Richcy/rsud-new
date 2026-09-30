@@ -14,13 +14,13 @@ class CareerController extends Controller
         $running_text = RunningText::first();
         $search = $request->input('title');
         $careers = Career::where('status', 1)
-        ->where(function($query) use ($search) {
-            if (!empty($search)) {
-                $query->where('title', 'like', '%' . $search . '%');
-            }
-        })
-        ->orderBy('created_at', 'asc')
-        ->paginate(8);
+            ->where(function ($query) use ($search) {
+                if (!empty($search)) {
+                    $query->where('title', 'like', '%' . $search . '%');
+                }
+            })
+            ->orderBy('created_at', 'asc')
+            ->paginate(8);
         return view('user.career.index', compact('running_text', 'careers'));
     }
 
@@ -28,7 +28,7 @@ class CareerController extends Controller
     {
         $running_text = RunningText::first();
         $career = Career::where('slug', $slug)->first();
-        $otherCareer = Career::where('status',1)->whereNot('slug', $slug)->orderBy('created_at', 'asc')->limit(3)->get();
+        $otherCareer = Career::where('status', 1)->whereNot('slug', $slug)->orderBy('created_at', 'desc')->limit(3)->get();
         return view('user.career.show', compact('running_text', 'career', 'otherCareer'));
     }
 }

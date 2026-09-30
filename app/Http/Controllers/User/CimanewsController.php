@@ -37,7 +37,7 @@ class CimanewsController extends Controller
     {
         $running_text = RunningText::first();
         $cimanews = Article::where('slug', $slug)->first();
-        $otherArticle = Article::where('slug', '!=', $slug)->where('article_category_id', $cimanews->article_category_id)->orderBy('created_at', 'asc')->limit(3)->get();
+        $otherArticle = Article::where('slug', '!=', $slug)->where('article_category_id', $cimanews->article_category_id)->orderBy('created_at', 'desc')->limit(3)->get();
         return view('user.cimanews.show', compact('running_text', 'cimanews',  'otherArticle'));
     }
 }
